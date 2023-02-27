@@ -7,7 +7,7 @@ import {
   Tags,
   Users,
   projectDetails
-} from "/build/_shared/chunk-B4T4FDK4.js";
+} from "/build/_shared/chunk-B5AL77MM.js";
 import {
   require_groq
 } from "/build/_shared/chunk-VFPAK4Q6.js";
@@ -616,4 +616,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/studio/$-QFYBJ5VS.js.map
+//# sourceMappingURL=/build/routes/studio/$-Y4YCH7KD.js.map

@@ -10,10 +10,14 @@ import {
 
 // app/sanity/projectDetails.ts
 var projectDetails = () => {
-  const { SANITY_PUBLIC_PROJECT_ID, SANITY_PUBLIC_DATASET, SANITY_PUBLIC_API_VERSION } = typeof document === "undefined" ? process.env : window.ENV;
+  const {
+    SANITY_PUBLIC_PROJECT_ID,
+    SANITY_PUBLIC_DATASET,
+    SANITY_PUBLIC_API_VERSION
+  } = typeof document === "undefined" ? process.env : window.ENV;
   return {
-    projectId: SANITY_PUBLIC_PROJECT_ID != null ? SANITY_PUBLIC_PROJECT_ID : `pnkijp0b`,
-    dataset: SANITY_PUBLIC_DATASET != null ? SANITY_PUBLIC_DATASET : `remix`,
+    projectId: SANITY_PUBLIC_PROJECT_ID != null ? SANITY_PUBLIC_PROJECT_ID : `hw4meujw`,
+    dataset: SANITY_PUBLIC_DATASET != null ? SANITY_PUBLIC_DATASET : `production`,
     apiVersion: SANITY_PUBLIC_API_VERSION != null ? SANITY_PUBLIC_API_VERSION : `2022-09-19`
   };
 };
@@ -155,4 +159,4 @@ export {
   ThumbsUp,
   Users
 };
-//# sourceMappingURL=/build/_shared/chunk-B4T4FDK4.js.map
+//# sourceMappingURL=/build/_shared/chunk-B5AL77MM.js.map

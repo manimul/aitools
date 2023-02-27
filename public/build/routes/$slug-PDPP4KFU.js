@@ -6,7 +6,7 @@ import {
   RecordCover,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-7RNW3JRB.js";
+} from "/build/_shared/chunk-GB6D6E4Q.js";
 import {
   useFetcher,
   useLoaderData,
@@ -16,7 +16,7 @@ import {
   ThumbsDown,
   ThumbsUp,
   projectDetails
-} from "/build/_shared/chunk-B4T4FDK4.js";
+} from "/build/_shared/chunk-B5AL77MM.js";
 import {
   require_groq
 } from "/build/_shared/chunk-VFPAK4Q6.js";
@@ -1320,4 +1320,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/$slug-XZOPR25G.js.map
+//# sourceMappingURL=/build/routes/$slug-PDPP4KFU.js.map
