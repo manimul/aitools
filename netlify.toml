@@ -1,11 +1,14 @@
+
+
 [build]
-  command = "remix build"
-  publish = "build"
+command = "remix build "
+publish = "public/build"
 
 [dev]
-  command = "remix watch"
-  port = 3000
+  command = "remix dev"
+  port = 8002
 
+ 
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/server"
