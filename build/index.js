@@ -34,17 +34,13 @@ var entry_server_exports = {};
 __export(entry_server_exports, {
   default: () => handleRequest
 });
-var import_stream = require("stream"), import_node = require("@remix-run/node"), import_react = require("@remix-run/react"), import_server = require("react-dom/server"), import_styled_components = require("styled-components"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ABORT_DELAY = 5e3;
+var import_stream = require("stream"), import_node = require("@remix-run/node"), import_react = require("@remix-run/react"), import_server = require("react-dom/server"), import_styled_components = require("styled-components"), import_jsx_runtime = require("react/jsx-runtime"), ABORT_DELAY = 5e3;
 function handleRequest(request, responseStatusCode, responseHeaders, remixContext) {
   return new Promise((resolve, reject) => {
     let didError = !1;
     if (new URL(request.url).pathname.startsWith("/studio")) {
       let sheet = new import_styled_components.ServerStyleSheet(), markup = (0, import_server.renderToString)(
-        sheet.collectStyles(/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react.RemixServer, { context: remixContext, url: request.url }, void 0, !1, {
-          fileName: "app/entry.server.tsx",
-          lineNumber: 25,
-          columnNumber: 29
-        }, this))
+        sheet.collectStyles(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react.RemixServer, { context: remixContext, url: request.url }))
       ), styles = sheet.getStyleTags();
       return markup = markup.replace("__STYLES__", styles), responseHeaders.set("Content-Type", "text/html"), resolve(
         new import_node.Response("<!DOCTYPE html>" + markup, {
@@ -54,11 +50,7 @@ function handleRequest(request, responseStatusCode, responseHeaders, remixContex
       );
     }
     let { pipe, abort } = (0, import_server.renderToPipeableStream)(
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react.RemixServer, { context: remixContext, url: request.url }, void 0, !1, {
-        fileName: "app/entry.server.tsx",
-        lineNumber: 41,
-        columnNumber: 7
-      }, this),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react.RemixServer, { context: remixContext, url: request.url }),
       {
         onShellReady: () => {
           let body = new import_stream.PassThrough();
@@ -142,7 +134,7 @@ function getBodyClassNames(themePreference) {
 }
 
 // app/root.tsx
-var import_jsx_dev_runtime2 = require("react/jsx-dev-runtime"), meta = () => ({
+var import_jsx_runtime2 = require("react/jsx-runtime"), meta = () => ({
   charset: "utf-8",
   viewport: "width=device-width,initial-scale=1"
 }), links = () => [
@@ -170,71 +162,27 @@ var import_jsx_dev_runtime2 = require("react/jsx-dev-runtime"), meta = () => ({
 };
 function App() {
   let { ENV, themePreference } = (0, import_react2.useLoaderData)(), { pathname } = (0, import_react2.useLocation)(), isStudioRoute = pathname.startsWith("/studio"), bodyClassNames = getBodyClassNames(themePreference);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("html", { lang: "en", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("head", { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Meta, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 77,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Links, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 78,
-        columnNumber: 9
-      }, this),
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("html", { lang: "en", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("head", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Meta, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Links, {}),
       isStudioRoute && typeof document > "u" ? "__STYLES__" : null
-    ] }, void 0, !0, {
-      fileName: "app/root.tsx",
-      lineNumber: 76,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("body", { className: bodyClassNames, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Outlet, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 82,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.ScrollRestoration, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 83,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("body", { className: bodyClassNames, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Outlet, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.ScrollRestoration, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
         "script",
         {
           dangerouslySetInnerHTML: {
             __html: `window.ENV = ${JSON.stringify(ENV)}`
           }
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/root.tsx",
-          lineNumber: 84,
-          columnNumber: 9
-        },
-        this
+        }
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Scripts, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 89,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.LiveReload, {}, void 0, !1, {
-        fileName: "app/root.tsx",
-        lineNumber: 90,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/root.tsx",
-      lineNumber: 81,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/root.tsx",
-    lineNumber: 75,
-    columnNumber: 5
-  }, this);
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Scripts, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.LiveReload, {})
+    ] })
+  ] });
 }
 
 // app/routes/resource/toggle-theme.ts
@@ -319,7 +267,7 @@ var action2 = async ({ request }) => {
   if (!secret)
     return new Response("No secret in URL", { status: 401 });
   let validSlug = await previewClient.fetch(
-    import_groq3.default`*[_type == "record" && slug.current == $slug][0].slug.current`,
+    import_groq3.default`*[_type == "product" && slug.current == $slug][0].slug.current`,
     { slug }
   );
   if (!validSlug)
@@ -344,15 +292,15 @@ __export(__exports, {
 var import_remix_utils = require("remix-utils"), import_sanity7 = require("sanity");
 
 // app/styles/studio.css
-var studio_default = "/build/_assets/studio-7UYMGTOZ.css";
+var studio_default = "/build/_assets/studio-CZ6JLOEM.css";
 
 // sanity.config.ts
 var import_sanity6 = require("sanity"), import_desk = require("sanity/desk");
 
-// app/sanity/schema/artist.ts
-var import_lucide_react = require("lucide-react"), import_sanity = require("sanity"), artist_default = (0, import_sanity.defineType)({
-  name: "artist",
-  title: "Artist",
+// app/sanity/schema/category.ts
+var import_lucide_react = require("lucide-react"), import_sanity = require("sanity"), category_default = (0, import_sanity.defineType)({
+  name: "category",
+  title: "Category",
   type: "document",
   icon: import_lucide_react.Users,
   fields: [
@@ -375,10 +323,10 @@ var import_lucide_react = require("lucide-react"), import_sanity = require("sani
   ]
 });
 
-// app/sanity/schema/genre.ts
-var import_lucide_react2 = require("lucide-react"), import_sanity2 = require("sanity"), genre_default = (0, import_sanity2.defineType)({
-  name: "genre",
-  title: "Genre",
+// app/sanity/schema/tag.ts
+var import_lucide_react2 = require("lucide-react"), import_sanity2 = require("sanity"), tag_default = (0, import_sanity2.defineType)({
+  name: "tag",
+  title: "Tag",
   type: "document",
   icon: import_lucide_react2.Tags,
   fields: [
@@ -415,14 +363,14 @@ var import_lucide_react3 = require("lucide-react"), import_sanity3 = require("sa
   preview: {
     select: {
       title: "title",
-      artist: "siteTitle"
+      category: "siteTitle"
     }
   }
 });
 
-// app/sanity/schema/record.ts
-var import_lucide_react4 = require("lucide-react"), import_sanity4 = require("sanity"), record_default = (0, import_sanity4.defineType)({
-  name: "record",
+// app/sanity/schema/product.ts
+var import_lucide_react4 = require("lucide-react"), import_sanity4 = require("sanity"), product_default = (0, import_sanity4.defineType)({
+  name: "product",
   title: "Record",
   type: "document",
   icon: import_lucide_react4.Disc,
@@ -443,8 +391,8 @@ var import_lucide_react4 = require("lucide-react"), import_sanity4 = require("sa
       title: "Editorial"
     },
     {
-      name: "tracks",
-      title: "Tracks"
+      name: "features",
+      title: "Features"
     }
   ],
   fields: [
@@ -462,6 +410,11 @@ var import_lucide_react4 = require("lucide-react"), import_sanity4 = require("sa
       group: "details"
     }),
     (0, import_sanity4.defineField)({
+      name: "referral",
+      type: "url",
+      group: "details"
+    }),
+    (0, import_sanity4.defineField)({
       name: "likes",
       type: "number",
       readOnly: !0,
@@ -474,15 +427,15 @@ var import_lucide_react4 = require("lucide-react"), import_sanity4 = require("sa
       fieldset: "rating"
     }),
     (0, import_sanity4.defineField)({
-      name: "artist",
+      name: "category",
       type: "reference",
-      to: [{ type: "artist" }],
+      to: [{ type: "category" }],
       group: "details"
     }),
     (0, import_sanity4.defineField)({
-      name: "genres",
+      name: "tags",
       type: "array",
-      of: [{ type: "reference", to: { type: "genre" } }],
+      of: [{ type: "reference", to: { type: "tag" } }],
       group: "details"
     }),
     (0, import_sanity4.defineField)({
@@ -498,29 +451,29 @@ var import_lucide_react4 = require("lucide-react"), import_sanity4 = require("sa
       group: "editorial"
     }),
     (0, import_sanity4.defineField)({
-      name: "tracks",
+      name: "features",
       type: "array",
-      of: [{ type: "track" }],
-      group: "tracks"
+      of: [{ type: "feature" }],
+      group: "features"
     })
   ],
   preview: {
     select: {
       title: "title",
-      artist: "artist.title",
+      category: "category.title",
       media: "image"
     },
-    prepare({ title, artist, media }) {
+    prepare({ title, category, media }) {
       return {
         title,
-        subtitle: artist,
+        subtitle: category,
         media
       };
     }
   }
 });
 
-// app/sanity/schema/track.ts
+// app/sanity/schema/feature.ts
 var import_sanity5 = require("sanity");
 
 // app/lib/secondsToMinutes.ts
@@ -530,30 +483,18 @@ function secondsToMinutes(seconds) {
 
 // app/sanity/components/Duration.tsx
 var import_ui = require("@sanity/ui");
-var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime");
+var import_jsx_runtime3 = require("react/jsx-runtime");
 function Duration(props) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_ui.Flex, { gap: 3, align: "center", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_ui.Box, { flex: 1, children: props.renderDefault(props) }, void 0, !1, {
-      fileName: "app/sanity/components/Duration.tsx",
-      lineNumber: 9,
-      columnNumber: 7
-    }, this),
-    props.value ? /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_ui.Code, { size: 4, children: secondsToMinutes(props.value) }, void 0, !1, {
-      fileName: "app/sanity/components/Duration.tsx",
-      lineNumber: 10,
-      columnNumber: 22
-    }, this) : null
-  ] }, void 0, !0, {
-    fileName: "app/sanity/components/Duration.tsx",
-    lineNumber: 8,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_ui.Flex, { gap: 3, align: "center", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ui.Box, { flex: 1, children: props.renderDefault(props) }),
+    props.value ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ui.Code, { size: 4, children: secondsToMinutes(props.value) }) : null
+  ] });
 }
 
-// app/sanity/schema/track.ts
-var track_default = (0, import_sanity5.defineType)({
-  name: "track",
-  title: "Track",
+// app/sanity/schema/feature.ts
+var feature_default = (0, import_sanity5.defineType)({
+  name: "feature",
+  title: "Feature",
   type: "object",
   fields: [
     (0, import_sanity5.defineField)({
@@ -584,7 +525,7 @@ var track_default = (0, import_sanity5.defineType)({
 });
 
 // app/sanity/schema/index.ts
-var schema_default = [record_default, artist_default, track_default, genre_default, home_default];
+var schema_default = [product_default, category_default, feature_default, tag_default, home_default];
 
 // app/sanity/structure/index.ts
 var import_sanity_plugin_iframe_pane = __toESM(require("sanity-plugin-iframe-pane")), import_lucide_react5 = require("lucide-react");
@@ -604,14 +545,14 @@ async function resolvePreviewUrl(doc, client2) {
 var structure = (S) => S.list().id("root").title("Content").items([
   S.documentListItem().schemaType("home").icon(import_lucide_react5.Home).id("home").title("Home"),
   S.divider(),
-  S.documentTypeListItem("record").title("Products").icon(import_lucide_react5.Disc),
-  S.documentTypeListItem("artist").title("Category").icon(import_lucide_react5.Users),
+  S.documentTypeListItem("product").title("Products").icon(import_lucide_react5.Disc),
+  S.documentTypeListItem("category").title("Category").icon(import_lucide_react5.Users),
   S.divider(),
-  S.documentTypeListItem("genre").title("Tags").icon(import_lucide_react5.Tags)
+  S.documentTypeListItem("tag").title("Tags").icon(import_lucide_react5.Tags)
 ]), defaultDocumentNode = (S, { schemaType, getClient: getClient2 }) => {
   let { apiVersion } = projectDetails(), client2 = getClient2({ apiVersion });
   switch (schemaType) {
-    case "record":
+    case "product":
       return S.document().views([
         S.view.form(),
         S.view.component(import_sanity_plugin_iframe_pane.default).options({
@@ -637,29 +578,17 @@ var config = (0, import_sanity6.defineConfig)({
 });
 
 // app/routes/studio/$.tsx
-var import_jsx_dev_runtime4 = require("react/jsx-dev-runtime"), meta2 = () => ({
+var import_jsx_runtime4 = require("react/jsx-runtime"), meta2 = () => ({
   title: "Sanity Studio",
   robots: "noindex"
 }), links2 = () => [{ rel: "stylesheet", href: studio_default }];
 function StudioPage() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_remix_utils.ClientOnly, { children: () => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_remix_utils.ClientOnly, { children: () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
     import_sanity7.Studio,
     {
       config
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/routes/studio/$.tsx",
-      lineNumber: 21,
-      columnNumber: 9
-    },
-    this
-  ) }, void 0, !1, {
-    fileName: "app/routes/studio/$.tsx",
-    lineNumber: 19,
-    columnNumber: 5
-  }, this);
+    }
+  ) });
 }
 
 // app/routes/$slug.tsx
@@ -674,9 +603,9 @@ __export(slug_exports, {
 var import_node7 = require("@remix-run/node"), import_react7 = require("@remix-run/react"), import_groq4 = __toESM(require("groq")), import_preview_kit2 = require("@sanity/preview-kit");
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-VPJCSMFP.css";
+var tailwind_default = "/build/_assets/tailwind-D6FERBOV.css";
 
-// app/components/Record.tsx
+// app/components/Product.tsx
 var import_preview_kit = require("@sanity/preview-kit");
 
 // app/components/SanityContent.tsx
@@ -684,10 +613,10 @@ var import_react3 = require("@portabletext/react");
 
 // app/components/SanityImage.tsx
 var import_image_url = __toESM(require("@sanity/image-url")), import_asset_utils = require("@sanity/asset-utils");
-var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
+var import_jsx_runtime5 = require("react/jsx-runtime");
 function SanityImage(props) {
   let { value, isInline } = props, { width, height } = (0, import_asset_utils.getImageDimensions)(value);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
     "img",
     {
       className: "not-prose h-auto w-full",
@@ -698,248 +627,116 @@ function SanityImage(props) {
         display: isInline ? "inline-block" : "block",
         aspectRatio: width / height
       }
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/components/SanityImage.tsx",
-      lineNumber: 15,
-      columnNumber: 5
-    },
-    this
+    }
   );
 }
 
 // app/components/SanityContent.tsx
-var import_jsx_dev_runtime6 = require("react/jsx-dev-runtime"), components = {
+var import_jsx_runtime6 = require("react/jsx-runtime"), components = {
   types: {
     image: SanityImage
   }
 };
 function SanityContent(props) {
   let { value } = props;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "prose font-serif prose-a:text-cyan-600 dark:prose-invert dark:prose-a:text-cyan-200 md:prose-2xl", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react3.PortableText, { value, components }, void 0, !1, {
-    fileName: "app/components/SanityContent.tsx",
-    lineNumber: 21,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/SanityContent.tsx",
-    lineNumber: 20,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "prose font-serif prose-a:text-cyan-600 dark:prose-invert dark:prose-a:text-cyan-200 md:prose-2xl", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_react3.PortableText, { value, components }) });
 }
 
 // app/components/Logo.tsx
-var import_react4 = require("@remix-run/react"), import_remix_utils2 = require("remix-utils"), import_jsx_dev_runtime7 = require("react/jsx-dev-runtime");
+var import_react4 = require("@remix-run/react"), import_remix_utils2 = require("remix-utils"), import_jsx_runtime7 = require("react/jsx-runtime");
 function Logo() {
   let { home } = (0, import_remix_utils2.useRouteData)("root");
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("p", { className: "text-lg font-bold tracking-tighter text-black dark:text-white lg:text-2xl", children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react4.Link, { to: "/", children: home.siteTitle }, void 0, !1, {
-    fileName: "app/components/Logo.tsx",
-    lineNumber: 11,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/Logo.tsx",
-    lineNumber: 10,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "featureing-tighter text-lg font-bold text-black dark:text-white lg:text-2xl", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_react4.Link, { to: "/", children: home.siteTitle }) });
 }
 
 // app/components/Footer.tsx
-var import_jsx_dev_runtime8 = require("react/jsx-dev-runtime");
+var import_jsx_runtime8 = require("react/jsx-runtime");
 function Footer() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("header", { className: "border-t border-gray-100 transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "container mx-auto flex items-center justify-between p-4 lg:px-12", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(Logo, {}, void 0, !1, {
-      fileName: "app/components/Footer.tsx",
-      lineNumber: 7,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "flex flex-1 flex-col items-end justify-end gap-2 text-sm md:flex-row md:items-center md:gap-5", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("a", { className: "hover:text-cyan-600 dark:hover:text-cyan-200", href: "/studio", children: "Log in to Sanity Studio v3" }, void 0, !1, {
-        fileName: "app/components/Footer.tsx",
-        lineNumber: 9,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("a", { className: "hover:text-cyan-600 dark:hover:text-cyan-200", href: "https://sanity.io", children: "Sign up free at Sanity.io" }, void 0, !1, {
-        fileName: "app/components/Footer.tsx",
-        lineNumber: 12,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("header", { className: "border-t border-gray-100 transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "container mx-auto flex items-center justify-between p-4 lg:px-12", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Logo, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "flex flex-1 flex-col items-end justify-end gap-2 text-sm md:flex-row md:items-center md:gap-5", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("a", { className: "hover:text-cyan-600 dark:hover:text-cyan-200", href: "/studio", children: "Log in to Sanity Studio v3" }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("a", { className: "hover:text-cyan-600 dark:hover:text-cyan-200", href: "https://sanity.io", children: "Sign up free at Sanity.io" }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
         "a",
         {
           className: "hover:text-cyan-600 dark:hover:text-cyan-200",
           href: "https://github.com/SimeonGriggs/remix-sanity-studio-v3",
           children: "Clone this project on GitHub"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/components/Footer.tsx",
-          lineNumber: 15,
-          columnNumber: 11
-        },
-        this
+        }
       )
-    ] }, void 0, !0, {
-      fileName: "app/components/Footer.tsx",
-      lineNumber: 8,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/Footer.tsx",
-    lineNumber: 6,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/Footer.tsx",
-    lineNumber: 5,
-    columnNumber: 5
-  }, this);
+    ] })
+  ] }) });
 }
 
 // app/components/ThemeToggle.tsx
-var import_lucide_react6 = require("lucide-react"), import_react5 = require("@remix-run/react"), import_jsx_dev_runtime9 = require("react/jsx-dev-runtime");
+var import_lucide_react6 = require("lucide-react"), import_react5 = require("@remix-run/react"), import_jsx_runtime9 = require("react/jsx-runtime");
 function ThemeToggle() {
   let cookieToggle = (0, import_react5.useFetcher)(), { themePreference } = (0, import_react5.useLoaderData)(), isDarkMode = themePreference === "dark";
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(cookieToggle.Form, { method: "post", action: "/resource/toggle-theme", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("button", { type: "submit", disabled: cookieToggle.state === "submitting", children: [
-    isDarkMode ? /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_lucide_react6.Sun, { className: "h-auto w-4" }, void 0, !1, {
-      fileName: "app/components/ThemeToggle.tsx",
-      lineNumber: 14,
-      columnNumber: 23
-    }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_lucide_react6.Moon, { className: "h-auto w-4" }, void 0, !1, {
-      fileName: "app/components/ThemeToggle.tsx",
-      lineNumber: 14,
-      columnNumber: 56
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "sr-only select-none", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(cookieToggle.Form, { method: "post", action: "/resource/toggle-theme", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("button", { type: "submit", disabled: cookieToggle.state === "submitting", children: [
+    isDarkMode ? /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_lucide_react6.Sun, { className: "h-auto w-4" }) : /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_lucide_react6.Moon, { className: "h-auto w-4" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "sr-only select-none", children: [
       isDarkMode ? "Light" : "Dark",
       " Mode"
-    ] }, void 0, !0, {
-      fileName: "app/components/ThemeToggle.tsx",
-      lineNumber: 15,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/ThemeToggle.tsx",
-    lineNumber: 13,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ThemeToggle.tsx",
-    lineNumber: 12,
-    columnNumber: 5
-  }, this);
+    ] })
+  ] }) });
 }
 
 // app/components/Header.tsx
-var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime");
+var import_jsx_runtime10 = require("react/jsx-runtime");
 function Header() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("header", { className: "border-b border-gray-100 transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "container mx-auto flex items-center justify-between p-4 lg:px-12", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Logo, {}, void 0, !1, {
-      fileName: "app/components/Header.tsx",
-      lineNumber: 8,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(ThemeToggle, {}, void 0, !1, {
-      fileName: "app/components/Header.tsx",
-      lineNumber: 9,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/Header.tsx",
-    lineNumber: 7,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/Header.tsx",
-    lineNumber: 6,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("header", { className: "border-b border-gray-100 transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "container mx-auto flex items-center justify-between p-4 lg:px-12", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Logo, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ThemeToggle, {})
+  ] }) });
 }
 
 // app/components/Layout.tsx
-var import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
+var import_jsx_runtime11 = require("react/jsx-runtime");
 function Layout(props) {
   let { children } = props;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_jsx_dev_runtime11.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(Header, {}, void 0, !1, {
-      fileName: "app/components/Layout.tsx",
-      lineNumber: 11,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "container mx-auto p-4 lg:p-12", children }, void 0, !1, {
-      fileName: "app/components/Layout.tsx",
-      lineNumber: 12,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(Footer, {}, void 0, !1, {
-      fileName: "app/components/Layout.tsx",
-      lineNumber: 13,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/Layout.tsx",
-    lineNumber: 10,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Header, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "container mx-auto p-4 lg:p-12", children }),
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Footer, {})
+  ] });
 }
 
 // app/components/Title.tsx
-var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime");
+var import_jsx_runtime12 = require("react/jsx-runtime");
 function Title(props) {
-  return props.children ? /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("h1", { className: "text-bold max-w-4xl text-4xl font-bold tracking-tighter md:text-4xl lg:text-5xl xl:text-8xl", children: props.children }, void 0, !1, {
-    fileName: "app/components/Title.tsx",
-    lineNumber: 6,
-    columnNumber: 5
-  }, this) : null;
+  return props.children ? /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h1", { className: "text-bold featureing-tighter max-w-4xl text-4xl font-bold md:text-4xl lg:text-5xl xl:text-8xl", children: props.children }) : null;
 }
 
 // app/components/RecordCover.tsx
 var import_image_url2 = __toESM(require("@sanity/image-url"));
-var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime");
+var import_jsx_runtime13 = require("react/jsx-runtime");
 function RecordCover(props) {
   let { title, image } = props;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "aspect-square bg-gray-50", children: image ? /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "aspect-square bg-gray-50", children: image ? /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
     "img",
     {
       className: "h-auto w-full object-cover shadow-black transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-cyan-200",
       src: (0, import_image_url2.default)(projectDetails()).image(image.asset._ref).height(800).width(800).fit("max").auto("format").url(),
       alt: String(title) ?? "",
       loading: "lazy"
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/components/RecordCover.tsx",
-      lineNumber: 18,
-      columnNumber: 9
-    },
-    this
-  ) : /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500", children: title ?? "Missing Record art" }, void 0, !1, {
-    fileName: "app/components/RecordCover.tsx",
-    lineNumber: 31,
-    columnNumber: 9
-  }, this) }, void 0, !1, {
-    fileName: "app/components/RecordCover.tsx",
-    lineNumber: 16,
-    columnNumber: 5
-  }, this);
+    }
+  ) : /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500", children: title ?? "Missing Record art" }) });
 }
 
 // app/components/LikeDislike.tsx
-var import_react6 = require("@remix-run/react"), import_lucide_react7 = require("lucide-react"), import_jsx_dev_runtime14 = require("react/jsx-dev-runtime");
+var import_react6 = require("@remix-run/react"), import_lucide_react7 = require("lucide-react"), import_jsx_runtime14 = require("react/jsx-runtime");
 function LikeDislike(props) {
   let { id } = props, fetcher = (0, import_react6.useFetcher)(), location = (0, import_react6.useLocation)(), likes = fetcher.type === "done" ? fetcher.data.likes : props.likes, dislikes = fetcher.type === "done" ? fetcher.data.dislikes : props.dislikes;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(
     fetcher.Form,
     {
       action: location.pathname,
       className: "flex items-center justify-center gap-4 bg-black text-white",
       method: "post",
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("input", { name: "id", type: "hidden", value: id }, void 0, !1, {
-          fileName: "app/components/LikeDislike.tsx",
-          lineNumber: 26,
-          columnNumber: 7
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("input", { name: "id", type: "hidden", value: id }),
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(
           "button",
           {
             name: "action",
@@ -949,33 +746,13 @@ function LikeDislike(props) {
             className: "flex items-center gap-2 bg-black p-4 transition-all duration-100 ease-in-out hover:bg-cyan-400 hover:text-black disabled:opacity-50",
             title: "Like",
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("span", { className: "text-xs font-bold", children: likes }, void 0, !1, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 35,
-                columnNumber: 9
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(import_lucide_react7.ThumbsUp, {}, void 0, !1, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 36,
-                columnNumber: 9
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("span", { className: "sr-only", children: "Like" }, void 0, !1, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 37,
-                columnNumber: 9
-              }, this)
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-xs font-bold", children: likes }),
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_lucide_react7.ThumbsUp, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "sr-only", children: "Like" })
             ]
-          },
-          void 0,
-          !0,
-          {
-            fileName: "app/components/LikeDislike.tsx",
-            lineNumber: 27,
-            columnNumber: 7
-          },
-          this
+          }
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(
           "button",
           {
             name: "action",
@@ -985,213 +762,109 @@ function LikeDislike(props) {
             className: "flex items-center gap-2 bg-black p-4 transition-all duration-100 ease-in-out hover:bg-cyan-400 hover:text-black disabled:opacity-50",
             title: "Dislike",
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(import_lucide_react7.ThumbsDown, {}, void 0, !1, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 47,
-                columnNumber: 9
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("span", { className: "text-xs font-bold", children: dislikes }, void 0, !1, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 48,
-                columnNumber: 9
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("span", { className: "sr-only", children: "Dislike" }, void 0, !1, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 49,
-                columnNumber: 9
-              }, this)
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_lucide_react7.ThumbsDown, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-xs font-bold", children: dislikes }),
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "sr-only", children: "Dislike" })
             ]
-          },
-          void 0,
-          !0,
-          {
-            fileName: "app/components/LikeDislike.tsx",
-            lineNumber: 39,
-            columnNumber: 7
-          },
-          this
+          }
         )
       ]
-    },
-    void 0,
-    !0,
-    {
-      fileName: "app/components/LikeDislike.tsx",
-      lineNumber: 21,
-      columnNumber: 5
-    },
-    this
+    }
   );
 }
 
 // app/components/ExitPreview.tsx
-var import_jsx_dev_runtime15 = require("react/jsx-dev-runtime");
+var import_jsx_runtime15 = require("react/jsx-runtime");
 function ExitPreview() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "pointer-events-none fixed inset-0 flex h-screen w-screen items-end justify-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("form", { className: "pointer-events-auto", action: "/resource/preview", method: "POST", children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("button", { className: "bg-black p-4 font-bold text-white", type: "submit", children: "Exit Preview Mode" }, void 0, !1, {
-    fileName: "app/components/ExitPreview.tsx",
-    lineNumber: 7,
-    columnNumber: 9
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ExitPreview.tsx",
-    lineNumber: 6,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ExitPreview.tsx",
-    lineNumber: 5,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "pointer-events-none fixed inset-0 flex h-screen w-screen items-end justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("form", { className: "pointer-events-auto", action: "/resource/preview", method: "POST", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("button", { className: "bg-black p-4 font-bold text-white", type: "submit", children: "Exit Preview Mode" }) }) });
 }
 
-// app/components/Record.tsx
-var import_jsx_dev_runtime16 = require("react/jsx-dev-runtime");
+// app/components/Product.tsx
+var import_jsx_runtime16 = require("react/jsx-runtime");
 function Record(props) {
-  let { _id, title, artist, content, image, tracks, likes, dislikes } = props;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Layout, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("article", { className: "flex flex-col items-start gap-4 lg:flex-row lg:gap-12", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "grid-gap-4 mx-auto grid max-w-[70vw] grid-cols-1", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(RecordCover, { image, title }, void 0, !1, {
-        fileName: "app/components/Record.tsx",
-        lineNumber: 21,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(LikeDislike, { id: _id, likes, dislikes }, void 0, !1, {
-        fileName: "app/components/Record.tsx",
-        lineNumber: 22,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/components/Record.tsx",
-      lineNumber: 20,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "flex flex-shrink-0 flex-col gap-4 md:gap-6 lg:w-2/3", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("header", { children: [
-        title ? /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Title, { children: title }, void 0, !1, {
-          fileName: "app/components/Record.tsx",
-          lineNumber: 26,
-          columnNumber: 22
-        }, this) : null,
-        artist ? /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("h2", { className: "bg-black text-2xl font-bold tracking-tighter text-white", children: artist }, void 0, !1, {
-          fileName: "app/components/Record.tsx",
-          lineNumber: 28,
-          columnNumber: 15
-        }, this) : null
-      ] }, void 0, !0, {
-        fileName: "app/components/Record.tsx",
-        lineNumber: 25,
-        columnNumber: 11
-      }, this),
-      content && (content == null ? void 0 : content.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(SanityContent, { value: content }, void 0, !1, {
-        fileName: "app/components/Record.tsx",
-        lineNumber: 34,
-        columnNumber: 13
-      }, this) : null,
-      tracks && (tracks == null ? void 0 : tracks.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_jsx_dev_runtime16.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("li", { className: "py-3 text-2xl font-bold tracking-tighter", children: (tracks == null ? void 0 : tracks.length) === 1 ? "1 Track" : `${tracks == null ? void 0 : tracks.length} Key Features` }, void 0, !1, {
-          fileName: "app/components/Record.tsx",
-          lineNumber: 39,
-          columnNumber: 17
-        }, this),
-        tracks.map((track) => /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
+  let { _id, title, category, content, image, features, likes, dislikes } = props;
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Layout, { children: /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("article", { className: "flex flex-col items-start gap-4 lg:flex-row lg:gap-12", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "grid-gap-4 mx-auto grid max-w-[70vw] grid-cols-1", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(RecordCover, { image, title }),
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LikeDislike, { id: _id, likes, dislikes })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "flex flex-shrink-0 flex-col gap-4 md:gap-6 lg:w-2/3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("header", { children: [
+        title ? /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Title, { children: title }) : null,
+        category ? /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h2", { className: "featureing-tighter bg-black text-2xl font-bold text-white", children: category }) : null
+      ] }),
+      content && (content == null ? void 0 : content.length) > 0 ? /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(SanityContent, { value: content }) : null,
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+        "a",
+        {
+          href: "www.test.com",
+          className: "mr-auto w-auto border-2 border-purple-500 py-4 px-12 text-purple-500",
+          children: "Try Out Now"
+        }
+      ),
+      features && (features == null ? void 0 : features.length) > 0 ? /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_jsx_runtime16.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("li", { className: "featureing-tighter py-3 text-2xl font-bold", children: (features == null ? void 0 : features.length) === 1 ? "1 Feature" : `${features == null ? void 0 : features.length} Key Features` }),
+        features.map((feature) => /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
           "li",
           {
             className: "flex items-center justify-between py-3",
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("span", { className: "text-lg", children: track.title }, void 0, !1, {
-                fileName: "app/components/Record.tsx",
-                lineNumber: 49,
-                columnNumber: 21
-              }, this),
-              track.duration ? /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("span", { className: "text-sm font-bold", children: secondsToMinutes(track.duration) }, void 0, !1, {
-                fileName: "app/components/Record.tsx",
-                lineNumber: 51,
-                columnNumber: 23
-              }, this) : null
+              /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: "text-lg", children: feature.title }),
+              feature.duration ? /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: "text-sm font-bold", children: secondsToMinutes(feature.duration) }) : null
             ]
           },
-          track._key,
-          !0,
-          {
-            fileName: "app/components/Record.tsx",
-            lineNumber: 45,
-            columnNumber: 19
-          },
-          this
+          feature._key
         ))
-      ] }, void 0, !0, {
-        fileName: "app/components/Record.tsx",
-        lineNumber: 38,
-        columnNumber: 15
-      }, this) }, void 0, !1, {
-        fileName: "app/components/Record.tsx",
-        lineNumber: 37,
-        columnNumber: 13
-      }, this) : null
-    ] }, void 0, !0, {
-      fileName: "app/components/Record.tsx",
-      lineNumber: 24,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/Record.tsx",
-    lineNumber: 19,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/Record.tsx",
-    lineNumber: 18,
-    columnNumber: 5
-  }, this);
+      ] }) }) : null
+    ] })
+  ] }) });
 }
 var { projectId, dataset } = projectDetails(), usePreview = (0, import_preview_kit.definePreview)({ projectId, dataset });
 function PreviewRecord(props) {
   let { query: query2, params, token } = props, data = usePreview(token ?? null, query2, params);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_jsx_dev_runtime16.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(ExitPreview, {}, void 0, !1, {
-      fileName: "app/components/Record.tsx",
-      lineNumber: 82,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Record, { ...data }, void 0, !1, {
-      fileName: "app/components/Record.tsx",
-      lineNumber: 83,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/Record.tsx",
-    lineNumber: 81,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(import_jsx_runtime16.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(ExitPreview, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Record, { ...data })
+  ] });
 }
 
-// app/types/record.ts
-var import_zod3 = require("zod"), recordZ = import_zod3.z.object({
+// app/types/product.ts
+var import_zod3 = require("zod"), productZ = import_zod3.z.object({
   _id: import_zod3.z.string(),
   title: import_zod3.z.string().nullable(),
   slug: import_zod3.z.string().nullable(),
   likes: import_zod3.z.number(),
   dislikes: import_zod3.z.number(),
-  artist: import_zod3.z.string().nullable(),
-  tracks: import_zod3.z.array(
+  category: import_zod3.z.string().nullable(),
+  features: import_zod3.z.array(
     import_zod3.z.object({
       _key: import_zod3.z.string(),
       title: import_zod3.z.string().nullable(),
       duration: import_zod3.z.number().nullable()
     })
   ).nullable(),
+  tags: import_zod3.z.array(
+    import_zod3.z.object({
+      _key: import_zod3.z.string(),
+      title: import_zod3.z.string().nullable(),
+      slug: import_zod3.z.string().nullable()
+    })
+  ).nullable(),
   image: import_zod3.z.any().nullable(),
   content: import_zod3.z.array(import_zod3.z.any()).nullable()
-}), recordsZ = import_zod3.z.array(recordZ), recordStubZ = import_zod3.z.object({
+}), productsZ = import_zod3.z.array(productZ), productStubZ = import_zod3.z.object({
   _id: import_zod3.z.string(),
   title: import_zod3.z.string().nullable(),
   slug: import_zod3.z.string().nullable(),
-  artist: import_zod3.z.string().nullable(),
+  category: import_zod3.z.string().nullable(),
   image: import_zod3.z.any().nullable()
-}), recordStubsZ = import_zod3.z.array(recordStubZ);
+}), productStubsZ = import_zod3.z.array(productStubZ);
 
 // app/routes/$slug.tsx
-var import_jsx_dev_runtime17 = require("react/jsx-dev-runtime"), links3 = () => [{ rel: "stylesheet", href: tailwind_default }], meta3 = ({ data, parentsData }) => {
+var import_jsx_runtime17 = require("react/jsx-runtime"), links3 = () => [{ rel: "stylesheet", href: tailwind_default }], meta3 = ({ data, parentsData }) => {
   let home = parentsData.root.home;
   return {
-    title: [data.record.title, home.siteTitle].filter(Boolean).join(" | ")
+    title: [data.product.title, home.siteTitle].filter(Boolean).join(" | ")
   };
 }, action3 = async ({ request }) => {
   if (request.method !== "POST")
@@ -1200,20 +873,26 @@ var import_jsx_dev_runtime17 = require("react/jsx-dev-runtime"), links3 = () => 
   if (id)
     switch (action4) {
       case "LIKE":
-        return await writeClient.patch(id).setIfMissing({ likes: 0 }).inc({ likes: 1 }).commit().then(({ likes, dislikes }) => ({ likes: likes ?? 0, dislikes: dislikes ?? 0 }));
+        return await writeClient.patch(id).setIfMissing({ likes: 0 }).inc({ likes: 1 }).commit().then(({ likes, dislikes }) => ({
+          likes: likes ?? 0,
+          dislikes: dislikes ?? 0
+        }));
       case "DISLIKE":
-        return await writeClient.patch(id).setIfMissing({ dislikes: 0 }).inc({ dislikes: 1 }).commit().then(({ likes, dislikes }) => ({ likes: likes ?? 0, dislikes: dislikes ?? 0 }));
+        return await writeClient.patch(id).setIfMissing({ dislikes: 0 }).inc({ dislikes: 1 }).commit().then(({ likes, dislikes }) => ({
+          likes: likes ?? 0,
+          dislikes: dislikes ?? 0
+        }));
       default:
         return (0, import_node7.json)({ message: "Invalid action" }, 400);
     }
   return (0, import_node7.json)({ message: "Bad request" }, 400);
 }, loader4 = async ({ params, request }) => {
-  let token = (await getSession(request.headers.get("Cookie"))).get("token"), preview = Boolean(token), query2 = import_groq4.default`*[_type == "record" && slug.current == $slug][0]{
+  let token = (await getSession(request.headers.get("Cookie"))).get("token"), preview = Boolean(token), query2 = import_groq4.default`*[_type == "product" && slug.current == $slug][0]{
     _id,
     title,
     // GROQ can re-shape data in the request!
     "slug": slug.current,
-    "artist": artist->title,
+    "category": category->title,
     // coalesce() returns the first value that is not null
     // so we can ensure we have at least a zero
     "likes": coalesce(likes, 0),
@@ -1224,16 +903,21 @@ var import_jsx_dev_runtime17 = require("react/jsx-dev-runtime"), links3 = () => 
     image,
     content,
     // this is how we extract values from arrays
-    tracks[]{
+    features[]{
       _key,
       title,
       duration
+    },
+    tags[]{
+      _key,
+      title,
+      slug
     }
-  }`, record = await getClient(preview).fetch(query2, params).then((res) => res ? recordZ.parse(res) : null);
-  if (!record)
+  }`, product = await getClient(preview).fetch(query2, params).then((res) => res ? productZ.parse(res) : null);
+  if (!product)
     throw new Response("Not found", { status: 404 });
   return (0, import_node7.json)({
-    record,
+    product,
     preview,
     query: preview ? query2 : null,
     params: preview ? params : null,
@@ -1241,24 +925,8 @@ var import_jsx_dev_runtime17 = require("react/jsx-dev-runtime"), links3 = () => 
   });
 };
 function RecordPage() {
-  let { record, preview, query: query2, params, token } = (0, import_react7.useLoaderData)();
-  return preview && query2 && params && token ? /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_preview_kit2.PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Record, { ...record }, void 0, !1, {
-    fileName: "app/routes/$slug.tsx",
-    lineNumber: 118,
-    columnNumber: 34
-  }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(PreviewRecord, { query: query2, params, token }, void 0, !1, {
-    fileName: "app/routes/$slug.tsx",
-    lineNumber: 119,
-    columnNumber: 9
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/$slug.tsx",
-    lineNumber: 118,
-    columnNumber: 7
-  }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Record, { ...record }, void 0, !1, {
-    fileName: "app/routes/$slug.tsx",
-    lineNumber: 124,
-    columnNumber: 10
-  }, this);
+  let { product, preview, query: query2, params, token } = (0, import_react7.useLoaderData)();
+  return preview && query2 && params && token ? /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_preview_kit2.PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Record, { ...product }), children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(PreviewRecord, { query: query2, params, token }) }) : /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Record, { ...product });
 }
 
 // app/routes/index.tsx
@@ -1270,113 +938,53 @@ __export(routes_exports, {
   meta: () => meta4
 });
 var import_node8 = require("@remix-run/node"), import_react8 = require("@remix-run/react"), import_groq5 = __toESM(require("groq")), import_remix_utils3 = require("remix-utils");
-var import_jsx_dev_runtime18 = require("react/jsx-dev-runtime"), links4 = () => [{ rel: "stylesheet", href: tailwind_default }], meta4 = (data) => {
+var import_jsx_runtime18 = require("react/jsx-runtime"), links4 = () => [{ rel: "stylesheet", href: tailwind_default }], meta4 = (data) => {
   let home = data.parentsData.root.home;
   return {
     title: [home.title, home.siteTitle].filter(Boolean).join(" | ")
   };
 }, loader5 = async (props) => {
-  let query2 = import_groq5.default`*[_type == "record"][0...12]{
+  let query2 = import_groq5.default`*[_type == "product"][0...12]{
     _id,
     title,
     "slug": slug.current,
-    "artist": artist->title,
+    "category": category->title,
     image
-  }`, records = await getClient().fetch(query2).then((res) => res ? recordStubsZ.parse(res) : null);
-  if (!records)
+  }`, products = await getClient().fetch(query2).then((res) => res ? productStubsZ.parse(res) : null);
+  if (!products)
     throw new Response("Not found", { status: 404 });
-  return (0, import_node8.json)({ records });
+  return (0, import_node8.json)({ products });
 };
 function Index() {
-  let { records } = (0, import_react8.useLoaderData)(), { home } = (0, import_remix_utils3.useRouteData)("root");
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(Layout, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "grid grid-cols-1 gap-6 md:gap-12", children: [
-    home.title ? /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(Title, { children: home.title }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 54,
-      columnNumber: 23
-    }, this) : null,
-    records.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("ul", { className: "grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-12 lg:grid-cols-4", children: records.map((record) => /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("li", { className: "group relative flex flex-col", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "relative overflow-hidden transition-all duration-200 ease-in-out group-hover:scale-105 group-hover:opacity-90", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "absolute z-0 h-48 w-[200%] translate-x-20 translate-y-20 -rotate-45 bg-gradient-to-b from-white to-transparent opacity-25 mix-blend-overlay transition-transform duration-500 ease-in-out group-hover:translate-y-10 group-hover:translate-x-10 group-hover:opacity-75" }, void 0, !1, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 60,
-          columnNumber: 19
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(RecordCover, { image: record.image, title: record.title }, void 0, !1, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 61,
-          columnNumber: 19
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 59,
-        columnNumber: 17
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-col", children: [
-        record != null && record.slug ? /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
+  let { products } = (0, import_react8.useLoaderData)(), { home } = (0, import_remix_utils3.useRouteData)("root");
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Layout, { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "grid grid-cols-1 gap-6 md:gap-12", children: [
+    home.title ? /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Title, { children: home.title }) : null,
+    products.length > 0 ? /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("ul", { className: "grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-12 lg:grid-cols-4", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("li", { className: "group relative flex flex-col", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "relative overflow-hidden transition-all duration-200 ease-in-out group-hover:scale-105 group-hover:opacity-90", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "absolute z-0 h-48 w-[200%] translate-x-20 translate-y-20 -rotate-45 bg-gradient-to-b from-white to-transparent opacity-25 mix-blend-overlay transition-transform duration-500 ease-in-out group-hover:translate-y-10 group-hover:translate-x-10 group-hover:opacity-75" }),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(RecordCover, { image: product.image, title: product.title })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "flex flex-col", children: [
+        product != null && product.slug ? /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
           import_react8.Link,
           {
             prefetch: "intent",
-            to: record == null ? void 0 : record.slug,
-            className: "text-bold pt-4 text-xl font-bold tracking-tighter transition-colors duration-100 ease-in-out hover:bg-cyan-400 hover:text-white md:text-3xl",
+            to: product == null ? void 0 : product.slug,
+            className: "text-bold featureing-tighter pt-4 text-xl font-bold transition-colors duration-100 ease-in-out hover:bg-cyan-400 hover:text-white md:text-3xl",
             children: [
-              record.title,
-              /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("span", { className: "absolute inset-0" }, void 0, !1, {
-                fileName: "app/routes/index.tsx",
-                lineNumber: 72,
-                columnNumber: 23
-              }, this)
+              product.title,
+              /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "absolute inset-0" })
             ]
-          },
-          void 0,
-          !0,
-          {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 65,
-            columnNumber: 21
-          },
-          this
-        ) : /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("span", { className: "pt-4 text-xl font-bold", children: record.title }, void 0, !1, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 75,
-          columnNumber: 21
-        }, this),
-        record != null && record.artist ? /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("span", { className: "bg-black font-bold leading-none tracking-tighter text-white", children: record.artist }, void 0, !1, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 78,
-          columnNumber: 21
-        }, this) : null
-      ] }, void 0, !0, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 63,
-        columnNumber: 17
-      }, this)
-    ] }, record._id, !0, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 58,
-      columnNumber: 15
-    }, this)) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 56,
-      columnNumber: 11
-    }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("p", { children: "No records found" }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 87,
-      columnNumber: 11
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 53,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 52,
-    columnNumber: 5
-  }, this);
+          }
+        ) : /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "pt-4 text-xl font-bold", children: product.title }),
+        product != null && product.category ? /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "featureing-tighter bg-black font-bold leading-none text-white", children: product.category }) : null
+      ] })
+    ] }, product._id)) }) : /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("p", { children: "No products found" })
+  ] }) });
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "506d663c", entry: { module: "/build/entry.client-SW4EYPZN.js", imports: ["/build/_shared/chunk-T5F5625V.js", "/build/_shared/chunk-5BVC5GJT.js", "/build/_shared/chunk-WA32A3L3.js", "/build/_shared/chunk-247AAKB7.js", "/build/_shared/chunk-CUPSZOF3.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-DUSLR3OO.js", imports: ["/build/_shared/chunk-VFPAK4Q6.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$slug": { id: "routes/$slug", parentId: "root", path: ":slug", index: void 0, caseSensitive: void 0, module: "/build/routes/$slug-PDPP4KFU.js", imports: ["/build/_shared/chunk-XOLG3HXY.js", "/build/_shared/chunk-GB6D6E4Q.js", "/build/_shared/chunk-B5AL77MM.js", "/build/_shared/chunk-PBYB3QU6.js", "/build/_shared/chunk-RZ47BF3R.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-PG3IVQT7.js", imports: ["/build/_shared/chunk-GB6D6E4Q.js", "/build/_shared/chunk-B5AL77MM.js", "/build/_shared/chunk-RZ47BF3R.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resource/preview": { id: "routes/resource/preview", parentId: "root", path: "resource/preview", index: void 0, caseSensitive: void 0, module: "/build/routes/resource/preview-LKSRCSFF.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resource/toggle-theme": { id: "routes/resource/toggle-theme", parentId: "root", path: "resource/toggle-theme", index: void 0, caseSensitive: void 0, module: "/build/routes/resource/toggle-theme-2UZDET2H.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/studio/$": { id: "routes/studio/$", parentId: "root", path: "studio/*", index: void 0, caseSensitive: void 0, module: "/build/routes/studio/$-Y4YCH7KD.js", imports: ["/build/_shared/chunk-XOLG3HXY.js", "/build/_shared/chunk-B5AL77MM.js", "/build/_shared/chunk-3PXH2B7D.js", "/build/_shared/chunk-BPU3GXCB.js", "/build/_shared/chunk-PBYB3QU6.js", "/build/_shared/chunk-RZ47BF3R.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, url: "/build/manifest-506D663C.js" };
+var assets_manifest_default = { version: "d3751bc8", entry: { module: "/build/entry.client-5GWE43QM.js", imports: ["/build/_shared/chunk-6QSCAR5C.js", "/build/_shared/chunk-BT6BK5OL.js", "/build/_shared/chunk-TE2R5WIX.js", "/build/_shared/chunk-ADMCF34Z.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-TDLKFLN2.js", imports: ["/build/_shared/chunk-PM5GQWRX.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$slug": { id: "routes/$slug", parentId: "root", path: ":slug", index: void 0, caseSensitive: void 0, module: "/build/routes/$slug-EILWYTBE.js", imports: ["/build/_shared/chunk-6LR2WKBX.js", "/build/_shared/chunk-VIEGSFVW.js", "/build/_shared/chunk-2GFJKGCD.js", "/build/_shared/chunk-LCNKOXSN.js", "/build/_shared/chunk-WRAB7R2F.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-DURG3XDG.js", imports: ["/build/_shared/chunk-VIEGSFVW.js", "/build/_shared/chunk-2GFJKGCD.js", "/build/_shared/chunk-WRAB7R2F.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resource/preview": { id: "routes/resource/preview", parentId: "root", path: "resource/preview", index: void 0, caseSensitive: void 0, module: "/build/routes/resource/preview-S7DZOXRI.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resource/toggle-theme": { id: "routes/resource/toggle-theme", parentId: "root", path: "resource/toggle-theme", index: void 0, caseSensitive: void 0, module: "/build/routes/resource/toggle-theme-SX4PZDS3.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/studio/$": { id: "routes/studio/$", parentId: "root", path: "studio/*", index: void 0, caseSensitive: void 0, module: "/build/routes/studio/$-OHLAVDZU.js", imports: ["/build/_shared/chunk-6LR2WKBX.js", "/build/_shared/chunk-2GFJKGCD.js", "/build/_shared/chunk-6ORFEM36.js", "/build/_shared/chunk-2WXH3QX5.js", "/build/_shared/chunk-LCNKOXSN.js", "/build/_shared/chunk-WRAB7R2F.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, url: "/build/manifest-D3751BC8.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !0, unstable_vanillaExtract: !1, v2_errorBoundary: !1, v2_meta: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -1438,4 +1046,3 @@ var assetsBuildDirectory = "public/build", future = { unstable_cssModules: !1, u
   publicPath,
   routes
 });
-//# sourceMappingURL=index.js.map

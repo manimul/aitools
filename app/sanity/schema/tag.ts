@@ -1,27 +1,23 @@
 /* eslint-disable prettier/prettier */
-
-import { Home } from 'lucide-react';
+import { Tags } from 'lucide-react';
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
-  name: 'home',
-  title: 'Home',
+  name: 'tag',
+  title: 'Tag',
   type: 'document',
-  icon: Home,
+  icon: Tags,
   fields: [
     defineField({
       name: 'title',
       type: 'string',
     }),
     defineField({
-      name: 'siteTitle',
-      type: 'string',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+      },
     }),
   ],
-  preview: {
-    select: {
-      title: 'title',
-      category: 'siteTitle',
-    },
-  },
 });

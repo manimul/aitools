@@ -7,7 +7,7 @@ export default function Logo() {
   const { home } = useRouteData(`root`) as { home: HomeDocument };
 
   return (
-    <p className='text-lg font-bold tracking-tighter text-black dark:text-white lg:text-2xl'>
+    <p className='featureing-tighter text-lg font-bold text-black dark:text-white lg:text-2xl'>
       <Link to='/'>{home.siteTitle}</Link>
     </p>
   );

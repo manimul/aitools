@@ -1,7 +1,8 @@
-import artist from '~/sanity/schema/artist'
-import genre from '~/sanity/schema/genre'
-import home from '~/sanity/schema/home'
-import record from '~/sanity/schema/record'
-import track from '~/sanity/schema/track'
+/* eslint-disable prettier/prettier */
+import category from '~/sanity/schema/category';
+import tag from '~/sanity/schema/tag';
+import home from '~/sanity/schema/home';
+import product from '~/sanity/schema/product';
+import feature from '~/sanity/schema/feature';
 
-export default [record, artist, track, genre, home]
+export default [product, category, feature, tag, home];

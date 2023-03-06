@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import type {
   DefaultDocumentNodeResolver,
   StructureResolver,
@@ -22,10 +23,10 @@ export const structure: StructureResolver = (S) =>
         .title('Home'),
       S.divider(),
       // Document lists
-      S.documentTypeListItem('record').title('Products').icon(Disc),
-      S.documentTypeListItem('artist').title('Category').icon(Users),
+      S.documentTypeListItem('product').title('Products').icon(Disc),
+      S.documentTypeListItem('category').title('Category').icon(Users),
       S.divider(),
-      S.documentTypeListItem('genre').title('Tags').icon(Tags),
+      S.documentTypeListItem('tag').title('Tags').icon(Tags),
     ]);
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (
@@ -36,7 +37,7 @@ export const defaultDocumentNode: DefaultDocumentNodeResolver = (
   const client = getClient({ apiVersion });
 
   switch (schemaType) {
-    case `record`:
+    case `product`:
       return S.document().views([
         S.view.form(),
         S.view

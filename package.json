@@ -4,7 +4,9 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "deploy": "fly deploy --remote-only",
+    "start": "remix-serve build"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
