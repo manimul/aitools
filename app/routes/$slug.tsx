@@ -121,11 +121,11 @@ export const loader = async ({ params, request }: LoaderArgs) => {
       title,
       description
 
-    },    tags[]{
-      _key,
-      title,
-      slug
-    }
+    },  tags[]{
+    _key,
+    "title": @->title,
+    "slug": @->slug.current
+  }
   }`;
 
   const product = await getClient(preview)

@@ -29,6 +29,8 @@ export const loader = async (props: LoaderArgs) => {
   const query = groq`*[_type == "product"][0...12]{
     _id,
     title,
+    metadescription,
+
     "slug": slug.current,
     "category": category->title,
     image
@@ -61,12 +63,12 @@ export default function Index() {
                   <div className='absolute z-0 h-48 w-[200%] translate-x-20 translate-y-20 -rotate-45 bg-gradient-to-b from-white to-transparent opacity-25 mix-blend-overlay transition-transform duration-500 ease-in-out group-hover:translate-y-10 group-hover:translate-x-10 group-hover:opacity-75' />
                   <AlbumCover image={product.image} title={product.title} />
                 </div>
-                <div className='flex flex-col'>
+                <div className='flex flex-col space-y-2'>
                   {product?.slug ? (
                     <Link
                       prefetch='intent'
                       to={product?.slug}
-                      className='text-bold featureing-tighter pt-4 text-xl font-bold transition-colors duration-100 ease-in-out hover:bg-cyan-400 hover:text-white md:text-3xl'
+                      className='text-bold  d:text-3xl pt-4 text-xl font-bold transition-colors duration-100  ease-in-out'
                     >
                       {product.title}
                       {/* Makes this entire block clickable */}
@@ -78,8 +80,13 @@ export default function Index() {
                     </span>
                   )}
                   {product?.category ? (
-                    <span className='featureing-tighter bg-black font-bold leading-none text-white'>
+                    <span className=' font-bold leading-none '>
                       {product.category}
+                    </span>
+                  ) : null}
+                  {product?.metadescription ? (
+                    <span className=' ... truncate  font-light leading-none '>
+                      {product.metadescription}
                     </span>
                   ) : null}
                 </div>

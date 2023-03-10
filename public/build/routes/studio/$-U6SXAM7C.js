@@ -134,6 +134,10 @@ var home_default = defineType({
       type: "string"
     }),
     defineField({
+      name: "logo",
+      type: "image"
+    }),
+    defineField({
       name: "siteTitle",
       type: "string"
     })
@@ -646,4 +650,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/studio/$-3SS3C7ZF.js.map
+//# sourceMappingURL=/build/routes/studio/$-U6SXAM7C.js.map

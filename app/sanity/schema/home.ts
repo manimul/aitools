@@ -14,6 +14,10 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'logo',
+      type: 'image',
+    }),
+    defineField({
       name: 'siteTitle',
       type: 'string',
     }),

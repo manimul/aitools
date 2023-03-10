@@ -17,9 +17,9 @@ export const productZ = z.object({
 
   slug: z.string().nullable(),
   referral: z.string().nullable(),
-  likes: z.number(),
-  dislikes: z.number(),
-  score: z.number(),
+  likes: z.number().nullable(),
+  dislikes: z.number().nullable(),
+  score: z.number().nullable(),
   pricing: z.string().nullable(),
 
   category: z.string().nullable(),
@@ -77,6 +77,8 @@ export const productStubZ = z.object({
   title: z.string().nullable(),
   slug: z.string().nullable(),
   category: z.string().nullable(),
+  metadescription: z.string().nullable(),
+
   image: z.any().nullable(),
 });
 

@@ -9,6 +9,7 @@ import Layout from '~/components/Layout';
 import Title from '~/components/Title';
 import AlbumCover from '~/components/RecordCover';
 import ExitPreview from '~/components/ExitPreview';
+import { Link } from '@remix-run/react';
 
 export default function Record(props: RecordDocument) {
   const {
@@ -16,6 +17,7 @@ export default function Record(props: RecordDocument) {
     title,
     referral,
     category,
+    tags,
     content,
     overview,
     support,
@@ -54,7 +56,7 @@ export default function Record(props: RecordDocument) {
   const starIcons = Array(5)
     .fill(nonYellowStar)
     .map((star, index) => {
-      if (index < score) {
+      if (index < (score ?? 0)) {
         return yellowStar;
       }
       return star;
@@ -62,47 +64,104 @@ export default function Record(props: RecordDocument) {
 
   return (
     <Layout>
-      <article className='flex flex-col items-start gap-4 lg:flex-row lg:gap-12'>
-        <div className='grid-gap-4 mx-auto grid max-w-[70vw] grid-cols-1'>
-          <AlbumCover image={image} title={title} />
-        </div>
-        <div className='flex flex-shrink-0 flex-col gap-4 md:gap-6 lg:w-2/3'>
-          <header>
-            {title ? <Title>{title}</Title> : null}
-            {category ? (
-              <h2 className='featureing-tighter bg-black text-2xl font-bold text-white'>
-                {category}
-              </h2>
+      <section className=' mb-6 '>
+        <div className='mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
+          <div className='mr-auto space-y-3 place-self-center lg:col-span-7'>
+            <header>
+              {category ? (
+                <h2 className='text-xs  uppercase tracking-widest opacity-70 '>
+                  Category:{' '}
+                  <Link className='underline' to='/'>
+                    {category}
+                  </Link>
+                </h2>
+              ) : null}
+              {title ? <Title>{title}</Title> : null}
+              {content && content?.length > 0 ? (
+                <section className='my-6 text-6xl  italic  '>
+                  <SanityContent value={content} />
+                </section>
+              ) : null}
+
+              {tags ? (
+                <>
+                  {tags.map((tag) => (
+                    <div
+                      key={tag._key}
+                      className=' mx-2 my-4  inline-flex rounded bg-green-500 py-1 px-2 lowercase'
+                    >
+                      <Link to={'/tags/' + tag.slug} className='text-xs'>
+                        {tag.title}{' '}
+                      </Link>
+                    </div>
+                  ))}
+                </>
+              ) : null}
+            </header>
+            {referral ? (
+              <a className='text-purple-500 underline' href={referral}>
+                Visit the {title} website
+              </a>
             ) : null}
-          </header>
-          {referral ? (
-            <a className='text-purple-500 underline' href={referral}>
-              Visit the {title} website
-            </a>
-          ) : null}
-          {score ? (
-            <section>
-              <h2 className='text-2xl'>Score</h2>
-              <span className='text-4xl text-yellow-500'></span>
-              <div className='flex items-center'>
-                {starIcons}
-                <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
-                  {score} out of 5
+            {score ? (
+              <section>
+                <h2 className='text-2xl'>Score</h2>
+                <span className='text-4xl text-yellow-500'></span>
+                <div className='flex items-center'>
+                  {starIcons}
+                  <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
+                    {score} out of 5
+                  </p>
+                </div>
+              </section>
+            ) : null}
+            {pricing ? (
+              <section>
+                <h2 className='text-2xl'>Price Range</h2>
+                <p className='text-bold font-serif text-2xl italic text-green-600'>
+                  {' '}
+                  {pricing}
                 </p>
-              </div>
-            </section>
+              </section>
+            ) : null}
+
+            <a
+              href='#'
+              className='inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800'
+            >
+              Read more
+            </a>
+          </div>
+          <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
+            <AlbumCover image={image} title={title} />
+          </div>
+        </div>
+      </section>
+
+      <article className='flex flex-col items-start gap-4 lg:flex-row lg:gap-12'>
+        <div className='grid-gap-4 sticky top-1 mx-auto grid max-w-[70vw] grid-cols-1 space-y-4'>
+          <AlbumCover image={image} title={title} />
+          {features && features?.length > 0 ? (
+            <>
+              <ul className='grid grid-cols-1 divide-y divide-gray-100 rounded border bg-[#f1f1f1] p-4 dark:divide-gray-900 dark:bg-[#111111]'>
+                <li className='featureing-tighter py-3 text-2xl font-bold'>
+                  {features?.length === 1
+                    ? `1 Great Feature`
+                    : `${features?.length} Key Features`}
+                </li>
+                {features.map((feature) => (
+                  <li
+                    key={feature._key}
+                    className='flex items-center justify-between py-3'
+                  >
+                    <span className='text-lg'>{feature.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
           ) : null}
-          {pricing ? (
-            <section>
-              <h2 className='text-2xl'>Price Range</h2>
-              {pricing}
-            </section>
-          ) : null}
-          {content && content?.length > 0 ? (
-            <section className='text-6xl italic'>
-              <SanityContent value={content} />
-            </section>
-          ) : null}
+        </div>
+        <div className=' flex flex-shrink-0 flex-col gap-4 md:gap-4 lg:w-2/3'>
           {overview && overview?.length > 0 ? (
             <section>
               <h2 className='text-2xl'>Overview</h2>
@@ -128,25 +187,6 @@ export default function Record(props: RecordDocument) {
             >
               Try Out Now
             </a>
-          ) : null}
-          {features && features?.length > 0 ? (
-            <>
-              <ul className='grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900'>
-                <li className='featureing-tighter py-3 text-2xl font-bold'>
-                  {features?.length === 1
-                    ? `1 Great Feature`
-                    : `${features?.length} Key Features`}
-                </li>
-                {features.map((feature) => (
-                  <li
-                    key={feature._key}
-                    className='flex items-center justify-between py-3'
-                  >
-                    <span className='text-lg'>{feature.title}</span>
-                  </li>
-                ))}
-              </ul>
-            </>
           ) : null}
 
           {pros && cons && pros?.length > 0 && cons?.length > 0 ? (

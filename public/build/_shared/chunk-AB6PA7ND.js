@@ -26,19 +26,19 @@ function useRouteData(routeId) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-EBPH355U.css";
+var tailwind_default = "/build/_assets/tailwind-XIJUFJE7.css";
 
 // app/components/Logo.tsx
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 function Logo() {
   const { home } = useRouteData(`root`);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "featureing-tighter text-lg font-bold text-black dark:text-white lg:text-2xl", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { to: "/", children: home.siteTitle }, void 0, false, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "featureing-tighter font-mono text-lg font-bold text-black dark:text-white lg:text-2xl", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { to: "/", children: home.siteTitle }, void 0, false, {
     fileName: "app/components/Logo.tsx",
-    lineNumber: 11,
+    lineNumber: 12,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/components/Logo.tsx",
-    lineNumber: 10,
+    lineNumber: 11,
     columnNumber: 5
   }, this);
 }
@@ -46,45 +46,11 @@ function Logo() {
 // app/components/Footer.tsx
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime());
 function Footer() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("header", { className: "border-t border-gray-100 transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "container mx-auto flex items-center justify-between p-4 lg:px-12", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(Logo, {}, void 0, false, {
-      fileName: "app/components/Footer.tsx",
-      lineNumber: 7,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "flex flex-1 flex-col items-end justify-end gap-2 text-sm md:flex-row md:items-center md:gap-5", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("a", { className: "hover:text-cyan-600 dark:hover:text-cyan-200", href: "/studio", children: "Log in to Sanity Studio v3" }, void 0, false, {
-        fileName: "app/components/Footer.tsx",
-        lineNumber: 9,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("a", { className: "hover:text-cyan-600 dark:hover:text-cyan-200", href: "https://sanity.io", children: "Sign up free at Sanity.io" }, void 0, false, {
-        fileName: "app/components/Footer.tsx",
-        lineNumber: 12,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(
-        "a",
-        {
-          className: "hover:text-cyan-600 dark:hover:text-cyan-200",
-          href: "https://github.com/SimeonGriggs/remix-sanity-studio-v3",
-          children: "Clone this project on GitHub"
-        },
-        void 0,
-        false,
-        {
-          fileName: "app/components/Footer.tsx",
-          lineNumber: 15,
-          columnNumber: 11
-        },
-        this
-      )
-    ] }, void 0, true, {
-      fileName: "app/components/Footer.tsx",
-      lineNumber: 8,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, true, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("header", { className: "border-t border-gray-100 transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "container mx-auto flex items-center justify-between p-4 lg:px-12", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(Logo, {}, void 0, false, {
+    fileName: "app/components/Footer.tsx",
+    lineNumber: 7,
+    columnNumber: 9
+  }, this) }, void 0, false, {
     fileName: "app/components/Footer.tsx",
     lineNumber: 6,
     columnNumber: 7
@@ -232,4 +198,4 @@ export {
   Title,
   RecordCover
 };
-//# sourceMappingURL=/build/_shared/chunk-BKRSQNMI.js.map
+//# sourceMappingURL=/build/_shared/chunk-AB6PA7ND.js.map
