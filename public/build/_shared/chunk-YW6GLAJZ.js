@@ -98,30 +98,6 @@ var Tags = createReactComponent("Tags", [
   ["path", { d: "m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19", key: "1cbfv1" }]
 ]);
 
-// node_modules/lucide-react/dist/esm/icons/thumbs-down.js
-var ThumbsDown = createReactComponent("ThumbsDown", [
-  ["path", { d: "M17 14V2", key: "8ymqnk" }],
-  [
-    "path",
-    {
-      d: "M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z",
-      key: "s6e0r"
-    }
-  ]
-]);
-
-// node_modules/lucide-react/dist/esm/icons/thumbs-up.js
-var ThumbsUp = createReactComponent("ThumbsUp", [
-  ["path", { d: "M7 10v12", key: "1qc93n" }],
-  [
-    "path",
-    {
-      d: "M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z",
-      key: "y3tblf"
-    }
-  ]
-]);
-
 // node_modules/lucide-react/dist/esm/icons/users.js
 var Users = createReactComponent("Users", [
   ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
@@ -155,8 +131,6 @@ export {
   Moon,
   Sun,
   Tags,
-  ThumbsDown,
-  ThumbsUp,
   Users
 };
-//# sourceMappingURL=/build/_shared/chunk-B73CHUZR.js.map
+//# sourceMappingURL=/build/_shared/chunk-YW6GLAJZ.js.map

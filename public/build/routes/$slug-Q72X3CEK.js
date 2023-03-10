@@ -1,22 +1,15 @@
 import {
-  secondsToMinutes
-} from "/build/_shared/chunk-XOLG3HXY.js";
-import {
   Layout,
   RecordCover,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-XZJDKSDX.js";
+} from "/build/_shared/chunk-VJHBSRGG.js";
 import {
-  useFetcher,
-  useLoaderData,
-  useLocation
+  useLoaderData
 } from "/build/_shared/chunk-T5F5625V.js";
 import {
-  ThumbsDown,
-  ThumbsUp,
   projectDetails
-} from "/build/_shared/chunk-B73CHUZR.js";
+} from "/build/_shared/chunk-YW6GLAJZ.js";
 import {
   require_groq
 } from "/build/_shared/chunk-VFPAK4Q6.js";
@@ -1036,115 +1029,10 @@ function SanityContent(props) {
   }, this);
 }
 
-// app/components/LikeDislike.tsx
-var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime());
-function LikeDislike(props) {
-  const { id } = props;
-  const fetcher = useFetcher();
-  const location = useLocation();
-  const likes = fetcher.type === "done" ? fetcher.data.likes : props.likes;
-  const dislikes = fetcher.type === "done" ? fetcher.data.dislikes : props.dislikes;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-    fetcher.Form,
-    {
-      action: location.pathname,
-      className: "flex items-center justify-center gap-4 bg-black text-white",
-      method: "post",
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("input", { name: "id", type: "hidden", value: id }, void 0, false, {
-          fileName: "app/components/LikeDislike.tsx",
-          lineNumber: 26,
-          columnNumber: 7
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-          "button",
-          {
-            name: "action",
-            type: "submit",
-            value: "LIKE",
-            disabled: fetcher.state !== "idle",
-            className: "flex items-center gap-2 bg-black p-4 transition-all duration-100 ease-in-out hover:bg-cyan-400 hover:text-black disabled:opacity-50",
-            title: "Like",
-            children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { className: "text-xs font-bold", children: likes }, void 0, false, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 35,
-                columnNumber: 9
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(ThumbsUp, {}, void 0, false, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 36,
-                columnNumber: 9
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { className: "sr-only", children: "Like" }, void 0, false, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 37,
-                columnNumber: 9
-              }, this)
-            ]
-          },
-          void 0,
-          true,
-          {
-            fileName: "app/components/LikeDislike.tsx",
-            lineNumber: 27,
-            columnNumber: 7
-          },
-          this
-        ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-          "button",
-          {
-            name: "action",
-            type: "submit",
-            value: "DISLIKE",
-            disabled: fetcher.state !== "idle",
-            className: "flex items-center gap-2 bg-black p-4 transition-all duration-100 ease-in-out hover:bg-cyan-400 hover:text-black disabled:opacity-50",
-            title: "Dislike",
-            children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(ThumbsDown, {}, void 0, false, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 47,
-                columnNumber: 9
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { className: "text-xs font-bold", children: dislikes }, void 0, false, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 48,
-                columnNumber: 9
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("span", { className: "sr-only", children: "Dislike" }, void 0, false, {
-                fileName: "app/components/LikeDislike.tsx",
-                lineNumber: 49,
-                columnNumber: 9
-              }, this)
-            ]
-          },
-          void 0,
-          true,
-          {
-            fileName: "app/components/LikeDislike.tsx",
-            lineNumber: 39,
-            columnNumber: 7
-          },
-          this
-        )
-      ]
-    },
-    void 0,
-    true,
-    {
-      fileName: "app/components/LikeDislike.tsx",
-      lineNumber: 21,
-      columnNumber: 5
-    },
-    this
-  );
-}
-
 // app/components/ExitPreview.tsx
-var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime());
+var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime());
 function ExitPreview() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "pointer-events-none fixed inset-0 flex h-screen w-screen items-end justify-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("form", { className: "pointer-events-auto", action: "/resource/preview", method: "POST", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "bg-black p-4 font-bold text-white", type: "submit", children: "Exit Preview Mode" }, void 0, false, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "pointer-events-none fixed inset-0 flex h-screen w-screen items-end justify-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("form", { className: "pointer-events-auto", action: "/resource/preview", method: "POST", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("button", { className: "bg-black p-4 font-bold text-white", type: "submit", children: "Exit Preview Mode" }, void 0, false, {
     fileName: "app/components/ExitPreview.tsx",
     lineNumber: 7,
     columnNumber: 9
@@ -1160,52 +1048,216 @@ function ExitPreview() {
 }
 
 // app/components/Product.tsx
-var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime());
+var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime());
 function Record(props) {
-  const { _id, title, category, content, image, features, likes, dislikes } = props;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Layout, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("article", { className: "flex flex-col items-start gap-4 lg:flex-row lg:gap-12", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "grid-gap-4 mx-auto grid max-w-[70vw] grid-cols-1", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(RecordCover, { image, title }, void 0, false, {
+  const {
+    _id,
+    title,
+    referral,
+    category,
+    content,
+    overview,
+    support,
+    ease,
+    image,
+    features,
+    pros,
+    cons,
+    score,
+    pricing
+  } = props;
+  const nonYellowStar = /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+    "svg",
+    {
+      "aria-hidden": "true",
+      className: "h-5 w-5 text-gray-300 dark:text-gray-500",
+      fill: "currentColor",
+      viewBox: "0 0 20 20",
+      xmlns: "http://www.w3.org/2000/svg",
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("path", { d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" }, void 0, false, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 23,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(LikeDislike, { id: _id, likes, dislikes }, void 0, false, {
-        fileName: "app/components/Product.tsx",
-        lineNumber: 24,
-        columnNumber: 11
+        lineNumber: 39,
+        columnNumber: 7
       }, this)
-    ] }, void 0, true, {
+    },
+    void 0,
+    false,
+    {
       fileName: "app/components/Product.tsx",
-      lineNumber: 22,
+      lineNumber: 32,
+      columnNumber: 5
+    },
+    this
+  );
+  const yellowStar = /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+    "svg",
+    {
+      "aria-hidden": "true",
+      className: "h-5 w-5 text-yellow-400",
+      fill: "currentColor",
+      viewBox: "0 0 20 20",
+      xmlns: "http://www.w3.org/2000/svg",
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("path", { d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" }, void 0, false, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 50,
+        columnNumber: 7
+      }, this)
+    },
+    void 0,
+    false,
+    {
+      fileName: "app/components/Product.tsx",
+      lineNumber: 43,
+      columnNumber: 5
+    },
+    this
+  );
+  const starIcons = Array(5).fill(nonYellowStar).map((star, index) => {
+    if (index < score) {
+      return yellowStar;
+    }
+    return star;
+  });
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Layout, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("article", { className: "flex flex-col items-start gap-4 lg:flex-row lg:gap-12", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "grid-gap-4 mx-auto grid max-w-[70vw] grid-cols-1", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(RecordCover, { image, title }, void 0, false, {
+      fileName: "app/components/Product.tsx",
+      lineNumber: 67,
+      columnNumber: 11
+    }, this) }, void 0, false, {
+      fileName: "app/components/Product.tsx",
+      lineNumber: 66,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex flex-shrink-0 flex-col gap-4 md:gap-6 lg:w-2/3", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("header", { children: [
-        title ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Title, { children: title }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "flex flex-shrink-0 flex-col gap-4 md:gap-6 lg:w-2/3", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { children: [
+        title ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Title, { children: title }, void 0, false, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 28,
+          lineNumber: 71,
           columnNumber: 22
         }, this) : null,
-        category ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h2", { className: "featureing-tighter bg-black text-2xl font-bold text-white", children: category }, void 0, false, {
+        category ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "featureing-tighter bg-black text-2xl font-bold text-white", children: category }, void 0, false, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 30,
+          lineNumber: 73,
           columnNumber: 15
         }, this) : null
       ] }, void 0, true, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 27,
+        lineNumber: 70,
         columnNumber: 11
       }, this),
-      content && (content == null ? void 0 : content.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(SanityContent, { value: content }, void 0, false, {
+      referral ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("a", { className: "text-purple-500 underline", href: referral, children: [
+        "Visit the ",
+        title,
+        " website"
+      ] }, void 0, true, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 36,
+        lineNumber: 79,
         columnNumber: 13
       }, this) : null,
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(
+      score ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-2xl", children: "Score" }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 85,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-4xl text-yellow-500" }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 86,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "flex items-center", children: [
+          starIcons,
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("p", { className: "ml-2 text-sm font-medium text-gray-500 dark:text-gray-400", children: [
+            score,
+            " out of 5"
+          ] }, void 0, true, {
+            fileName: "app/components/Product.tsx",
+            lineNumber: 89,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, true, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 87,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 84,
+        columnNumber: 13
+      }, this) : null,
+      pricing ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-2xl", children: "Price Range" }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 97,
+          columnNumber: 15
+        }, this),
+        pricing
+      ] }, void 0, true, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 96,
+        columnNumber: 13
+      }, this) : null,
+      content && (content == null ? void 0 : content.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { className: "text-6xl italic", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(SanityContent, { value: content }, void 0, false, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 103,
+        columnNumber: 15
+      }, this) }, void 0, false, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 102,
+        columnNumber: 13
+      }, this) : null,
+      overview && (overview == null ? void 0 : overview.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-2xl", children: "Overview" }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 108,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(SanityContent, { value: overview }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 109,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 107,
+        columnNumber: 13
+      }, this) : null,
+      ease && (ease == null ? void 0 : ease.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { className: "mt-6 border-t border-gray-400 py-6", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-2xl ", children: "Ease of Use" }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 114,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(SanityContent, { value: ease }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 115,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 113,
+        columnNumber: 13
+      }, this) : null,
+      support && (support == null ? void 0 : support.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { className: "mt-6 border-t border-gray-400 py-6", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-2xl ", children: "Customer Support" }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 120,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(SanityContent, { value: support }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 121,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 119,
+        columnNumber: 13
+      }, this) : null,
+      referral ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
         "a",
         {
-          href: "www.test.com",
+          href: referral,
           className: "mr-auto w-auto border-2 border-purple-500 py-4 px-12 text-purple-500",
           children: "Try Out Now"
         },
@@ -1213,64 +1265,148 @@ function Record(props) {
         false,
         {
           fileName: "app/components/Product.tsx",
-          lineNumber: 38,
-          columnNumber: 11
+          lineNumber: 125,
+          columnNumber: 13
         },
         this
-      ),
-      features && (features == null ? void 0 : features.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_jsx_dev_runtime5.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("li", { className: "featureing-tighter py-3 text-2xl font-bold", children: (features == null ? void 0 : features.length) === 1 ? `1 Feature` : `${features == null ? void 0 : features.length} Key Features` }, void 0, false, {
+      ) : null,
+      features && (features == null ? void 0 : features.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "featureing-tighter py-3 text-2xl font-bold", children: (features == null ? void 0 : features.length) === 1 ? `1 Great Feature` : `${features == null ? void 0 : features.length} Key Features` }, void 0, false, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 47,
+          lineNumber: 135,
           columnNumber: 17
         }, this),
-        features.map((feature) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(
+        features.map((feature) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
           "li",
           {
             className: "flex items-center justify-between py-3",
-            children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("span", { className: "text-lg", children: feature.title }, void 0, false, {
-                fileName: "app/components/Product.tsx",
-                lineNumber: 57,
-                columnNumber: 21
-              }, this),
-              feature.duration ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("span", { className: "text-sm font-bold", children: secondsToMinutes(feature.duration) }, void 0, false, {
-                fileName: "app/components/Product.tsx",
-                lineNumber: 59,
-                columnNumber: 23
-              }, this) : null
-            ]
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-lg", children: feature.title }, void 0, false, {
+              fileName: "app/components/Product.tsx",
+              lineNumber: 145,
+              columnNumber: 21
+            }, this)
           },
           feature._key,
-          true,
+          false,
           {
             fileName: "app/components/Product.tsx",
-            lineNumber: 53,
+            lineNumber: 141,
             columnNumber: 19
           },
           this
         ))
       ] }, void 0, true, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 46,
+        lineNumber: 134,
         columnNumber: 15
       }, this) }, void 0, false, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 45,
+        lineNumber: 133,
+        columnNumber: 13
+      }, this) : null,
+      pros && cons && (pros == null ? void 0 : pros.length) > 0 && (cons == null ? void 0 : cons.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: " py-3 text-2xl font-bold", children: "Pros & Cons" }, void 0, false, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 154,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "grid grid-cols-2 divide-x divide-gray-100  dark:divide-gray-900", children: [
+          pros && (pros == null ? void 0 : pros.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "p-4", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { children: "Pros" }, void 0, false, {
+              fileName: "app/components/Product.tsx",
+              lineNumber: 158,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: pros.map((pro) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+              "li",
+              {
+                className: "flex items-center justify-between py-3",
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-lg", children: [
+                  "\u{1F44D} ",
+                  pro.title
+                ] }, void 0, true, {
+                  fileName: "app/components/Product.tsx",
+                  lineNumber: 165,
+                  columnNumber: 27
+                }, this)
+              },
+              pro._key,
+              false,
+              {
+                fileName: "app/components/Product.tsx",
+                lineNumber: 161,
+                columnNumber: 25
+              },
+              this
+            )) }, void 0, false, {
+              fileName: "app/components/Product.tsx",
+              lineNumber: 159,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, true, {
+            fileName: "app/components/Product.tsx",
+            lineNumber: 157,
+            columnNumber: 19
+          }, this) : null,
+          cons && (cons == null ? void 0 : cons.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "p-4", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-sm uppercase", children: "Cons" }, void 0, false, {
+              fileName: "app/components/Product.tsx",
+              lineNumber: 173,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: cons.map((con) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+              "li",
+              {
+                className: "flex items-center justify-between py-3",
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-lg", children: [
+                  "\u{1F44E} ",
+                  con.title
+                ] }, void 0, true, {
+                  fileName: "app/components/Product.tsx",
+                  lineNumber: 181,
+                  columnNumber: 27
+                }, this)
+              },
+              con._key,
+              false,
+              {
+                fileName: "app/components/Product.tsx",
+                lineNumber: 177,
+                columnNumber: 25
+              },
+              this
+            )) }, void 0, false, {
+              fileName: "app/components/Product.tsx",
+              lineNumber: 175,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, true, {
+            fileName: "app/components/Product.tsx",
+            lineNumber: 172,
+            columnNumber: 19
+          }, this) : null
+        ] }, void 0, true, {
+          fileName: "app/components/Product.tsx",
+          lineNumber: 155,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "app/components/Product.tsx",
+        lineNumber: 153,
         columnNumber: 13
       }, this) : null
     ] }, void 0, true, {
       fileName: "app/components/Product.tsx",
-      lineNumber: 26,
+      lineNumber: 69,
       columnNumber: 9
     }, this)
   ] }, void 0, true, {
     fileName: "app/components/Product.tsx",
-    lineNumber: 21,
+    lineNumber: 65,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/components/Product.tsx",
-    lineNumber: 20,
+    lineNumber: 64,
     columnNumber: 5
   }, this);
 }
@@ -1279,26 +1415,26 @@ var usePreview = definePreview({ projectId, dataset });
 function PreviewRecord(props) {
   const { query: query2, params, token } = props;
   const data = usePreview(token != null ? token : null, query2, params);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_jsx_dev_runtime5.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ExitPreview, {}, void 0, false, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ExitPreview, {}, void 0, false, {
       fileName: "app/components/Product.tsx",
-      lineNumber: 90,
+      lineNumber: 212,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Record, { ...data }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Record, { ...data }, void 0, false, {
       fileName: "app/components/Product.tsx",
-      lineNumber: 91,
+      lineNumber: 213,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/components/Product.tsx",
-    lineNumber: 89,
+    lineNumber: 211,
     columnNumber: 5
   }, this);
 }
 
 // app/routes/$slug.tsx
-var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
+var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime());
 var links = () => {
   return [{ rel: "stylesheet", href: tailwind_default }];
 };
@@ -1311,23 +1447,23 @@ var meta = ({ data, parentsData }) => {
 function RecordPage() {
   const { product, preview, query: query2, params, token } = useLoaderData();
   if (preview && query2 && params && token) {
-    return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(Record, { ...product }, void 0, false, {
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Record, { ...product }, void 0, false, {
       fileName: "app/routes/$slug.tsx",
-      lineNumber: 136,
+      lineNumber: 149,
       columnNumber: 34
-    }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(PreviewRecord, { query: query2, params, token }, void 0, false, {
+    }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(PreviewRecord, { query: query2, params, token }, void 0, false, {
       fileName: "app/routes/$slug.tsx",
-      lineNumber: 137,
+      lineNumber: 150,
       columnNumber: 9
     }, this) }, void 0, false, {
       fileName: "app/routes/$slug.tsx",
-      lineNumber: 136,
+      lineNumber: 149,
       columnNumber: 7
     }, this);
   }
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(Record, { ...product }, void 0, false, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Record, { ...product }, void 0, false, {
     fileName: "app/routes/$slug.tsx",
-    lineNumber: 142,
+    lineNumber: 155,
     columnNumber: 10
   }, this);
 }
@@ -1336,4 +1472,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/$slug-NDGVHWJZ.js.map
+//# sourceMappingURL=/build/routes/$slug-Q72X3CEK.js.map

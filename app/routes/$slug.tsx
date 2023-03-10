@@ -90,13 +90,26 @@ export const loader = async ({ params, request }: LoaderArgs) => {
     // https://www.simeongriggs.dev/type-safe-groq-queries-for-sanity-data-with-zod
     image,
     content,
+    overview,
+    score,
+    referral,
+    pricing,
+    ease,
+    support,
     // this is how we extract values from arrays
     features[]{
       _key,
       title,
       duration
     },
-    tags[]{
+    pros[]{
+      _key,
+      title,
+    },
+    cons[]{
+      _key,
+      title,
+    },    tags[]{
       _key,
       title,
       slug

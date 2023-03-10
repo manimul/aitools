@@ -47,17 +47,16 @@ export default defineType({
       type: 'url',
       group: 'details',
     }),
+
     defineField({
-      name: 'likes',
+      name: 'score',
       type: 'number',
-      readOnly: true,
       fieldset: 'rating',
     }),
     defineField({
-      name: 'dislikes',
-      type: 'number',
-      readOnly: true,
-      fieldset: 'rating',
+      name: 'pricing',
+      type: 'string',
+      group: 'details',
     }),
     defineField({
       name: 'category',
@@ -101,9 +100,28 @@ export default defineType({
       of: [{ type: 'block' }, { type: 'image' }],
       group: 'editorial',
     }),
+    defineField({
+      name: 'support',
+      type: 'array',
+      of: [{ type: 'block' }, { type: 'image' }],
+      group: 'editorial',
+    }),
 
     defineField({
       name: 'features',
+      type: 'array',
+      of: [{ type: 'feature' }],
+      group: 'features',
+    }),
+
+    defineField({
+      name: 'pros',
+      type: 'array',
+      of: [{ type: 'feature' }],
+      group: 'features',
+    }),
+    defineField({
+      name: 'cons',
       type: 'array',
       of: [{ type: 'feature' }],
       group: 'features',

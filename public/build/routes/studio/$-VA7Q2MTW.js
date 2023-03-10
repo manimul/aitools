@@ -1,13 +1,10 @@
 import {
-  secondsToMinutes
-} from "/build/_shared/chunk-XOLG3HXY.js";
-import {
   Disc,
   Home,
   Tags,
   Users,
   projectDetails
-} from "/build/_shared/chunk-B73CHUZR.js";
+} from "/build/_shared/chunk-YW6GLAJZ.js";
 import {
   require_groq
 } from "/build/_shared/chunk-VFPAK4Q6.js";
@@ -18,7 +15,6 @@ import {
   Box,
   Button,
   Card,
-  Code,
   CopyIcon,
   Flex,
   LeaveIcon,
@@ -197,16 +193,14 @@ var product_default = defineType({
       group: "details"
     }),
     defineField({
-      name: "likes",
+      name: "score",
       type: "number",
-      readOnly: true,
       fieldset: "rating"
     }),
     defineField({
-      name: "dislikes",
-      type: "number",
-      readOnly: true,
-      fieldset: "rating"
+      name: "pricing",
+      type: "string",
+      group: "details"
     }),
     defineField({
       name: "category",
@@ -251,7 +245,25 @@ var product_default = defineType({
       group: "editorial"
     }),
     defineField({
+      name: "support",
+      type: "array",
+      of: [{ type: "block" }, { type: "image" }],
+      group: "editorial"
+    }),
+    defineField({
       name: "features",
+      type: "array",
+      of: [{ type: "feature" }],
+      group: "features"
+    }),
+    defineField({
+      name: "pros",
+      type: "array",
+      of: [{ type: "feature" }],
+      group: "features"
+    }),
+    defineField({
+      name: "cons",
       type: "array",
       of: [{ type: "feature" }],
       group: "features"
@@ -273,27 +285,6 @@ var product_default = defineType({
   }
 });
 
-// app/sanity/components/Duration.tsx
-var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
-function Duration(props) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Flex, { gap: 3, align: "center", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Box, { flex: 1, children: props.renderDefault(props) }, void 0, false, {
-      fileName: "app/sanity/components/Duration.tsx",
-      lineNumber: 9,
-      columnNumber: 7
-    }, this),
-    props.value ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Code, { size: 4, children: secondsToMinutes(props.value) }, void 0, false, {
-      fileName: "app/sanity/components/Duration.tsx",
-      lineNumber: 10,
-      columnNumber: 22
-    }, this) : null
-  ] }, void 0, true, {
-    fileName: "app/sanity/components/Duration.tsx",
-    lineNumber: 8,
-    columnNumber: 5
-  }, this);
-}
-
 // app/sanity/schema/feature.ts
 var feature_default = defineType({
   name: "feature",
@@ -303,25 +294,15 @@ var feature_default = defineType({
     defineField({
       name: "title",
       type: "string"
-    }),
-    defineField({
-      name: "duration",
-      description: "Time in seconds",
-      type: "number",
-      components: {
-        input: Duration
-      }
     })
   ],
   preview: {
     select: {
-      title: "title",
-      duration: "duration"
+      title: "title"
     },
-    prepare({ title, duration }) {
+    prepare({ title }) {
       return {
-        title,
-        subtitle: secondsToMinutes(duration)
+        title
       };
     }
   }
@@ -606,7 +587,7 @@ var config = defineConfig({
 });
 
 // app/routes/studio/$.tsx
-var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime());
+var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 var meta = () => ({
   title: "Sanity Studio",
   robots: "noindex"
@@ -615,7 +596,7 @@ var links = () => {
   return [{ rel: "stylesheet", href: studio_default }];
 };
 function StudioPage() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(ClientOnly, { children: () => /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ClientOnly, { children: () => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
     Studio,
     {
       config
@@ -639,4 +620,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/studio/$-GE4CRBYW.js.map
+//# sourceMappingURL=/build/routes/studio/$-VA7Q2MTW.js.map

@@ -8,7 +8,7 @@ import {
   Moon,
   Sun,
   projectDetails
-} from "/build/_shared/chunk-B73CHUZR.js";
+} from "/build/_shared/chunk-YW6GLAJZ.js";
 import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-5BVC5GJT.js";
@@ -26,7 +26,7 @@ function useRouteData(routeId) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-P3CBEONE.css";
+var tailwind_default = "/build/_assets/tailwind-OCJIPHLZ.css";
 
 // app/components/Logo.tsx
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
@@ -232,4 +232,4 @@ export {
   Title,
   RecordCover
 };
-//# sourceMappingURL=/build/_shared/chunk-XZJDKSDX.js.map
+//# sourceMappingURL=/build/_shared/chunk-VJHBSRGG.js.map
