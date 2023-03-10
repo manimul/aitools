@@ -1,0 +1,14 @@
+/* app/styles/studio.css */
+html {
+  background-color: #111;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+/*# sourceMappingURL=/build/_assets/studio-5Q3ECAKK.css.map */

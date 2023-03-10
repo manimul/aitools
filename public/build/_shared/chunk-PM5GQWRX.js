@@ -1,1 +1,0 @@
-import{c as g}from"/build/_shared/chunk-ADMCF34Z.js";var d=g((i,a)=>{"use strict";a.exports=function(t){for(var n=arguments.length,u=new Array(n>1?n-1:0),r=1;r<n;r++)u[r-1]=arguments[r];var e=t.length-1;return t.slice(0,e).reduce(function(c,o,f){return c+o+u[f]},"")+t[e]}});export{d as a};

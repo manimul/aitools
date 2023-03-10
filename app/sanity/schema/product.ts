@@ -72,17 +72,36 @@ export default defineType({
       group: 'details',
     }),
     defineField({
+      name: 'image',
+      type: 'image',
+      options: { hotspot: true },
+      group: 'editorial',
+    }),
+    defineField({
+      name: 'gallery',
+      type: 'array',
+      of: [{ type: 'image' }],
+      group: 'editorial',
+    }),
+    defineField({
       name: 'content',
       type: 'array',
       of: [{ type: 'block' }, { type: 'image' }],
       group: 'editorial',
     }),
     defineField({
-      name: 'image',
-      type: 'image',
-      options: { hotspot: true },
+      name: 'overview',
+      type: 'array',
+      of: [{ type: 'block' }, { type: 'image' }],
       group: 'editorial',
     }),
+    defineField({
+      name: 'ease',
+      type: 'array',
+      of: [{ type: 'block' }, { type: 'image' }],
+      group: 'editorial',
+    }),
+
     defineField({
       name: 'features',
       type: 'array',
