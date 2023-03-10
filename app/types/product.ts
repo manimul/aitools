@@ -12,6 +12,9 @@ import { z } from 'zod';
 export const productZ = z.object({
   _id: z.string(),
   title: z.string().nullable(),
+  metatitle: z.string().nullable(),
+  metadescription: z.string().nullable(),
+
   slug: z.string().nullable(),
   referral: z.string().nullable(),
   likes: z.number(),
@@ -25,7 +28,7 @@ export const productZ = z.object({
       z.object({
         _key: z.string(),
         title: z.string().nullable(),
-        duration: z.number().nullable(),
+        description: z.string().nullable(),
       })
     )
     .nullable(),
@@ -34,6 +37,7 @@ export const productZ = z.object({
       z.object({
         _key: z.string(),
         title: z.string().nullable(),
+        description: z.string().nullable(),
       })
     )
     .nullable(),
@@ -42,6 +46,7 @@ export const productZ = z.object({
       z.object({
         _key: z.string(),
         title: z.string().nullable(),
+        description: z.string().nullable(),
       })
     )
     .nullable(),
@@ -56,6 +61,7 @@ export const productZ = z.object({
     .nullable(),
   // ...being a touch lazy here, these could be more strongly typed
   image: z.any().nullable(),
+  metaimage: z.any().nullable(),
   content: z.array(z.any()).nullable(),
   overview: z.array(z.any()).nullable(),
   ease: z.array(z.any()).nullable(),

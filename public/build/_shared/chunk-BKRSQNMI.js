@@ -26,7 +26,7 @@ function useRouteData(routeId) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-OCJIPHLZ.css";
+var tailwind_default = "/build/_assets/tailwind-EBPH355U.css";
 
 // app/components/Logo.tsx
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
@@ -187,7 +187,7 @@ var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
 function Title(props) {
   return props.children ? /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("h1", { className: "text-bold featureing-tighter max-w-4xl text-4xl font-bold md:text-4xl lg:text-5xl xl:text-8xl", children: props.children }, void 0, false, {
     fileName: "app/components/Title.tsx",
-    lineNumber: 6,
+    lineNumber: 7,
     columnNumber: 5
   }, this) : null;
 }
@@ -232,4 +232,4 @@ export {
   Title,
   RecordCover
 };
-//# sourceMappingURL=/build/_shared/chunk-VJHBSRGG.js.map
+//# sourceMappingURL=/build/_shared/chunk-BKRSQNMI.js.map

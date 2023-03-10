@@ -9,13 +9,14 @@ import { json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import groq from 'groq';
 import { PreviewSuspense } from '@sanity/preview-kit';
-
+import urlBuilder from '@sanity/image-url';
 import stylesheet from '~/tailwind.css';
 import Record, { PreviewRecord } from '~/components/Product';
 import { getClient, writeClient } from '~/sanity/client';
 import { productZ } from '~/types/product';
 import { getSession } from '~/sessions';
 import type { HomeDocument } from '~/types/home';
+import { projectDetails } from '~/sanity/projectDetails';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
@@ -25,7 +26,11 @@ export const meta: MetaFunction = ({ data, parentsData }) => {
   const home = parentsData.root.home as HomeDocument;
 
   return {
-    title: [data.product.title, home.siteTitle].filter(Boolean).join(' | '),
+    title: [data.product.metatitle, home.siteTitle].filter(Boolean).join(' | '),
+    description: [data.product.metadescription],
+    'og:image': urlBuilder(projectDetails())
+      .image(data.product.metaimage.asset._ref)
+      .url(),
   };
 };
 
@@ -90,6 +95,9 @@ export const loader = async ({ params, request }: LoaderArgs) => {
     // https://www.simeongriggs.dev/type-safe-groq-queries-for-sanity-data-with-zod
     image,
     content,
+    metatitle,
+    metadescription,
+    metaimage,
     overview,
     score,
     referral,
@@ -100,15 +108,19 @@ export const loader = async ({ params, request }: LoaderArgs) => {
     features[]{
       _key,
       title,
-      duration
+      description
     },
     pros[]{
       _key,
       title,
+      description
+
     },
     cons[]{
       _key,
       title,
+      description
+
     },    tags[]{
       _key,
       title,

@@ -172,13 +172,11 @@ export default function Record(props: RecordDocument) {
                   <div className='p-4'>
                     <h2 className='text-sm uppercase'>Cons</h2>
 
-                    <ul className='grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900'>
+                    <ul className=' grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900'>
                       {cons.map((con) => (
-                        <li
-                          key={con._key}
-                          className='flex items-center justify-between py-3'
-                        >
-                          <span className='text-lg'>👎 {con.title}</span>
+                        <li key={con._key} className=' py-3'>
+                          <h3 className='text-lg'>👎 {con.title}</h3>
+                          <span className='text-lg'> {con.description}</span>
                         </li>
                       ))}
                     </ul>

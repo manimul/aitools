@@ -4,7 +4,7 @@ import {
   Title,
   tailwind_default,
   useRouteData
-} from "/build/_shared/chunk-VJHBSRGG.js";
+} from "/build/_shared/chunk-BKRSQNMI.js";
 import {
   Link,
   useLoaderData
@@ -127,4 +127,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/index-RPUH22F3.js.map
+//# sourceMappingURL=/build/routes/index-NG2QGUB6.js.map

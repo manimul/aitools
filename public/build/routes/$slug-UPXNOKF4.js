@@ -3,7 +3,7 @@ import {
   RecordCover,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-VJHBSRGG.js";
+} from "/build/_shared/chunk-BKRSQNMI.js";
 import {
   useLoaderData
 } from "/build/_shared/chunk-T5F5625V.js";
@@ -217,6 +217,9 @@ function PreviewSuspense(_ref2) {
     children: mounted ? children : fallback
   });
 }
+
+// app/routes/$slug.tsx
+var import_image_url2 = __toESM(require_image_url_umd());
 
 // node_modules/@portabletext/toolkit/dist/portable-text-toolkit.esm.js
 function ownKeys(object, enumerableOnly) {
@@ -1354,28 +1357,28 @@ function Record(props) {
               lineNumber: 173,
               columnNumber: 21
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: cons.map((con) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
-              "li",
-              {
-                className: "flex items-center justify-between py-3",
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-lg", children: [
-                  "\u{1F44E} ",
-                  con.title
-                ] }, void 0, true, {
-                  fileName: "app/components/Product.tsx",
-                  lineNumber: 181,
-                  columnNumber: 27
-                }, this)
-              },
-              con._key,
-              false,
-              {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: " grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: cons.map((con) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: " py-3", children: [
+              /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h3", { className: "text-lg", children: [
+                "\u{1F44E} ",
+                con.title
+              ] }, void 0, true, {
                 fileName: "app/components/Product.tsx",
-                lineNumber: 177,
-                columnNumber: 25
-              },
-              this
-            )) }, void 0, false, {
+                lineNumber: 178,
+                columnNumber: 27
+              }, this),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-lg", children: [
+                " ",
+                con.description
+              ] }, void 0, true, {
+                fileName: "app/components/Product.tsx",
+                lineNumber: 179,
+                columnNumber: 27
+              }, this)
+            ] }, con._key, true, {
+              fileName: "app/components/Product.tsx",
+              lineNumber: 177,
+              columnNumber: 25
+            }, this)) }, void 0, false, {
               fileName: "app/components/Product.tsx",
               lineNumber: 175,
               columnNumber: 21
@@ -1418,17 +1421,17 @@ function PreviewRecord(props) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ExitPreview, {}, void 0, false, {
       fileName: "app/components/Product.tsx",
-      lineNumber: 212,
+      lineNumber: 210,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Record, { ...data }, void 0, false, {
       fileName: "app/components/Product.tsx",
-      lineNumber: 213,
+      lineNumber: 211,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/components/Product.tsx",
-    lineNumber: 211,
+    lineNumber: 209,
     columnNumber: 5
   }, this);
 }
@@ -1441,7 +1444,9 @@ var links = () => {
 var meta = ({ data, parentsData }) => {
   const home = parentsData.root.home;
   return {
-    title: [data.product.title, home.siteTitle].filter(Boolean).join(" | ")
+    title: [data.product.metatitle, home.siteTitle].filter(Boolean).join(" | "),
+    description: [data.product.metadescription],
+    "og:image": (0, import_image_url2.default)(projectDetails()).image(data.product.metaimage.asset._ref).url()
   };
 };
 function RecordPage() {
@@ -1449,21 +1454,21 @@ function RecordPage() {
   if (preview && query2 && params && token) {
     return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Record, { ...product }, void 0, false, {
       fileName: "app/routes/$slug.tsx",
-      lineNumber: 149,
+      lineNumber: 161,
       columnNumber: 34
     }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(PreviewRecord, { query: query2, params, token }, void 0, false, {
       fileName: "app/routes/$slug.tsx",
-      lineNumber: 150,
+      lineNumber: 162,
       columnNumber: 9
     }, this) }, void 0, false, {
       fileName: "app/routes/$slug.tsx",
-      lineNumber: 149,
+      lineNumber: 161,
       columnNumber: 7
     }, this);
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Record, { ...product }, void 0, false, {
     fileName: "app/routes/$slug.tsx",
-    lineNumber: 155,
+    lineNumber: 167,
     columnNumber: 10
   }, this);
 }
@@ -1472,4 +1477,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/$slug-Q72X3CEK.js.map
+//# sourceMappingURL=/build/routes/$slug-UPXNOKF4.js.map

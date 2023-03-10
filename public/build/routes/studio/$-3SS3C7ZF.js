@@ -171,6 +171,10 @@ var product_default = defineType({
     {
       name: "features",
       title: "Features"
+    },
+    {
+      name: "seo",
+      title: "SEO"
     }
   ],
   fields: [
@@ -267,6 +271,24 @@ var product_default = defineType({
       type: "array",
       of: [{ type: "feature" }],
       group: "features"
+    }),
+    defineField({
+      name: "metatitle",
+      title: "Title",
+      type: "string",
+      group: "seo"
+    }),
+    defineField({
+      name: "metadescription",
+      title: "Description",
+      type: "string",
+      group: "seo"
+    }),
+    defineField({
+      name: "metaimage",
+      title: "Image",
+      type: "image",
+      group: "seo"
     })
   ],
   preview: {
@@ -293,6 +315,10 @@ var feature_default = defineType({
   fields: [
     defineField({
       name: "title",
+      type: "string"
+    }),
+    defineField({
+      name: "description",
       type: "string"
     })
   ],
@@ -620,4 +646,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/studio/$-VA7Q2MTW.js.map
+//# sourceMappingURL=/build/routes/studio/$-3SS3C7ZF.js.map

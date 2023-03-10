@@ -10,6 +10,10 @@ export default defineType({
       name: 'title',
       type: 'string',
     }),
+    defineField({
+      name: 'description',
+      type: 'string',
+    }),
   ],
   preview: {
     select: {

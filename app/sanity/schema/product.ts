@@ -27,6 +27,10 @@ export default defineType({
       name: 'features',
       title: 'Features',
     },
+    {
+      name: 'seo',
+      title: 'SEO',
+    },
   ],
   fields: [
     defineField({
@@ -125,6 +129,24 @@ export default defineType({
       type: 'array',
       of: [{ type: 'feature' }],
       group: 'features',
+    }),
+    defineField({
+      name: 'metatitle',
+      title: 'Title',
+      type: 'string',
+      group: 'seo',
+    }),
+    defineField({
+      name: 'metadescription',
+      title: 'Description',
+      type: 'string',
+      group: 'seo',
+    }),
+    defineField({
+      name: 'metaimage',
+      title: 'Image',
+      type: 'image',
+      group: 'seo',
     }),
   ],
   preview: {
