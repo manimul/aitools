@@ -96,4 +96,17 @@ export const tagsZ = z.array(tagZ);
 export const categoryZ = z.object({
   title: z.string(),
   slug: z.any(),
+  image: z.any().nullable(),
 });
+
+export const groupedProductZ = z.object({
+  _id: z.string(),
+  title: z.string().nullable(),
+  metadescription: z.string().nullable(),
+  slug: z.string().nullable(),
+  category: z.string().nullable(),
+  image: z.any().nullable(),
+  tags: z.array(tagZ).nullable(),
+});
+
+export const groupedProductsZ = z.array(groupedProductZ);

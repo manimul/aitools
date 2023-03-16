@@ -9,6 +9,7 @@ import Layout from '~/components/Layout';
 import stylesheet from '~/tailwind.css';
 import { getClient } from '~/sanity/client';
 import AlbumCover from '~/components/RecordCover';
+import Title from '~/components/Title';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
@@ -58,7 +59,18 @@ export default function Tags() {
   return (
     <Layout>
       <div>
-        <h2>A list of products tagged with {params.slug}</h2>
+        <section className=' mb-6 border p-6  '>
+          <div className='mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
+            <div className='mr-auto space-y-2 place-self-center lg:col-span-7'>
+              <header className='space-y-4'>
+                <Title>A list of products tagged with "{params.slug}"</Title>
+              </header>
+            </div>
+            <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
+              <img></img>{' '}
+            </div>
+          </div>
+        </section>
         {products.length > 0 ? (
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
             {products.map((product) => (

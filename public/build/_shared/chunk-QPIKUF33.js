@@ -1,10 +1,8 @@
 import {
-  Title
-} from "/build/_shared/chunk-NQSA6PG3.js";
-import {
   Layout,
-  RecordCover
-} from "/build/_shared/chunk-M3J5IFP6.js";
+  RecordCover,
+  Title
+} from "/build/_shared/chunk-27ICLBYI.js";
 import {
   Link
 } from "/build/_shared/chunk-6OT2F7ZE.js";
@@ -1550,4 +1548,4 @@ export {
   Record,
   PreviewRecord
 };
-//# sourceMappingURL=/build/_shared/chunk-7FX7HVWV.js.map
+//# sourceMappingURL=/build/_shared/chunk-QPIKUF33.js.map

@@ -146,7 +146,7 @@ function Layout(props) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-ESTXPYJS.css";
+var tailwind_default = "/build/_assets/tailwind-A4IPJNRL.css";
 
 // app/components/RecordCover.tsx
 var import_image_url = __toESM(require_image_url_umd());
@@ -181,10 +181,21 @@ function RecordCover(props) {
   }, this);
 }
 
+// app/components/Title.tsx
+var import_jsx_dev_runtime7 = __toESM(require_jsx_dev_runtime());
+function Title(props) {
+  return props.children ? /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("h1", { className: "text-bold featureing-tighter max-w-4xl text-4xl font-bold md:text-3xl lg:text-4xl xl:text-6xl", children: props.children }, void 0, false, {
+    fileName: "app/components/Title.tsx",
+    lineNumber: 7,
+    columnNumber: 5
+  }, this) : null;
+}
+
 export {
   useRouteData,
   Layout,
   tailwind_default,
-  RecordCover
+  RecordCover,
+  Title
 };
-//# sourceMappingURL=/build/_shared/chunk-M3J5IFP6.js.map
+//# sourceMappingURL=/build/_shared/chunk-27ICLBYI.js.map

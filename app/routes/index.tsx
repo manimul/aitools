@@ -54,7 +54,18 @@ export default function Index() {
   return (
     <Layout>
       <div className='grid grid-cols-1 gap-6 md:gap-12'>
-        {home.title ? <Title>{home.title}</Title> : null}
+        <section className=' mb-6 border p-6  '>
+          <div className='mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
+            <div className='mr-auto space-y-2 place-self-center lg:col-span-7'>
+              <header className='space-y-4'>
+                {home.title ? <Title>{home.title}</Title> : null}
+              </header>
+            </div>
+            <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
+              <img></img>{' '}
+            </div>
+          </div>
+        </section>
         {products.length > 0 ? (
           <ul className='grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-12 lg:grid-cols-4'>
             {products.map((product) => (
