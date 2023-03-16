@@ -91,18 +91,21 @@ export default function Categories() {
   return (
     <Layout>
       <div>
-        <section className=' mb-6 border p-6  '>
-          <div className='mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
-            <div className='mr-auto space-y-2 place-self-center lg:col-span-7'>
+        <section className=' mb-6 border border-dashed p-4 md:p-6  '>
+          <div className='mx-auto grid   gap-3 py-3 lg:grid-cols-12 lg:gap-8 lg:py-4 xl:gap-0'>
+            <div className='mr-auto space-y-2 place-self-center lg:col-span-6'>
               <header className='space-y-4'>
                 <Title>
-                  The <span className='text-blue-500'>Howtu.ai</span> guide to{' '}
-                  <span className='text-gray-400 '>{category.title}</span> AI
-                  products
+                  The <span className='font-mono text-blue-300'>howtu.ai</span>{' '}
+                  guide to AI{' '}
+                  <span className='font-serif text-gray-400 '>
+                    {category.title}
+                  </span>{' '}
+                  tools
                 </Title>
               </header>
             </div>
-            <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
+            <div className=' lg:col-span-6 lg:mt-0 lg:flex'>
               <AlbumCover image={category.image} title={category.title} />
             </div>
           </div>

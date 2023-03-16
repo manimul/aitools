@@ -4,7 +4,7 @@ import {
   Title,
   tailwind_default,
   useRouteData
-} from "/build/_shared/chunk-27ICLBYI.js";
+} from "/build/_shared/chunk-MD5PJD2T.js";
 import {
   Link,
   useLoaderData
@@ -38,56 +38,63 @@ function Index() {
   const { products } = useLoaderData();
   const { home } = useRouteData(`root`);
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Layout, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid grid-cols-1 gap-6 md:gap-12", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("section", { className: " mb-6 border p-6  ", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "mr-auto space-y-2 place-self-center lg:col-span-7", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("header", { className: "space-y-4", children: home.title ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Title, { children: home.title }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("section", { className: " mb-6 border p-4 md:p-6  ", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "mx-auto grid  gap-4 md:py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "order-2 mr-auto space-y-2 place-self-center md:order-1 lg:col-span-7", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("header", { className: "space-y-4", children: [
+        home.title ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Title, { children: home.title }, void 0, false, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 62,
+          columnNumber: 31
+        }, this) : null,
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "text-xl", children: [
+          home.subTitle,
+          " here "
+        ] }, void 0, true, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 63,
+          columnNumber: 17
+        }, this)
+      ] }, void 0, true, {
         fileName: "app/routes/index.tsx",
         lineNumber: 61,
-        columnNumber: 31
-      }, this) : null }, void 0, false, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 60,
         columnNumber: 15
       }, this) }, void 0, false, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 59,
+        lineNumber: 60,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "hidden lg:col-span-5 lg:mt-0 lg:flex", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {}, void 0, false, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 65,
-          columnNumber: 15
-        }, this),
-        " "
-      ] }, void 0, true, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "order-1 md:order-2 lg:col-span-5 lg:mt-0 lg:flex", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(RecordCover, { image: home.image, title: home.title }, void 0, false, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 64,
+        lineNumber: 67,
+        columnNumber: 15
+      }, this) }, void 0, false, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 66,
         columnNumber: 13
       }, this)
     ] }, void 0, true, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 58,
+      lineNumber: 59,
       columnNumber: 11
     }, this) }, void 0, false, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 57,
+      lineNumber: 58,
       columnNumber: 9
     }, this),
     products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("ul", { className: "grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-12 lg:grid-cols-4", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", { className: "group relative flex flex-col", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "relative overflow-hidden transition-all duration-200 ease-in-out group-hover:scale-105 group-hover:opacity-90", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "absolute z-0 h-48 w-[200%] translate-x-20 translate-y-20 -rotate-45 bg-gradient-to-b from-white to-transparent opacity-25 mix-blend-overlay transition-transform duration-500 ease-in-out group-hover:translate-y-10 group-hover:translate-x-10 group-hover:opacity-75" }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 74,
+          lineNumber: 76,
           columnNumber: 19
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(RecordCover, { image: product.image, title: product.title }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 75,
+          lineNumber: 77,
           columnNumber: 19
         }, this)
       ] }, void 0, true, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 73,
+        lineNumber: 75,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex flex-col space-y-2", children: [
@@ -101,7 +108,7 @@ function Index() {
               product.title,
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", { className: "absolute inset-0" }, void 0, false, {
                 fileName: "app/routes/index.tsx",
-                lineNumber: 86,
+                lineNumber: 88,
                 columnNumber: 23
               }, this)
             ]
@@ -110,50 +117,50 @@ function Index() {
           true,
           {
             fileName: "app/routes/index.tsx",
-            lineNumber: 79,
+            lineNumber: 81,
             columnNumber: 21
           },
           this
         ) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", { className: "pt-4 text-xl font-bold", children: product.title }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 89,
+          lineNumber: 91,
           columnNumber: 21
         }, this),
         (product == null ? void 0 : product.category) ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", { className: " font-bold leading-none ", children: product.category }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 94,
+          lineNumber: 96,
           columnNumber: 21
         }, this) : null,
         (product == null ? void 0 : product.metadescription) ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", { className: " ... truncate  font-light leading-none ", children: product.metadescription }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 99,
+          lineNumber: 101,
           columnNumber: 21
         }, this) : null
       ] }, void 0, true, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 77,
+        lineNumber: 79,
         columnNumber: 17
       }, this)
     ] }, product._id, true, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 72,
+      lineNumber: 74,
       columnNumber: 15
     }, this)) }, void 0, false, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 70,
+      lineNumber: 72,
       columnNumber: 11
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: "No products found" }, void 0, false, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 108,
+      lineNumber: 110,
       columnNumber: 11
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/index.tsx",
-    lineNumber: 56,
+    lineNumber: 57,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/routes/index.tsx",
-    lineNumber: 55,
+    lineNumber: 56,
     columnNumber: 5
   }, this);
 }
@@ -162,4 +169,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/index-ZOGJSS22.js.map
+//# sourceMappingURL=/build/routes/index-3JGRUPEN.js.map

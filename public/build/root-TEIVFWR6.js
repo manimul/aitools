@@ -40,8 +40,16 @@ var meta = () => ({
 var links = () => {
   return [
     { rel: "preconnect", href: "https://cdn.sanity.io" },
-    { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-    { rel: "preconnect", href: "https://fonts.googleapis.com", crossOrigin: "anonymous" },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "anonymous"
+    },
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+      crossOrigin: "anonymous"
+    },
     {
       href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@500;700;800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap",
       rel: "stylesheet"
@@ -57,29 +65,29 @@ function App() {
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("head", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Meta, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 77,
+        lineNumber: 88,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Links, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 78,
+        lineNumber: 89,
         columnNumber: 9
       }, this),
       isStudioRoute && typeof document === "undefined" ? "__STYLES__" : null
     ] }, void 0, true, {
       fileName: "app/root.tsx",
-      lineNumber: 76,
+      lineNumber: 87,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", { className: bodyClassNames, children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Outlet, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 82,
+        lineNumber: 93,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ScrollRestoration, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 83,
+        lineNumber: 94,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
@@ -93,29 +101,29 @@ function App() {
         false,
         {
           fileName: "app/root.tsx",
-          lineNumber: 84,
+          lineNumber: 95,
           columnNumber: 9
         },
         this
       ),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Scripts, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 89,
+        lineNumber: 100,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(LiveReload, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 90,
+        lineNumber: 101,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/root.tsx",
-      lineNumber: 81,
+      lineNumber: 92,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/root.tsx",
-    lineNumber: 75,
+    lineNumber: 86,
     columnNumber: 5
   }, this);
 }
@@ -124,4 +132,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/root-WT66T77D.js.map
+//# sourceMappingURL=/build/root-TEIVFWR6.js.map

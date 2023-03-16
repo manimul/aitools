@@ -65,12 +65,12 @@ export default function Record(props: RecordDocument) {
 
   return (
     <Layout>
-      <section className=' mb-6 border p-6  '>
-        <div className='mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
-          <div className='mr-auto space-y-2 place-self-center lg:col-span-7'>
+      <section className=' mb-6 border p-4 md:p-6  '>
+        <div className='mx-auto  grid  gap-4 md:py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
+          <div className='order-2 mr-auto space-y-2 place-self-center md:order-1 lg:col-span-7'>
             <header className='space-y-4'>
               {category ? (
-                <h2 className='text-xs  uppercase tracking-widest opacity-70 '>
+                <h2 className='  text-xs uppercase tracking-widest opacity-70 '>
                   Category:{' '}
                   <Link
                     to={'/categories/' + categoryslug}
@@ -146,14 +146,14 @@ export default function Record(props: RecordDocument) {
               ) : null}
             </header>
           </div>
-          <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
+          <div className='order-1 md:order-2 lg:col-span-5 lg:mt-0 lg:flex'>
             <AlbumCover image={image} title={title} />
           </div>
         </div>
       </section>
 
       <article className='flex flex-col items-start gap-4 lg:flex-row lg:gap-12'>
-        <div className='grid-gap-4 top-1 mx-auto grid max-w-[70vw] grid-cols-1 space-y-4 md:sticky'>
+        <div className='grid-gap-4 top-1 mx-auto grid grid-cols-1 space-y-4 md:sticky md:max-w-[70vw]'>
           <AlbumCover image={image} title={title} />
           {features && features?.length > 0 ? (
             <>
@@ -206,7 +206,7 @@ export default function Record(props: RecordDocument) {
           {pros && cons && pros?.length > 0 && cons?.length > 0 ? (
             <section>
               <h2 className=' py-3 text-2xl font-bold'>Pros & Cons</h2>
-              <div className='grid grid-cols-2 divide-x divide-gray-100  dark:divide-gray-900'>
+              <div className='grid divide-x divide-gray-100 dark:divide-gray-900  md:grid-cols-2'>
                 {pros && pros?.length > 0 ? (
                   <div className='p-4'>
                     <h2>Pros</h2>

@@ -12,6 +12,7 @@ import { getClient } from '~/sanity/client';
 import stylesheet from '~/tailwind.css';
 import { productStubsZ } from '~/types/product';
 import type { HomeDocument } from '~/types/home';
+import SanityContent from '~/components/SanityContent';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
@@ -54,15 +55,16 @@ export default function Index() {
   return (
     <Layout>
       <div className='grid grid-cols-1 gap-6 md:gap-12'>
-        <section className=' mb-6 border p-6  '>
-          <div className='mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
-            <div className='mr-auto space-y-2 place-self-center lg:col-span-7'>
+        <section className=' mb-6 border p-4 md:p-6  '>
+          <div className='mx-auto grid  gap-4 md:py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
+            <div className='order-2 mr-auto space-y-2 place-self-center md:order-1 lg:col-span-7'>
               <header className='space-y-4'>
                 {home.title ? <Title>{home.title}</Title> : null}
+                <p className='text-xl'>{home.subTitle} here </p>
               </header>
             </div>
-            <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
-              <img></img>{' '}
+            <div className='order-1 md:order-2 lg:col-span-5 lg:mt-0 lg:flex'>
+              <AlbumCover image={home.image} title={home.title} />
             </div>
           </div>
         </section>

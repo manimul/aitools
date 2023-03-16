@@ -2,7 +2,7 @@ import {
   Layout,
   RecordCover,
   Title
-} from "/build/_shared/chunk-27ICLBYI.js";
+} from "/build/_shared/chunk-MD5PJD2T.js";
 import {
   Link
 } from "/build/_shared/chunk-6OT2F7ZE.js";
@@ -1114,9 +1114,9 @@ function Record(props) {
     return star;
   });
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Layout, { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { className: " mb-6 border p-6  ", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "mr-auto space-y-2 place-self-center lg:col-span-7", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { className: "space-y-4", children: [
-        category ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-xs  uppercase tracking-widest opacity-70 ", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { className: " mb-6 border p-4 md:p-6  ", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "mx-auto  grid  gap-4 md:py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "order-2 mr-auto space-y-2 place-self-center md:order-1 lg:col-span-7", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { className: "space-y-4", children: [
+        category ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "  text-xs uppercase tracking-widest opacity-70 ", children: [
           "Category:",
           " ",
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
@@ -1284,7 +1284,7 @@ function Record(props) {
         lineNumber: 70,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "hidden lg:col-span-5 lg:mt-0 lg:flex", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(RecordCover, { image, title }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "order-1 md:order-2 lg:col-span-5 lg:mt-0 lg:flex", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(RecordCover, { image, title }, void 0, false, {
         fileName: "app/components/Product.tsx",
         lineNumber: 150,
         columnNumber: 13
@@ -1303,7 +1303,7 @@ function Record(props) {
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("article", { className: "flex flex-col items-start gap-4 lg:flex-row lg:gap-12", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "grid-gap-4 top-1 mx-auto grid max-w-[70vw] grid-cols-1 space-y-4 md:sticky", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "grid-gap-4 top-1 mx-auto grid grid-cols-1 space-y-4 md:sticky md:max-w-[70vw]", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(RecordCover, { image, title }, void 0, false, {
           fileName: "app/components/Product.tsx",
           lineNumber: 157,
@@ -1419,7 +1419,7 @@ function Record(props) {
             lineNumber: 208,
             columnNumber: 15
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "grid grid-cols-2 divide-x divide-gray-100  dark:divide-gray-900", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "grid divide-x divide-gray-100 dark:divide-gray-900  md:grid-cols-2", children: [
             pros && (pros == null ? void 0 : pros.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "p-4", children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { children: "Pros" }, void 0, false, {
                 fileName: "app/components/Product.tsx",
@@ -1548,4 +1548,4 @@ export {
   Record,
   PreviewRecord
 };
-//# sourceMappingURL=/build/_shared/chunk-QPIKUF33.js.map
+//# sourceMappingURL=/build/_shared/chunk-46OXQTMT.js.map
