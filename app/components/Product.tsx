@@ -17,6 +17,7 @@ export default function Record(props: RecordDocument) {
     title,
     referral,
     category,
+    categoryslug,
     tags,
     content,
     overview,
@@ -64,31 +65,37 @@ export default function Record(props: RecordDocument) {
 
   return (
     <Layout>
-      <section className=' mb-6 '>
+      <section className=' mb-6 border p-6  '>
         <div className='mx-auto grid   py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
-          <div className='mr-auto space-y-3 place-self-center lg:col-span-7'>
-            <header>
+          <div className='mr-auto space-y-2 place-self-center lg:col-span-7'>
+            <header className='space-y-4'>
               {category ? (
                 <h2 className='text-xs  uppercase tracking-widest opacity-70 '>
                   Category:{' '}
-                  <Link className='underline' to='/'>
+                  <Link
+                    to={'/categories/' + categoryslug}
+                    className='text-xs underline'
+                  >
                     {category}
                   </Link>
                 </h2>
               ) : null}
               {title ? <Title>{title}</Title> : null}
               {content && content?.length > 0 ? (
-                <section className='my-6 text-6xl  italic  '>
+                <section className=' text-6xl  italic  '>
                   <SanityContent value={content} />
                 </section>
               ) : null}
 
               {tags ? (
                 <>
+                  <h2 className='text-xs  uppercase tracking-widest opacity-70 '>
+                    Tags:
+                  </h2>
                   {tags.map((tag) => (
                     <div
                       key={tag._key}
-                      className=' mx-2 my-4  inline-flex rounded bg-green-500 py-1 px-2 lowercase'
+                      className=' mx-2 my-4 inline-flex  rounded-lg bg-blue-300 py-2 px-3 lowercase tracking-widest'
                     >
                       <Link to={'/tags/' + tag.slug} className='text-xs'>
                         {tag.title}{' '}
@@ -97,40 +104,47 @@ export default function Record(props: RecordDocument) {
                   ))}
                 </>
               ) : null}
-            </header>
-            {referral ? (
-              <a className='text-purple-500 underline' href={referral}>
-                Visit the {title} website
-              </a>
-            ) : null}
-            {score ? (
-              <section>
-                <h2 className='text-2xl'>Score</h2>
-                <span className='text-4xl text-yellow-500'></span>
-                <div className='flex items-center'>
-                  {starIcons}
-                  <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
-                    {score} out of 5
+              {score ? (
+                <section>
+                  <h2 className='text-xs  uppercase tracking-widest opacity-70 '>
+                    Score:
+                  </h2>{' '}
+                  <span className='text-4xl text-yellow-500'></span>
+                  <div className='flex items-center'>
+                    {starIcons}
+                    <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
+                      {score} out of 5
+                    </p>
+                  </div>
+                </section>
+              ) : null}
+              {pricing ? (
+                <section>
+                  <h2 className='text-xs  uppercase tracking-widest opacity-70 '>
+                    Price Range:
+                  </h2>{' '}
+                  <p className='text-bold font-serif text-2xl italic text-green-600'>
+                    {' '}
+                    {pricing}
                   </p>
-                </div>
-              </section>
-            ) : null}
-            {pricing ? (
-              <section>
-                <h2 className='text-2xl'>Price Range</h2>
-                <p className='text-bold font-serif text-2xl italic text-green-600'>
-                  {' '}
-                  {pricing}
-                </p>
-              </section>
-            ) : null}
-
-            <a
-              href='#'
-              className='inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800'
-            >
-              Read more
-            </a>
+                </section>
+              ) : null}
+              <a
+                href='#overview'
+                className=' mr-4 inline-flex border-2 border-blue-300 py-4 px-12 text-blue-600 dark:text-blue-300 '
+              >
+                Learn more
+              </a>
+              {referral ? (
+                <a
+                  className=' from-blue-5 200 inline-flex border-2 border-blue-500 bg-blue-500  py-4
+                  px-12 text-white'
+                  href={referral}
+                >
+                  Try {title} now
+                </a>
+              ) : null}
+            </header>
           </div>
           <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
             <AlbumCover image={image} title={title} />
@@ -139,11 +153,11 @@ export default function Record(props: RecordDocument) {
       </section>
 
       <article className='flex flex-col items-start gap-4 lg:flex-row lg:gap-12'>
-        <div className='grid-gap-4 sticky top-1 mx-auto grid max-w-[70vw] grid-cols-1 space-y-4'>
+        <div className='grid-gap-4 top-1 mx-auto grid max-w-[70vw] grid-cols-1 space-y-4 md:sticky'>
           <AlbumCover image={image} title={title} />
           {features && features?.length > 0 ? (
             <>
-              <ul className='grid grid-cols-1 divide-y divide-gray-100 rounded border bg-[#f1f1f1] p-4 dark:divide-gray-900 dark:bg-[#111111]'>
+              <ul className='grid grid-cols-1 divide-y divide-gray-100 rounded border bg-[#ffffff] p-4 dark:divide-gray-900 dark:bg-[#111111]'>
                 <li className='featureing-tighter py-3 text-2xl font-bold'>
                   {features?.length === 1
                     ? `1 Great Feature`
@@ -163,7 +177,7 @@ export default function Record(props: RecordDocument) {
         </div>
         <div className=' flex flex-shrink-0 flex-col gap-4 md:gap-4 lg:w-2/3'>
           {overview && overview?.length > 0 ? (
-            <section>
+            <section id='overview'>
               <h2 className='text-2xl'>Overview</h2>
               <SanityContent value={overview} />
             </section>

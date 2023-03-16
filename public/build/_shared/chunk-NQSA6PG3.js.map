@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/components/Title.tsx"],
+  "sourcesContent": ["/* eslint-disable prettier/prettier */\nimport React from 'react';\nimport type { PropsWithChildren } from 'react';\n\nexport default function Title(props: PropsWithChildren) {\n  return props.children ? (\n    <h1 className='text-bold featureing-tighter max-w-4xl text-4xl font-bold md:text-4xl lg:text-5xl xl:text-8xl'>\n      {props.children}\n    </h1>\n  ) : null;\n}\n"],
+  "mappings": ";;;;;;;;AAMI;AAFW,SAAR,MAAuB,OAA0B;AACtD,SAAO,MAAM,WACX,mDAAC,QAAG,WAAU,iGACX,gBAAM,YADT;AAAA;AAAA;AAAA;AAAA,SAEA,IACE;AACN;",
+  "names": []
+}

@@ -20,6 +20,7 @@
     "@sanity/demo": "^1.0.1",
     "@sanity/image-url": "^1.0.1",
     "@sanity/preview-kit": "^1.2.10",
+    "@sanity/vision": "^3.6.0",
     "cross-env": "^7.0.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",

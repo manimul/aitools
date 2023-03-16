@@ -23,6 +23,8 @@ export const productZ = z.object({
   pricing: z.string().nullable(),
 
   category: z.string().nullable(),
+  categoryslug: z.string().nullable(),
+
   features: z
     .array(
       z.object({
@@ -83,3 +85,15 @@ export const productStubZ = z.object({
 });
 
 export const productStubsZ = z.array(productStubZ);
+
+export const tagZ = z.object({
+  title: z.any().nullable(),
+  slug: z.any().nullable(),
+});
+
+export const tagsZ = z.array(tagZ);
+
+export const categoryZ = z.object({
+  title: z.string(),
+  slug: z.any(),
+});
