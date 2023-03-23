@@ -146,7 +146,7 @@ function Layout(props) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-OQQ4XXBT.css";
+var tailwind_default = "/build/_assets/tailwind-WT4KF4ZO.css";
 
 // app/components/RecordCover.tsx
 var import_image_url = __toESM(require_image_url_umd());
@@ -198,4 +198,4 @@ export {
   RecordCover,
   Title
 };
-//# sourceMappingURL=/build/_shared/chunk-MD5PJD2T.js.map
+//# sourceMappingURL=/build/_shared/chunk-WY73PI2Y.js.map

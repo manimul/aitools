@@ -88,6 +88,21 @@ export default function App() {
         <Meta />
         <Links />
         {isStudioRoute && typeof document === 'undefined' ? '__STYLES__' : null}
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-0129714B12'
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0129714B12');
+`,
+          }}
+        ></script>
       </head>
       <body className={bodyClassNames}>
         <Outlet />

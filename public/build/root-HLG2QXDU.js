@@ -73,7 +73,43 @@ function App() {
         lineNumber: 89,
         columnNumber: 9
       }, this),
-      isStudioRoute && typeof document === "undefined" ? "__STYLES__" : null
+      isStudioRoute && typeof document === "undefined" ? "__STYLES__" : null,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
+        "script",
+        {
+          async: true,
+          src: "https://www.googletagmanager.com/gtag/js?id=G-0129714B12"
+        },
+        void 0,
+        false,
+        {
+          fileName: "app/root.tsx",
+          lineNumber: 91,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
+        "script",
+        {
+          dangerouslySetInnerHTML: {
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0129714B12');
+`
+          }
+        },
+        void 0,
+        false,
+        {
+          fileName: "app/root.tsx",
+          lineNumber: 96,
+          columnNumber: 9
+        },
+        this
+      )
     ] }, void 0, true, {
       fileName: "app/root.tsx",
       lineNumber: 87,
@@ -82,12 +118,12 @@ function App() {
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", { className: bodyClassNames, children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Outlet, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 93,
+        lineNumber: 108,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ScrollRestoration, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 94,
+        lineNumber: 109,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
@@ -101,24 +137,24 @@ function App() {
         false,
         {
           fileName: "app/root.tsx",
-          lineNumber: 95,
+          lineNumber: 110,
           columnNumber: 9
         },
         this
       ),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Scripts, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 100,
+        lineNumber: 115,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(LiveReload, {}, void 0, false, {
         fileName: "app/root.tsx",
-        lineNumber: 101,
+        lineNumber: 116,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/root.tsx",
-      lineNumber: 92,
+      lineNumber: 107,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
@@ -132,4 +168,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/root-TEIVFWR6.js.map
+//# sourceMappingURL=/build/root-HLG2QXDU.js.map

@@ -3,7 +3,7 @@ import {
   RecordCover,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-MD5PJD2T.js";
+} from "/build/_shared/chunk-WY73PI2Y.js";
 import {
   Link,
   useLoaderData,
@@ -222,4 +222,4 @@ export {
   Categories as default,
   links
 };
-//# sourceMappingURL=/build/routes/categories/$slug-ZLUVBWKJ.js.map
+//# sourceMappingURL=/build/routes/categories/$slug-A6NRJYVN.js.map

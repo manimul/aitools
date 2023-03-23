@@ -2,10 +2,10 @@ import {
   PreviewRecord,
   PreviewSuspense,
   Record
-} from "/build/_shared/chunk-46OXQTMT.js";
+} from "/build/_shared/chunk-EOCHVQDS.js";
 import {
   tailwind_default
-} from "/build/_shared/chunk-MD5PJD2T.js";
+} from "/build/_shared/chunk-WY73PI2Y.js";
 import {
   useLoaderData
 } from "/build/_shared/chunk-6OT2F7ZE.js";
@@ -27,7 +27,7 @@ import {
   __toESM
 } from "/build/_shared/chunk-CUPSZOF3.js";
 
-// app/routes/products/$slug.tsx
+// app/routes/$slug.tsx
 var import_groq = __toESM(require_groq());
 var import_image_url = __toESM(require_image_url_umd());
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
@@ -46,21 +46,21 @@ function RecordPage() {
   const { product, preview, query, params, token } = useLoaderData();
   if (preview && query && params && token) {
     return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Record, { ...product }, void 0, false, {
-      fileName: "app/routes/products/$slug.tsx",
+      fileName: "app/routes/$slug.tsx",
       lineNumber: 163,
       columnNumber: 34
     }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewRecord, { query, params, token }, void 0, false, {
-      fileName: "app/routes/products/$slug.tsx",
+      fileName: "app/routes/$slug.tsx",
       lineNumber: 164,
       columnNumber: 9
     }, this) }, void 0, false, {
-      fileName: "app/routes/products/$slug.tsx",
+      fileName: "app/routes/$slug.tsx",
       lineNumber: 163,
       columnNumber: 7
     }, this);
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Record, { ...product }, void 0, false, {
-    fileName: "app/routes/products/$slug.tsx",
+    fileName: "app/routes/$slug.tsx",
     lineNumber: 169,
     columnNumber: 10
   }, this);
@@ -70,4 +70,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/products/$slug-P4WHCKSW.js.map
+//# sourceMappingURL=/build/routes/$slug-LL2H526M.js.map
