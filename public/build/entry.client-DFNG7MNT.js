@@ -1,9 +1,9 @@
 import {
-  RemixBrowser
-} from "/build/_shared/chunk-6OT2F7ZE.js";
-import {
   require_client
 } from "/build/_shared/chunk-WA32A3L3.js";
+import {
+  RemixBrowser
+} from "/build/_shared/chunk-6OT2F7ZE.js";
 import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-5BVC5GJT.js";
@@ -20,4 +20,4 @@ var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
   lineNumber: 4,
   columnNumber: 23
 }, this));
-//# sourceMappingURL=/build/entry.client-3ZZA4IFU.js.map
+//# sourceMappingURL=/build/entry.client-DFNG7MNT.js.map

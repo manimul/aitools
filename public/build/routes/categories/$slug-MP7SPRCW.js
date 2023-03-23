@@ -3,17 +3,17 @@ import {
   RecordCover,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-WY73PI2Y.js";
-import {
-  Link,
-  useLoaderData,
-  useParams
-} from "/build/_shared/chunk-6OT2F7ZE.js";
+} from "/build/_shared/chunk-DFIOHKBP.js";
 import "/build/_shared/chunk-RVWPLYFV.js";
 import "/build/_shared/chunk-7E4LWBBH.js";
 import {
   require_groq
 } from "/build/_shared/chunk-VFPAK4Q6.js";
+import {
+  Link,
+  useLoaderData,
+  useParams
+} from "/build/_shared/chunk-6OT2F7ZE.js";
 import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-5BVC5GJT.js";
@@ -222,4 +222,4 @@ export {
   Categories as default,
   links
 };
-//# sourceMappingURL=/build/routes/categories/$slug-A6NRJYVN.js.map
+//# sourceMappingURL=/build/routes/categories/$slug-MP7SPRCW.js.map

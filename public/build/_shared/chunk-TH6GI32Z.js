@@ -1,21 +1,21 @@
 import {
-  Layout,
-  RecordCover,
-  Title
-} from "/build/_shared/chunk-WY73PI2Y.js";
-import {
-  Link
-} from "/build/_shared/chunk-6OT2F7ZE.js";
-import {
   getImageDimensions,
   require_jsx_runtime
 } from "/build/_shared/chunk-PBYB3QU6.js";
+import {
+  Layout,
+  RecordCover,
+  Title
+} from "/build/_shared/chunk-DFIOHKBP.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-RVWPLYFV.js";
 import {
   require_image_url_umd
 } from "/build/_shared/chunk-7E4LWBBH.js";
+import {
+  Link
+} from "/build/_shared/chunk-6OT2F7ZE.js";
 import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-5BVC5GJT.js";
@@ -1548,4 +1548,4 @@ export {
   Record,
   PreviewRecord
 };
-//# sourceMappingURL=/build/_shared/chunk-EOCHVQDS.js.map
+//# sourceMappingURL=/build/_shared/chunk-TH6GI32Z.js.map

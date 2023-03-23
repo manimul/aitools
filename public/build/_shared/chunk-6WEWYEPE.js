@@ -32,7 +32,7 @@ import {
   usePane,
   usePaneLayout,
   usePaneRouter
-} from "/build/_shared/chunk-W7OSM6NY.js";
+} from "/build/_shared/chunk-VUKTLCDD.js";
 import {
   AddCircleIcon,
   ArrowLeftIcon,
@@ -8012,9 +8012,9 @@ var LoadingPane = (0, import_react30.memo)((props) => {
 });
 LoadingPane.displayName = "LoadingPane";
 var paneMap = {
-  component: (0, import_react30.lazy)(() => import("/build/_shared/index-ce5f5126-ARW4DFYX.js")),
-  document: (0, import_react30.lazy)(() => import("/build/_shared/index-ee3bfb2b-WPUQH3G4.js")),
-  documentList: (0, import_react30.lazy)(() => import("/build/_shared/index-4a7ca57d-ZIFKM3YP.js")),
+  component: (0, import_react30.lazy)(() => import("/build/_shared/index-ce5f5126-6DBCB7Z5.js")),
+  document: (0, import_react30.lazy)(() => import("/build/_shared/index-ee3bfb2b-6NCE6VXP.js")),
+  documentList: (0, import_react30.lazy)(() => import("/build/_shared/index-4a7ca57d-UU3HTIO3.js")),
   list: (0, import_react30.lazy)(() => import("/build/_shared/index-1ad21cb1-FLYIIJCF.js"))
 };
 var DeskToolPane = (0, import_react30.memo)(function DeskToolPane2(props) {
@@ -11519,4 +11519,4 @@ export {
   DocumentPane,
   index
 };
-//# sourceMappingURL=/build/_shared/chunk-FJTHRNVG.js.map
+//# sourceMappingURL=/build/_shared/chunk-6WEWYEPE.js.map

@@ -1,4 +1,7 @@
 import {
+  require_groq
+} from "/build/_shared/chunk-VFPAK4Q6.js";
+import {
   Links,
   LiveReload,
   Meta,
@@ -8,9 +11,6 @@ import {
   useLoaderData,
   useLocation
 } from "/build/_shared/chunk-6OT2F7ZE.js";
-import {
-  require_groq
-} from "/build/_shared/chunk-VFPAK4Q6.js";
 import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-5BVC5GJT.js";
@@ -168,4 +168,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/root-HLG2QXDU.js.map
+//# sourceMappingURL=/build/root-C3LZRD5Z.js.map

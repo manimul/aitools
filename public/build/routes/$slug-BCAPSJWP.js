@@ -2,14 +2,11 @@ import {
   PreviewRecord,
   PreviewSuspense,
   Record
-} from "/build/_shared/chunk-EOCHVQDS.js";
+} from "/build/_shared/chunk-TH6GI32Z.js";
+import "/build/_shared/chunk-PBYB3QU6.js";
 import {
   tailwind_default
-} from "/build/_shared/chunk-WY73PI2Y.js";
-import {
-  useLoaderData
-} from "/build/_shared/chunk-6OT2F7ZE.js";
-import "/build/_shared/chunk-PBYB3QU6.js";
+} from "/build/_shared/chunk-DFIOHKBP.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-RVWPLYFV.js";
@@ -20,6 +17,9 @@ import {
   require_groq
 } from "/build/_shared/chunk-VFPAK4Q6.js";
 import {
+  useLoaderData
+} from "/build/_shared/chunk-6OT2F7ZE.js";
+import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-5BVC5GJT.js";
 import "/build/_shared/chunk-247AAKB7.js";
@@ -27,7 +27,7 @@ import {
   __toESM
 } from "/build/_shared/chunk-CUPSZOF3.js";
 
-// app/routes/products/$slug.tsx
+// app/routes/$slug.tsx
 var import_groq = __toESM(require_groq());
 var import_image_url = __toESM(require_image_url_umd());
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
@@ -46,21 +46,21 @@ function RecordPage() {
   const { product, preview, query, params, token } = useLoaderData();
   if (preview && query && params && token) {
     return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Record, { ...product }, void 0, false, {
-      fileName: "app/routes/products/$slug.tsx",
+      fileName: "app/routes/$slug.tsx",
       lineNumber: 163,
       columnNumber: 34
     }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewRecord, { query, params, token }, void 0, false, {
-      fileName: "app/routes/products/$slug.tsx",
+      fileName: "app/routes/$slug.tsx",
       lineNumber: 164,
       columnNumber: 9
     }, this) }, void 0, false, {
-      fileName: "app/routes/products/$slug.tsx",
+      fileName: "app/routes/$slug.tsx",
       lineNumber: 163,
       columnNumber: 7
     }, this);
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Record, { ...product }, void 0, false, {
-    fileName: "app/routes/products/$slug.tsx",
+    fileName: "app/routes/$slug.tsx",
     lineNumber: 169,
     columnNumber: 10
   }, this);
@@ -70,4 +70,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/products/$slug-R2KSHWLC.js.map
+//# sourceMappingURL=/build/routes/$slug-BCAPSJWP.js.map

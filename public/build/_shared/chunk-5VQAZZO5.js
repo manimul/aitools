@@ -1,7 +1,7 @@
 import {
   PaneItemPreview,
   usePaneRouter
-} from "/build/_shared/chunk-W7OSM6NY.js";
+} from "/build/_shared/chunk-VUKTLCDD.js";
 import {
   ChevronRightIcon,
   DocumentIcon,
@@ -130,4 +130,4 @@ function PaneItem(props) {
 export {
   PaneItem
 };
-//# sourceMappingURL=/build/_shared/chunk-Y2YXGXKY.js.map
+//# sourceMappingURL=/build/_shared/chunk-5VQAZZO5.js.map

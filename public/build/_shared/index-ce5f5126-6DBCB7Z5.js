@@ -1,6 +1,6 @@
 import {
   useDeskTool
-} from "/build/_shared/chunk-FJTHRNVG.js";
+} from "/build/_shared/chunk-6WEWYEPE.js";
 import "/build/_shared/chunk-6URVWIZX.js";
 import {
   BackLink,
@@ -9,7 +9,7 @@ import {
   PaneHeaderActions,
   require_isNumber,
   usePane
-} from "/build/_shared/chunk-W7OSM6NY.js";
+} from "/build/_shared/chunk-VUKTLCDD.js";
 import {
   ArrowLeftIcon,
   Box,
@@ -133,4 +133,4 @@ function UserComponentPane(props) {
 export {
   UserComponentPane as default
 };
-//# sourceMappingURL=/build/_shared/index-ce5f5126-ARW4DFYX.js.map
+//# sourceMappingURL=/build/_shared/index-ce5f5126-6DBCB7Z5.js.map

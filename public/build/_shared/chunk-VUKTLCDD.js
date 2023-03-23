@@ -2826,7 +2826,7 @@ var deskTool = definePlugin((options) => ({
     name: (options == null ? void 0 : options.name) || "desk",
     title: (options == null ? void 0 : options.title) || "Desk",
     icon: (options == null ? void 0 : options.icon) || MasterDetailIcon,
-    component: (0, import_react.lazy)(() => import("/build/_shared/index-def00177-POADBELW.js").then(function(n) {
+    component: (0, import_react.lazy)(() => import("/build/_shared/index-def00177-HPNUYHPI.js").then(function(n) {
       return n.index;
     })),
     canHandleIntent: (intent, params) => {
@@ -4664,4 +4664,4 @@ export {
   SerializeError,
   DeskToolProvider
 };
-//# sourceMappingURL=/build/_shared/chunk-W7OSM6NY.js.map
+//# sourceMappingURL=/build/_shared/chunk-VUKTLCDD.js.map
