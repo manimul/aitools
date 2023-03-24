@@ -118,11 +118,16 @@ export default function Categories() {
         </section>
 
         {products.length > 0 ? (
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-            {products.map((product) => (
-              <ProductCard key={product._id} product={product} />
-            ))}
-          </div>
+          <>
+            <h2 className='mt-12 mb-6 font-mono text-6xl capitalize'>
+              New tools
+            </h2>
+            <div className='grid gap-6 md:grid-cols-4 md:gap-16'>
+              {products.slice(0, 4).map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))}
+            </div>
+          </>
         ) : (
           <p>No products found with this tag.</p>
         )}
@@ -133,7 +138,7 @@ export default function Categories() {
               <h2 className='mt-12 mb-6 font-mono text-6xl capitalize'>
                 {tagTitle}
               </h2>
-              <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
+              <div className='grid  gap-6 md:grid-cols-3 md:gap-16'>
                 {groupedProducts[tagTitle].map((product) => (
                   <ProductCard key={product._id} product={product} />
                 ))}

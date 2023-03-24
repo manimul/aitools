@@ -1,12 +1,12 @@
 import {
   ProductCard
-} from "/build/_shared/chunk-AO2RGFCI.js";
+} from "/build/_shared/chunk-5IGBLQKP.js";
 import {
   Layout,
   RecordCover,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-IXZ3F3AX.js";
+} from "/build/_shared/chunk-EHNQJK33.js";
 import "/build/_shared/chunk-RVWPLYFV.js";
 import "/build/_shared/chunk-7E4LWBBH.js";
 import {
@@ -102,41 +102,52 @@ function Categories() {
       lineNumber: 100,
       columnNumber: 9
     }, this),
-    products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
-      fileName: "app/routes/categories/$slug.tsx",
-      lineNumber: 123,
-      columnNumber: 15
-    }, this)) }, void 0, false, {
+    products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_jsx_dev_runtime.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h2", { className: "mt-12 mb-6 font-mono text-6xl capitalize", children: "New tools" }, void 0, false, {
+        fileName: "app/routes/categories/$slug.tsx",
+        lineNumber: 122,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid gap-6 md:grid-cols-4 md:gap-16", children: products.slice(0, 4).map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
+        fileName: "app/routes/categories/$slug.tsx",
+        lineNumber: 127,
+        columnNumber: 17
+      }, this)) }, void 0, false, {
+        fileName: "app/routes/categories/$slug.tsx",
+        lineNumber: 125,
+        columnNumber: 13
+      }, this)
+    ] }, void 0, true, {
       fileName: "app/routes/categories/$slug.tsx",
       lineNumber: 121,
       columnNumber: 11
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: "No products found with this tag." }, void 0, false, {
       fileName: "app/routes/categories/$slug.tsx",
-      lineNumber: 127,
+      lineNumber: 132,
       columnNumber: 11
     }, this),
     Object.keys(groupedProducts).length > 0 ? Object.keys(groupedProducts).map((tagTitle) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "my-12  border-t-2 border-dashed", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h2", { className: "mt-12 mb-6 font-mono text-6xl capitalize", children: tagTitle }, void 0, false, {
         fileName: "app/routes/categories/$slug.tsx",
-        lineNumber: 133,
+        lineNumber: 138,
         columnNumber: 15
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3", children: groupedProducts[tagTitle].map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid  gap-6 md:grid-cols-3 md:gap-16", children: groupedProducts[tagTitle].map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
         fileName: "app/routes/categories/$slug.tsx",
-        lineNumber: 138,
+        lineNumber: 143,
         columnNumber: 19
       }, this)) }, void 0, false, {
         fileName: "app/routes/categories/$slug.tsx",
-        lineNumber: 136,
+        lineNumber: 141,
         columnNumber: 15
       }, this)
     ] }, tagTitle, true, {
       fileName: "app/routes/categories/$slug.tsx",
-      lineNumber: 132,
+      lineNumber: 137,
       columnNumber: 13
     }, this)) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: "No products found with this tag." }, void 0, false, {
       fileName: "app/routes/categories/$slug.tsx",
-      lineNumber: 144,
+      lineNumber: 149,
       columnNumber: 11
     }, this)
   ] }, void 0, true, {
@@ -153,4 +164,4 @@ export {
   Categories as default,
   links
 };
-//# sourceMappingURL=/build/routes/categories/$slug-NJDVL3EY.js.map
+//# sourceMappingURL=/build/routes/categories/$slug-FC3OI2MA.js.map

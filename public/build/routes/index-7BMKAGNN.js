@@ -1,13 +1,13 @@
 import {
   ProductCard
-} from "/build/_shared/chunk-AO2RGFCI.js";
+} from "/build/_shared/chunk-5IGBLQKP.js";
 import {
   Layout,
   RecordCover,
   Title,
   tailwind_default,
   useRouteData
-} from "/build/_shared/chunk-IXZ3F3AX.js";
+} from "/build/_shared/chunk-EHNQJK33.js";
 import "/build/_shared/chunk-RVWPLYFV.js";
 import "/build/_shared/chunk-7E4LWBBH.js";
 import {
@@ -82,7 +82,7 @@ function Index() {
       lineNumber: 63,
       columnNumber: 9
     }, this),
-    products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("ul", { className: "grid  gap-6 space-y-12 md:grid-cols-3 md:gap-16 ", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
+    products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("ul", { className: "grid  gap-6 md:grid-cols-3 md:gap-16 ", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
       fileName: "app/routes/index.tsx",
       lineNumber: 79,
       columnNumber: 15
@@ -110,4 +110,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/index-ILPEBJM5.js.map
+//# sourceMappingURL=/build/routes/index-7BMKAGNN.js.map

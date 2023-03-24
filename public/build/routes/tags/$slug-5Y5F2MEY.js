@@ -1,11 +1,11 @@
 import {
   ProductCard
-} from "/build/_shared/chunk-AO2RGFCI.js";
+} from "/build/_shared/chunk-5IGBLQKP.js";
 import {
   Layout,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-IXZ3F3AX.js";
+} from "/build/_shared/chunk-EHNQJK33.js";
 import "/build/_shared/chunk-RVWPLYFV.js";
 import "/build/_shared/chunk-7E4LWBBH.js";
 import {
@@ -72,7 +72,7 @@ function Tags() {
       lineNumber: 64,
       columnNumber: 9
     }, this),
-    products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
+    products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid  gap-6 md:grid-cols-3 md:gap-16", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
       fileName: "app/routes/tags/$slug.tsx",
       lineNumber: 79,
       columnNumber: 15
@@ -99,4 +99,4 @@ export {
   Tags as default,
   links
 };
-//# sourceMappingURL=/build/routes/tags/$slug-4VCYJBQI.js.map
+//# sourceMappingURL=/build/routes/tags/$slug-5Y5F2MEY.js.map

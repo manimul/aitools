@@ -74,7 +74,7 @@ export default function Index() {
           </div>
         </section>
         {products.length > 0 ? (
-          <ul className='grid  gap-6 space-y-12 md:grid-cols-3 md:gap-16 '>
+          <ul className='grid  gap-6 md:grid-cols-3 md:gap-16 '>
             {products.map((product) => (
               <ProductCard key={product._id} product={product} />
             ))}

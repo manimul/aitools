@@ -6,7 +6,7 @@ import {
   Layout,
   RecordCover,
   Title
-} from "/build/_shared/chunk-IXZ3F3AX.js";
+} from "/build/_shared/chunk-EHNQJK33.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-RVWPLYFV.js";
@@ -1545,4 +1545,4 @@ export {
   Record,
   PreviewRecord
 };
-//# sourceMappingURL=/build/_shared/chunk-VFSZ6Q5P.js.map
+//# sourceMappingURL=/build/_shared/chunk-KIZTSWYG.js.map

@@ -146,7 +146,7 @@ function Layout(props) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-CSOCLKRC.css";
+var tailwind_default = "/build/_assets/tailwind-O2DUFTBN.css";
 
 // app/components/RecordCover.tsx
 var import_image_url = __toESM(require_image_url_umd());
@@ -157,7 +157,7 @@ function RecordCover(props) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "aspect-square bg-gray-50", children: image ? /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(
     "img",
     {
-      className: "h-auto w-full rounded-lg object-cover shadow-black transition-all duration-300  group-hover:scale-105 ",
+      className: "h-auto w-full  object-cover shadow-black transition-all duration-300  group-hover:scale-105 ",
       src: (0, import_image_url.default)(projectDetails()).image(image.asset._ref).height(800).width(800).fit("max").auto("format").url(),
       alt: (_a = String(title)) != null ? _a : ``,
       loading: "lazy"
@@ -198,4 +198,4 @@ export {
   RecordCover,
   Title
 };
-//# sourceMappingURL=/build/_shared/chunk-IXZ3F3AX.js.map
+//# sourceMappingURL=/build/_shared/chunk-EHNQJK33.js.map

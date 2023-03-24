@@ -2,11 +2,11 @@ import {
   PreviewRecord,
   PreviewSuspense,
   Record
-} from "/build/_shared/chunk-VFSZ6Q5P.js";
+} from "/build/_shared/chunk-KIZTSWYG.js";
 import "/build/_shared/chunk-PBYB3QU6.js";
 import {
   tailwind_default
-} from "/build/_shared/chunk-IXZ3F3AX.js";
+} from "/build/_shared/chunk-EHNQJK33.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-RVWPLYFV.js";
@@ -70,4 +70,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/products/$slug-E5Y7DOZ5.js.map
+//# sourceMappingURL=/build/routes/products/$slug-SBIAHW24.js.map

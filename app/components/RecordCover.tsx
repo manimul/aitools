@@ -17,7 +17,7 @@ export default function RecordCover(props: RecordCoverProps) {
     <div className='aspect-square bg-gray-50'>
       {image ? (
         <img
-          className='h-auto w-full rounded-lg object-cover shadow-black transition-all duration-300  group-hover:scale-105 '
+          className='h-auto w-full  object-cover shadow-black transition-all duration-300  group-hover:scale-105 '
           src={urlBuilder(projectDetails())
             .image(image.asset._ref)
             .height(800)
