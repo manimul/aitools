@@ -5,6 +5,8 @@ import { Link, useLoaderData, useParams } from '@remix-run/react';
 import groq from 'groq';
 import { json } from '@remix-run/node';
 import type { productsZ, RecordDocument } from '~/types/product';
+import { projectDetails } from '~/sanity/projectDetails';
+
 import { categoryZ, productStubsZ, groupedProductsZ } from '~/types/product';
 
 import type { LinksFunction, LoaderArgs } from '@remix-run/node';
@@ -14,6 +16,9 @@ import AlbumCover from '~/components/RecordCover';
 
 import { getClient } from '~/sanity/client';
 import Title from '~/components/Title';
+import urlBuilder from '@sanity/image-url';
+import SanityContent from '~/components/SanityContent';
+import ProductCard from '~/components/ProductCard';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
@@ -40,6 +45,7 @@ export const loader = async (props: LoaderArgs) => {
     _id,
     title,
     metadescription,
+    content,
     "slug": slug.current,
     "category": category->title,
     "tags": tags[]->{
@@ -110,21 +116,11 @@ export default function Categories() {
             </div>
           </div>
         </section>
+
         {products.length > 0 ? (
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
             {products.map((product) => (
-              <div key={product._id} className='rounded border p-4'>
-                <h3 className='text-xl'>{product.title}</h3>
-                {product.image && (
-                  <>
-                    <AlbumCover image={product.image} title={product.title} />
-                  </>
-                )}
-                <p>{product.category}</p>
-                <Link to={`/products/${product.slug}`} className='underline'>
-                  View Product
-                </Link>
-              </div>
+              <ProductCard key={product._id} product={product} />
             ))}
           </div>
         ) : (
@@ -133,28 +129,13 @@ export default function Categories() {
 
         {Object.keys(groupedProducts).length > 0 ? (
           Object.keys(groupedProducts).map((tagTitle) => (
-            <div key={tagTitle}>
-              <h2 className='my-4 text-2xl'>{tagTitle}</h2>
+            <div className='my-12  border-t-2 border-dashed' key={tagTitle}>
+              <h2 className='mt-12 mb-6 font-mono text-6xl capitalize'>
+                {tagTitle}
+              </h2>
               <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
                 {groupedProducts[tagTitle].map((product) => (
-                  <div key={product._id} className='rounded border p-4'>
-                    <h3 className='text-xl'>{product.title}</h3>
-                    {product.image && (
-                      <>
-                        <AlbumCover
-                          image={product.image}
-                          title={product.title}
-                        />
-                      </>
-                    )}
-                    <p>{product.category}</p>
-                    <Link
-                      to={`/products/${product.slug}`}
-                      className='underline'
-                    >
-                      View Product
-                    </Link>
-                  </div>
+                  <ProductCard key={product._id} product={product} />
                 ))}
               </div>
             </div>

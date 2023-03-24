@@ -146,7 +146,7 @@ function Layout(props) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-WT4KF4ZO.css";
+var tailwind_default = "/build/_assets/tailwind-CSOCLKRC.css";
 
 // app/components/RecordCover.tsx
 var import_image_url = __toESM(require_image_url_umd());
@@ -157,7 +157,7 @@ function RecordCover(props) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "aspect-square bg-gray-50", children: image ? /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(
     "img",
     {
-      className: "h-auto w-full object-cover shadow-black transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-cyan-200",
+      className: "h-auto w-full rounded-lg object-cover shadow-black transition-all duration-300  group-hover:scale-105 ",
       src: (0, import_image_url.default)(projectDetails()).image(image.asset._ref).height(800).width(800).fit("max").auto("format").url(),
       alt: (_a = String(title)) != null ? _a : ``,
       loading: "lazy"
@@ -166,17 +166,17 @@ function RecordCover(props) {
     false,
     {
       fileName: "app/components/RecordCover.tsx",
-      lineNumber: 18,
+      lineNumber: 19,
       columnNumber: 9
     },
     this
   ) : /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500", children: title != null ? title : `Missing Record art` }, void 0, false, {
     fileName: "app/components/RecordCover.tsx",
-    lineNumber: 31,
+    lineNumber: 32,
     columnNumber: 9
   }, this) }, void 0, false, {
     fileName: "app/components/RecordCover.tsx",
-    lineNumber: 16,
+    lineNumber: 17,
     columnNumber: 5
   }, this);
 }
@@ -198,4 +198,4 @@ export {
   RecordCover,
   Title
 };
-//# sourceMappingURL=/build/_shared/chunk-DFIOHKBP.js.map
+//# sourceMappingURL=/build/_shared/chunk-IXZ3F3AX.js.map

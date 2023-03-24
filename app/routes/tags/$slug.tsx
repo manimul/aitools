@@ -10,6 +10,7 @@ import stylesheet from '~/tailwind.css';
 import { getClient } from '~/sanity/client';
 import AlbumCover from '~/components/RecordCover';
 import Title from '~/components/Title';
+import ProductCard from '~/components/ProductCard';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
@@ -37,6 +38,7 @@ export const loader = async (props: LoaderArgs) => {
     metadescription,
     "slug": slug.current,
     "category": category->title,
+  
     image
   }`;
 
@@ -74,18 +76,7 @@ export default function Tags() {
         {products.length > 0 ? (
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
             {products.map((product) => (
-              <div key={product._id} className='rounded border p-4'>
-                <h3 className='text-xl'>{product.title}</h3>
-                {product.image && (
-                  <>
-                    <AlbumCover image={product.image} title={product.title} />
-                  </>
-                )}
-                <p>{product.category}</p>
-                <Link to={`/products/${product.slug}`} className='underline'>
-                  View Product
-                </Link>
-              </div>
+              <ProductCard key={product._id} product={product} />
             ))}
           </div>
         ) : (

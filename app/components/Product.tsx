@@ -88,21 +88,20 @@ export default function Record(props: RecordDocument) {
               ) : null}
 
               {tags ? (
-                <>
-                  <h2 className='text-xs  uppercase tracking-widest opacity-70 '>
+                <div className='flex flex-wrap space-x-2 space-y-2'>
+                  <h2 className='w-full text-xs uppercase tracking-widest opacity-70 '>
                     Tags:
                   </h2>
                   {tags.map((tag) => (
-                    <div
+                    <Link
                       key={tag._key}
-                      className=' mx-2 my-4 inline-flex  rounded-lg bg-blue-300 py-2 px-3 lowercase tracking-widest'
+                      to={'/tags/' + tag.slug}
+                      className='rounded-xl w-auto  rounded-full border border-black px-2 font-mono text-sm   lowercase dark:border-white'
                     >
-                      <Link to={'/tags/' + tag.slug} className='text-xs'>
-                        {tag.title}{' '}
-                      </Link>
-                    </div>
+                      {tag.title}{' '}
+                    </Link>
                   ))}
-                </>
+                </div>
               ) : null}
               {score ? (
                 <section>
@@ -129,16 +128,16 @@ export default function Record(props: RecordDocument) {
                   </p>
                 </section>
               ) : null}
-              <a
-                href='#overview'
-                className=' mr-4 inline-flex border-2 border-blue-300 py-4 px-12 text-blue-600 dark:text-blue-300 '
+              <Link
+                to='#overview'
+                className=' mr-4 inline-flex w-full justify-center border-2 border-blue-300 py-4 px-12 text-blue-600 dark:text-blue-300 md:w-auto '
               >
                 Learn more
-              </a>
+              </Link>
               {referral ? (
                 <a
-                  className=' from-blue-5 200 inline-flex border-2 border-blue-500 bg-blue-500  py-4
-                  px-12 text-white'
+                  className=' from-blue-5 200 inline-flex w-full justify-center border-2 border-blue-500 bg-blue-500 py-4 px-12
+                  text-white md:w-auto'
                   href={referral}
                 >
                   Try {title} now

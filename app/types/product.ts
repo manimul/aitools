@@ -79,16 +79,27 @@ export const productStubZ = z.object({
   title: z.string().nullable(),
   slug: z.string().nullable(),
   category: z.string().nullable(),
+  tags: z
+    .array(
+      z.object({
+        _key: z.string().optional(),
+        title: z.string().nullable(),
+        slug: z.string().nullable(),
+      })
+    )
+    .nullable()
+    .optional(),
   metadescription: z.string().nullable(),
-
   image: z.any().nullable(),
 });
 
 export const productStubsZ = z.array(productStubZ);
+export type ProductDocument = z.infer<typeof productStubZ>;
 
 export const tagZ = z.object({
   title: z.any().nullable(),
   slug: z.any().nullable(),
+  _key: z.string().nullable().optional(),
 });
 
 export const tagsZ = z.array(tagZ);
@@ -107,6 +118,7 @@ export const groupedProductZ = z.object({
   category: z.string().nullable(),
   image: z.any().nullable(),
   tags: z.array(tagZ).nullable(),
+  content: z.array(z.any()).nullable(),
 });
 
 export const groupedProductsZ = z.array(groupedProductZ);

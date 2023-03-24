@@ -6,7 +6,7 @@ import {
   Layout,
   RecordCover,
   Title
-} from "/build/_shared/chunk-DFIOHKBP.js";
+} from "/build/_shared/chunk-IXZ3F3AX.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-RVWPLYFV.js";
@@ -1154,27 +1154,24 @@ function Record(props) {
           lineNumber: 85,
           columnNumber: 17
         }, this) : null,
-        tags ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-xs  uppercase tracking-widest opacity-70 ", children: "Tags:" }, void 0, false, {
+        tags ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "flex flex-wrap space-x-2 space-y-2", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "w-full text-xs uppercase tracking-widest opacity-70 ", children: "Tags:" }, void 0, false, {
             fileName: "app/components/Product.tsx",
             lineNumber: 92,
             columnNumber: 19
           }, this),
           tags.map((tag) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
-            "div",
+            Link,
             {
-              className: " mx-2 my-4 inline-flex  rounded-lg bg-blue-300 py-2 px-3 lowercase tracking-widest",
-              children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Link, { to: "/tags/" + tag.slug, className: "text-xs", children: [
+              to: "/tags/" + tag.slug,
+              className: "rounded-xl w-auto  rounded-full border border-black px-2 font-mono text-sm   lowercase dark:border-white",
+              children: [
                 tag.title,
                 " "
-              ] }, void 0, true, {
-                fileName: "app/components/Product.tsx",
-                lineNumber: 100,
-                columnNumber: 23
-              }, this)
+              ]
             },
             tag._key,
-            false,
+            true,
             {
               fileName: "app/components/Product.tsx",
               lineNumber: 96,
@@ -1190,13 +1187,13 @@ function Record(props) {
         score ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-xs  uppercase tracking-widest opacity-70 ", children: "Score:" }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 109,
+            lineNumber: 108,
             columnNumber: 19
           }, this),
           " ",
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-4xl text-yellow-500" }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 112,
+            lineNumber: 111,
             columnNumber: 19
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "flex items-center", children: [
@@ -1206,23 +1203,23 @@ function Record(props) {
               " out of 5"
             ] }, void 0, true, {
               fileName: "app/components/Product.tsx",
-              lineNumber: 115,
+              lineNumber: 114,
               columnNumber: 21
             }, this)
           ] }, void 0, true, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 113,
+            lineNumber: 112,
             columnNumber: 19
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 108,
+          lineNumber: 107,
           columnNumber: 17
         }, this) : null,
         pricing ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-xs  uppercase tracking-widest opacity-70 ", children: "Price Range:" }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 123,
+            lineNumber: 122,
             columnNumber: 19
           }, this),
           " ",
@@ -1231,26 +1228,26 @@ function Record(props) {
             pricing
           ] }, void 0, true, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 126,
+            lineNumber: 125,
             columnNumber: 19
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 122,
+          lineNumber: 121,
           columnNumber: 17
         }, this) : null,
         /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
-          "a",
+          Link,
           {
-            href: "#overview",
-            className: " mr-4 inline-flex border-2 border-blue-300 py-4 px-12 text-blue-600 dark:text-blue-300 ",
+            to: "#overview",
+            className: " mr-4 inline-flex w-full justify-center border-2 border-blue-300 py-4 px-12 text-blue-600 dark:text-blue-300 md:w-auto ",
             children: "Learn more"
           },
           void 0,
           false,
           {
             fileName: "app/components/Product.tsx",
-            lineNumber: 132,
+            lineNumber: 131,
             columnNumber: 15
           },
           this
@@ -1258,7 +1255,7 @@ function Record(props) {
         referral ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
           "a",
           {
-            className: " from-blue-5 200 inline-flex border-2 border-blue-500 bg-blue-500  py-4\n                  px-12 text-white",
+            className: " from-blue-5 200 inline-flex w-full justify-center border-2 border-blue-500 bg-blue-500 py-4 px-12\n                  text-white md:w-auto",
             href: referral,
             children: [
               "Try ",
@@ -1270,7 +1267,7 @@ function Record(props) {
           true,
           {
             fileName: "app/components/Product.tsx",
-            lineNumber: 139,
+            lineNumber: 138,
             columnNumber: 17
           },
           this
@@ -1286,11 +1283,11 @@ function Record(props) {
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "order-1 md:order-2 lg:col-span-5 lg:mt-0 lg:flex", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(RecordCover, { image, title }, void 0, false, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 150,
+        lineNumber: 149,
         columnNumber: 13
       }, this) }, void 0, false, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 149,
+        lineNumber: 148,
         columnNumber: 11
       }, this)
     ] }, void 0, true, {
@@ -1306,13 +1303,13 @@ function Record(props) {
       /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "grid-gap-4 top-1 mx-auto grid grid-cols-1 space-y-4 md:sticky md:max-w-[70vw]", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(RecordCover, { image, title }, void 0, false, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 157,
+          lineNumber: 156,
           columnNumber: 11
         }, this),
         features && (features == null ? void 0 : features.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 rounded border bg-[#ffffff] p-4 dark:divide-gray-900 dark:bg-[#111111]", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "featureing-tighter py-3 text-2xl font-bold", children: (features == null ? void 0 : features.length) === 1 ? `1 Great Feature` : `${features == null ? void 0 : features.length} Key Features` }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 161,
+            lineNumber: 160,
             columnNumber: 17
           }, this),
           features.map((feature) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
@@ -1321,7 +1318,7 @@ function Record(props) {
               className: "flex items-center justify-between py-3",
               children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-lg", children: feature.title }, void 0, false, {
                 fileName: "app/components/Product.tsx",
-                lineNumber: 171,
+                lineNumber: 170,
                 columnNumber: 21
               }, this)
             },
@@ -1329,72 +1326,72 @@ function Record(props) {
             false,
             {
               fileName: "app/components/Product.tsx",
-              lineNumber: 167,
+              lineNumber: 166,
               columnNumber: 19
             },
             this
           ))
         ] }, void 0, true, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 160,
+          lineNumber: 159,
           columnNumber: 15
         }, this) }, void 0, false, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 159,
+          lineNumber: 158,
           columnNumber: 13
         }, this) : null
       ] }, void 0, true, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 156,
+        lineNumber: 155,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: " flex flex-shrink-0 flex-col gap-4 md:gap-4 lg:w-2/3", children: [
         overview && (overview == null ? void 0 : overview.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { id: "overview", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-2xl", children: "Overview" }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 181,
+            lineNumber: 180,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(SanityContent, { value: overview }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 182,
+            lineNumber: 181,
             columnNumber: 15
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 180,
+          lineNumber: 179,
           columnNumber: 13
         }, this) : null,
         ease && (ease == null ? void 0 : ease.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { className: "mt-6 border-t border-gray-400 py-6", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-2xl ", children: "Ease of Use" }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 187,
+            lineNumber: 186,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(SanityContent, { value: ease }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 188,
+            lineNumber: 187,
             columnNumber: 15
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 186,
+          lineNumber: 185,
           columnNumber: 13
         }, this) : null,
         support && (support == null ? void 0 : support.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { className: "mt-6 border-t border-gray-400 py-6", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-2xl ", children: "Customer Support" }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 193,
+            lineNumber: 192,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(SanityContent, { value: support }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 194,
+            lineNumber: 193,
             columnNumber: 15
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 192,
+          lineNumber: 191,
           columnNumber: 13
         }, this) : null,
         referral ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
@@ -1408,7 +1405,7 @@ function Record(props) {
           false,
           {
             fileName: "app/components/Product.tsx",
-            lineNumber: 198,
+            lineNumber: 197,
             columnNumber: 13
           },
           this
@@ -1416,14 +1413,14 @@ function Record(props) {
         pros && cons && (pros == null ? void 0 : pros.length) > 0 && (cons == null ? void 0 : cons.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("section", { children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: " py-3 text-2xl font-bold", children: "Pros & Cons" }, void 0, false, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 208,
+            lineNumber: 207,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "grid divide-x divide-gray-100 dark:divide-gray-900  md:grid-cols-2", children: [
             pros && (pros == null ? void 0 : pros.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "p-4", children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { children: "Pros" }, void 0, false, {
                 fileName: "app/components/Product.tsx",
-                lineNumber: 212,
+                lineNumber: 211,
                 columnNumber: 21
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: "grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: pros.map((pro) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
@@ -1435,7 +1432,7 @@ function Record(props) {
                     pro.title
                   ] }, void 0, true, {
                     fileName: "app/components/Product.tsx",
-                    lineNumber: 219,
+                    lineNumber: 218,
                     columnNumber: 27
                   }, this)
                 },
@@ -1443,24 +1440,24 @@ function Record(props) {
                 false,
                 {
                   fileName: "app/components/Product.tsx",
-                  lineNumber: 215,
+                  lineNumber: 214,
                   columnNumber: 25
                 },
                 this
               )) }, void 0, false, {
                 fileName: "app/components/Product.tsx",
-                lineNumber: 213,
+                lineNumber: 212,
                 columnNumber: 21
               }, this)
             ] }, void 0, true, {
               fileName: "app/components/Product.tsx",
-              lineNumber: 211,
+              lineNumber: 210,
               columnNumber: 19
             }, this) : null,
             cons && (cons == null ? void 0 : cons.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "p-4", children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h2", { className: "text-sm uppercase", children: "Cons" }, void 0, false, {
                 fileName: "app/components/Product.tsx",
-                lineNumber: 227,
+                lineNumber: 226,
                 columnNumber: 21
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: " grid grid-cols-1 divide-y divide-gray-100 dark:divide-gray-900", children: cons.map((con) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: " py-3", children: [
@@ -1469,7 +1466,7 @@ function Record(props) {
                   con.title
                 ] }, void 0, true, {
                   fileName: "app/components/Product.tsx",
-                  lineNumber: 232,
+                  lineNumber: 231,
                   columnNumber: 27
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("span", { className: "text-lg", children: [
@@ -1477,41 +1474,41 @@ function Record(props) {
                   con.description
                 ] }, void 0, true, {
                   fileName: "app/components/Product.tsx",
-                  lineNumber: 233,
+                  lineNumber: 232,
                   columnNumber: 27
                 }, this)
               ] }, con._key, true, {
                 fileName: "app/components/Product.tsx",
-                lineNumber: 231,
+                lineNumber: 230,
                 columnNumber: 25
               }, this)) }, void 0, false, {
                 fileName: "app/components/Product.tsx",
-                lineNumber: 229,
+                lineNumber: 228,
                 columnNumber: 21
               }, this)
             ] }, void 0, true, {
               fileName: "app/components/Product.tsx",
-              lineNumber: 226,
+              lineNumber: 225,
               columnNumber: 19
             }, this) : null
           ] }, void 0, true, {
             fileName: "app/components/Product.tsx",
-            lineNumber: 209,
+            lineNumber: 208,
             columnNumber: 15
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Product.tsx",
-          lineNumber: 207,
+          lineNumber: 206,
           columnNumber: 13
         }, this) : null
       ] }, void 0, true, {
         fileName: "app/components/Product.tsx",
-        lineNumber: 178,
+        lineNumber: 177,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/Product.tsx",
-      lineNumber: 155,
+      lineNumber: 154,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
@@ -1528,17 +1525,17 @@ function PreviewRecord(props) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ExitPreview, {}, void 0, false, {
       fileName: "app/components/Product.tsx",
-      lineNumber: 264,
+      lineNumber: 263,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Record, { ...data }, void 0, false, {
       fileName: "app/components/Product.tsx",
-      lineNumber: 265,
+      lineNumber: 264,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/components/Product.tsx",
-    lineNumber: 263,
+    lineNumber: 262,
     columnNumber: 5
   }, this);
 }
@@ -1548,4 +1545,4 @@ export {
   Record,
   PreviewRecord
 };
-//# sourceMappingURL=/build/_shared/chunk-TH6GI32Z.js.map
+//# sourceMappingURL=/build/_shared/chunk-VFSZ6Q5P.js.map
