@@ -110,6 +110,8 @@ export const categoryZ = z.object({
   image: z.any().nullable(),
 });
 
+export const categoriesZ = z.array(categoryZ);
+
 export const groupedProductZ = z.object({
   _id: z.string(),
   title: z.string().nullable(),

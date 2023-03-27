@@ -11,7 +11,7 @@ interface Slug {
 
 const slugsQuery = groq`*[defined(slug.current)]{
   _type == "product" => {
-    "slug": "products/" + slug.current
+    "slug": "tools/" + slug.current
   },
   _type == "category" => {
     "slug": "categories/" + slug.current

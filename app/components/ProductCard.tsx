@@ -56,7 +56,7 @@ export default function ProductCard({ product }: { product: ProductDocument }) {
           <>
             <Link
               prefetch='intent'
-              to={'/products/' + product?.slug}
+              to={'/tools/' + product?.slug}
               className=' text-md   md:text-lg'
             >
               <span className='mr-1 opacity-0 group-hover:opacity-100'>👉</span>

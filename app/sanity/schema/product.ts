@@ -140,6 +140,11 @@ export default defineType({
       name: 'metadescription',
       title: 'Description',
       type: 'string',
+      validation: (Rule) =>
+        Rule.max(150).warning(
+          `A descriptions shouldn't be more than 150 characters.`
+        ),
+
       group: 'seo',
     }),
     defineField({
