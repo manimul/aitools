@@ -65,6 +65,13 @@ var Home = createReactComponent("Home", [
   ["polyline", { points: "9 22 9 12 15 12 15 22", key: "e2us08" }]
 ]);
 
+// node_modules/lucide-react/dist/esm/icons/info.js
+var Info = createReactComponent("Info", [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["line", { x1: "12", y1: "16", x2: "12", y2: "12", key: "dkqlv3" }],
+  ["line", { x1: "12", y1: "8", x2: "12.01", y2: "8", key: "1kl4hv" }]
+]);
+
 // node_modules/lucide-react/dist/esm/icons/list.js
 var List = createReactComponent("List", [
   ["line", { x1: "8", y1: "6", x2: "21", y2: "6", key: "1kveod" }],
@@ -134,6 +141,7 @@ var Sun = createReactComponent("Sun", [
 export {
   Disc,
   Home,
+  Info,
   List,
   Moon,
   Sun,
@@ -141,4 +149,4 @@ export {
   Users,
   Wrench
 };
-//# sourceMappingURL=/build/_shared/chunk-6TE67VER.js.map
+//# sourceMappingURL=/build/_shared/chunk-GTC6AJN5.js.map

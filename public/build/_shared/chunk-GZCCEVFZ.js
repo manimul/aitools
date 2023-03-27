@@ -10,7 +10,7 @@ import {
 import {
   Layout,
   Title
-} from "/build/_shared/chunk-6RDU6RSJ.js";
+} from "/build/_shared/chunk-7KIFQQ6S.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
@@ -735,4 +735,4 @@ export {
   Record,
   PreviewRecord
 };
-//# sourceMappingURL=/build/_shared/chunk-UEH5AXOC.js.map
+//# sourceMappingURL=/build/_shared/chunk-GZCCEVFZ.js.map

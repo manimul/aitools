@@ -5,5 +5,6 @@ import home from '~/sanity/schema/home';
 import product from '~/sanity/schema/product';
 import feature from '~/sanity/schema/feature';
 import guide from '~/sanity/schema/guide';
+import info from '~/sanity/schema/info';
 
-export default [product, category, feature, tag, home, guide];
+export default [product, category, feature, tag, home, guide, info];

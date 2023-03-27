@@ -36,11 +36,12 @@ import "/build/_shared/chunk-UXONZQWX.js";
 import {
   Disc,
   Home,
+  Info,
   List,
   Tags,
   Users,
   Wrench
-} from "/build/_shared/chunk-6TE67VER.js";
+} from "/build/_shared/chunk-GTC6AJN5.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -491,8 +492,44 @@ var guide_default = defineType({
   }
 });
 
+// app/sanity/schema/info.ts
+var info_default = defineType({
+  name: "info",
+  title: "Info",
+  type: "document",
+  icon: List,
+  fields: [
+    defineField({
+      name: "title",
+      type: "string"
+    }),
+    defineField({
+      name: "image",
+      type: "image",
+      options: { hotspot: true }
+    }),
+    defineField({
+      name: "content",
+      type: "array",
+      of: [{ type: "block" }, { type: "image" }]
+    })
+  ],
+  preview: {
+    select: {
+      title: "title",
+      media: "image"
+    },
+    prepare({ title, media }) {
+      return {
+        title,
+        media
+      };
+    }
+  }
+});
+
 // app/sanity/schema/index.ts
-var schema_default = [product_default, category_default, feature_default, tag_default, home_default, guide_default];
+var schema_default = [product_default, category_default, feature_default, tag_default, home_default, guide_default, info_default];
 
 // node_modules/sanity-plugin-iframe-pane/lib/index.esm.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime());
@@ -737,6 +774,7 @@ var structure = (S) => S.list().id("root").title("Content").items([
   S.divider(),
   S.documentTypeListItem("product").title("Tools").icon(Wrench),
   S.documentTypeListItem("guide").title("Guides").icon(List),
+  S.documentTypeListItem("info").title("Info").icon(Info),
   S.divider(),
   S.documentTypeListItem("category").title("Categories").icon(Users),
   S.documentTypeListItem("tag").title("Tags").icon(Tags)
@@ -810,4 +848,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/studio/$-CZJNDF3K.js.map
+//# sourceMappingURL=/build/routes/studio/$-WS2CJFNV.js.map

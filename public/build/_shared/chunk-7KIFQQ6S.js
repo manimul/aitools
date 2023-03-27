@@ -1,7 +1,7 @@
 import {
   Moon,
   Sun
-} from "/build/_shared/chunk-6TE67VER.js";
+} from "/build/_shared/chunk-GTC6AJN5.js";
 import {
   Link,
   useFetcher,
@@ -168,7 +168,7 @@ function Layout(props) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-NT7KRLNJ.css";
+var tailwind_default = "/build/_assets/tailwind-JY5KN5SU.css";
 
 // app/components/Title.tsx
 var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
@@ -186,4 +186,4 @@ export {
   tailwind_default,
   Title
 };
-//# sourceMappingURL=/build/_shared/chunk-6RDU6RSJ.js.map
+//# sourceMappingURL=/build/_shared/chunk-7KIFQQ6S.js.map

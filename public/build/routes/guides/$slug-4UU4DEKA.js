@@ -9,14 +9,14 @@ import {
   Layout,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-6RDU6RSJ.js";
+} from "/build/_shared/chunk-7KIFQQ6S.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
 import {
   require_image_url_umd
 } from "/build/_shared/chunk-UXONZQWX.js";
-import "/build/_shared/chunk-6TE67VER.js";
+import "/build/_shared/chunk-GTC6AJN5.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -137,4 +137,4 @@ export {
   GuidePage as default,
   links
 };
-//# sourceMappingURL=/build/routes/guides/$slug-2E7PLQHR.js.map
+//# sourceMappingURL=/build/routes/guides/$slug-4UU4DEKA.js.map

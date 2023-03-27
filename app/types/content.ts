@@ -53,3 +53,12 @@ export const guideStubZ = z.object({
 });
 
 export const guideStubsZ = z.array(guideStubZ);
+
+export const infoZ = z.object({
+  _id: z.string(),
+  title: z.string().nullable(),
+  image: z.any().nullable(),
+  content: z.array(z.any()).nullable(),
+});
+
+export const infosZ = z.array(infoZ);

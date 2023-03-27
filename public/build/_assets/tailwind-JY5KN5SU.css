@@ -840,6 +840,9 @@ video {
 .-mt-1 {
   margin-top: -4px;
 }
+.mb-12 {
+  margin-bottom: 3rem;
+}
 .block {
   display: block;
 }
@@ -1027,8 +1030,14 @@ video {
 .border-t-2 {
   border-top-width: 2px;
 }
+.border-b-2 {
+  border-bottom-width: 2px;
+}
 .border-dashed {
   border-style: dashed;
+}
+.border-dotted {
+  border-style: dotted;
 }
 .border-black {
   --tw-border-opacity: 1;
@@ -1128,6 +1137,9 @@ video {
 }
 .pr-4 {
   padding-right: 20px;
+}
+.pt-12 {
+  padding-top: 3rem;
 }
 .text-center {
   text-align: center;
@@ -1656,6 +1668,10 @@ video {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 @media (min-width: 1024px) {
   .lg\:col-span-5 {
@@ -1724,4 +1740,4 @@ video {
     line-height: 1;
   }
 }
-/*# sourceMappingURL=/build/_assets/tailwind-MXYHKAGF.css.map */
+/*# sourceMappingURL=/build/_assets/tailwind-ZWETGCPH.css.map */

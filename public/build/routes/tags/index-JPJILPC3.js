@@ -2,8 +2,8 @@ import {
   Layout,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-6RDU6RSJ.js";
-import "/build/_shared/chunk-6TE67VER.js";
+} from "/build/_shared/chunk-7KIFQQ6S.js";
+import "/build/_shared/chunk-GTC6AJN5.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -87,4 +87,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/tags/index-KERTVCXU.js.map
+//# sourceMappingURL=/build/routes/tags/index-JPJILPC3.js.map
