@@ -2,8 +2,8 @@ import {
   Layout,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-CZLDT6TF.js";
-import "/build/_shared/chunk-YTXMV47J.js";
+} from "/build/_shared/chunk-KEYK25BR.js";
+import "/build/_shared/chunk-6TE67VER.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -20,7 +20,7 @@ import {
   __toESM
 } from "/build/_shared/chunk-CUPSZOF3.js";
 
-// app/routes/tags/index.tsx
+// app/routes/categories/index.tsx
 var import_groq = __toESM(require_groq());
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 var links = () => {
@@ -34,51 +34,47 @@ var meta = (data) => {
   };
 };
 function Index() {
-  const { tags } = useLoaderData();
+  const { categories } = useLoaderData();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Layout, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid grid-cols-1 gap-6 md:gap-12", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("header", { className: "space-y-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Title, { children: "All Tags" }, void 0, false, {
-      fileName: "app/routes/tags/index.tsx",
-      lineNumber: 58,
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("header", { className: "space-y-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Title, { children: "All Categories" }, void 0, false, {
+      fileName: "app/routes/categories/index.tsx",
+      lineNumber: 59,
       columnNumber: 11
     }, this) }, void 0, false, {
-      fileName: "app/routes/tags/index.tsx",
-      lineNumber: 57,
+      fileName: "app/routes/categories/index.tsx",
+      lineNumber: 58,
       columnNumber: 9
     }, this),
-    tags.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: " flex flex-wrap", children: tags.map((tag) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
+    categories.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_jsx_dev_runtime.Fragment, { children: categories.map((category) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
       Link,
       {
-        to: "/tags/" + tag.slug,
-        className: "rounded-xl mr-4 mb-4 w-auto  rounded-full border border-black px-2 font-mono text-4xl   lowercase dark:border-white",
-        children: [
-          tag.title,
-          " "
-        ]
+        to: "/categories/" + category.slug.current,
+        children: category.title
       },
-      tag._key,
-      true,
+      category.title,
+      false,
       {
-        fileName: "app/routes/tags/index.tsx",
-        lineNumber: 63,
+        fileName: "app/routes/categories/index.tsx",
+        lineNumber: 64,
         columnNumber: 15
       },
       this
     )) }, void 0, false, {
-      fileName: "app/routes/tags/index.tsx",
-      lineNumber: 61,
+      fileName: "app/routes/categories/index.tsx",
+      lineNumber: 62,
       columnNumber: 11
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: " No products found " }, void 0, false, {
-      fileName: "app/routes/tags/index.tsx",
+      fileName: "app/routes/categories/index.tsx",
       lineNumber: 73,
       columnNumber: 11
     }, this)
   ] }, void 0, true, {
-    fileName: "app/routes/tags/index.tsx",
-    lineNumber: 56,
+    fileName: "app/routes/categories/index.tsx",
+    lineNumber: 57,
     columnNumber: 7
   }, this) }, void 0, false, {
-    fileName: "app/routes/tags/index.tsx",
-    lineNumber: 55,
+    fileName: "app/routes/categories/index.tsx",
+    lineNumber: 56,
     columnNumber: 5
   }, this);
 }
@@ -87,4 +83,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/tags/index-GTT772RH.js.map
+//# sourceMappingURL=/build/routes/categories/index-CN6TRY5C.js.map

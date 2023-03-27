@@ -735,6 +735,21 @@ video {
 .top-1 {
   top: 4px;
 }
+.top-1\/2 {
+  top: 50%;
+}
+.left-1\/2 {
+  left: 50%;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-0 {
+  z-index: 0;
+}
+.z-50 {
+  z-index: 50;
+}
 .order-1 {
   order: 1;
 }
@@ -749,8 +764,19 @@ video {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+.-mx-32 {
+  margin-left: -8rem;
+  margin-right: -8rem;
+}
+.-mx-24 {
+  margin-left: -6rem;
+  margin-right: -6rem;
+}
 .-ml-4 {
   margin-left: -20px;
+}
+.mb-4 {
+  margin-bottom: 20px;
 }
 .mb-6 {
   margin-bottom: 52px;
@@ -776,11 +802,20 @@ video {
 .mt-6 {
   margin-top: 52px;
 }
-.mr-6 {
-  margin-right: 52px;
+.mb-32 {
+  margin-bottom: 8rem;
 }
-.mb-4 {
-  margin-bottom: 20px;
+.-mt-32 {
+  margin-top: -8rem;
+}
+.ml-12 {
+  margin-left: 3rem;
+}
+.ml-48 {
+  margin-left: 12rem;
+}
+.-mt-12 {
+  margin-top: -3rem;
 }
 .block {
   display: block;
@@ -812,6 +847,21 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-64 {
+  height: 16rem;
+}
+.h-96 {
+  height: 24rem;
+}
+.h-4\/5 {
+  height: 80%;
+}
+.h-full {
+  height: 100%;
+}
+.max-h-screen {
+  max-height: 100vh;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -830,8 +880,20 @@ video {
 .w-screen {
   width: 100vw;
 }
+.w-fit {
+  width: fit-content;
+}
 .max-w-4xl {
   max-width: 56rem;
+}
+.max-w-3xl {
+  max-width: 48rem;
+}
+.max-w-fit {
+  max-width: fit-content;
+}
+.max-w-6xl {
+  max-width: 72rem;
 }
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -841,6 +903,9 @@ video {
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -856,9 +921,6 @@ video {
 }
 .items-center {
   align-items: center;
-}
-.justify-end {
-  justify-content: flex-end;
 }
 .justify-center {
   justify-content: center;
@@ -883,6 +945,11 @@ video {
   margin-right: calc(8px * var(--tw-space-x-reverse));
   margin-left: calc(8px * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(52px * var(--tw-space-x-reverse));
+  margin-left: calc(52px * calc(1 - var(--tw-space-x-reverse)));
+}
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(8px * calc(1 - var(--tw-space-y-reverse)));
@@ -892,16 +959,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(20px * var(--tw-space-y-reverse));
-}
-.space-x-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(52px * var(--tw-space-x-reverse));
-  margin-left: calc(52px * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(20px * var(--tw-space-x-reverse));
-  margin-left: calc(20px * calc(1 - var(--tw-space-x-reverse)));
 }
 .divide-x > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-x-reverse: 0;
@@ -1004,6 +1061,9 @@ video {
 .p-6 {
   padding: 52px;
 }
+.p-32 {
+  padding: 8rem;
+}
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -1030,6 +1090,9 @@ video {
 }
 .pt-4 {
   padding-top: 20px;
+}
+.text-center {
+  text-align: center;
 }
 .font-mono {
   font-family:
@@ -1159,6 +1222,14 @@ video {
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-blur-lg {
+  --tw-backdrop-blur: blur(16px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition-all {
   transition-property: all;
@@ -1558,4 +1629,4 @@ video {
     line-height: 1;
   }
 }
-/*# sourceMappingURL=/build/_assets/tailwind-3DQYH56C.css.map */
+/*# sourceMappingURL=/build/_assets/tailwind-DBKF36TQ.css.map */

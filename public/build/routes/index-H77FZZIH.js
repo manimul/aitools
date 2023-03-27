@@ -11,8 +11,8 @@ import {
   Title,
   tailwind_default,
   useRouteData
-} from "/build/_shared/chunk-CZLDT6TF.js";
-import "/build/_shared/chunk-YTXMV47J.js";
+} from "/build/_shared/chunk-KEYK25BR.js";
+import "/build/_shared/chunk-6TE67VER.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -114,4 +114,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/index-OTICG3FN.js.map
+//# sourceMappingURL=/build/routes/index-H77FZZIH.js.map

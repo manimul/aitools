@@ -4,7 +4,7 @@ import type {
   StructureResolver,
 } from 'sanity/desk';
 import Iframe from 'sanity-plugin-iframe-pane';
-import { Disc, Users, Tags, Home } from 'lucide-react';
+import { Disc, Users, Tags, Home, List, Wrench } from 'lucide-react';
 
 import { projectDetails } from '~/sanity/projectDetails';
 import type { SanityDocumentWithSlug } from '~/sanity/structure/resolvePreviewUrl';
@@ -23,9 +23,11 @@ export const structure: StructureResolver = (S) =>
         .title('Home'),
       S.divider(),
       // Document lists
-      S.documentTypeListItem('product').title('Products').icon(Disc),
-      S.documentTypeListItem('category').title('Category').icon(Users),
+      S.documentTypeListItem('product').title('Tools').icon(Wrench),
+      S.documentTypeListItem('guide').title('Guides').icon(List),
       S.divider(),
+      S.documentTypeListItem('category').title('Categories').icon(Users),
+
       S.documentTypeListItem('tag').title('Tags').icon(Tags),
     ]);
 

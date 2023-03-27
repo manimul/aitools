@@ -10,8 +10,8 @@ import {
   Layout,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-CZLDT6TF.js";
-import "/build/_shared/chunk-YTXMV47J.js";
+} from "/build/_shared/chunk-KEYK25BR.js";
+import "/build/_shared/chunk-6TE67VER.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -168,4 +168,4 @@ export {
   Categories as default,
   links
 };
-//# sourceMappingURL=/build/routes/categories/$slug-ABFLACHD.js.map
+//# sourceMappingURL=/build/routes/categories/$slug-2YSJ2KCW.js.map

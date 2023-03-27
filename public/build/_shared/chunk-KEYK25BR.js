@@ -1,7 +1,7 @@
 import {
   Moon,
   Sun
-} from "/build/_shared/chunk-YTXMV47J.js";
+} from "/build/_shared/chunk-6TE67VER.js";
 import {
   Link,
   useFetcher,
@@ -92,7 +92,7 @@ function ThemeToggle() {
 // app/components/Header.tsx
 var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime());
 function Header() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { className: "border-b border-gray-100 transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "container mx-auto flex items-center justify-between p-4 lg:px-12", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { className: "relative z-10 border-b border-gray-100 backdrop-blur-lg transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "container  mx-auto flex items-center justify-between p-4 lg:px-12", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Logo, {}, void 0, false, {
       fileName: "app/components/Header.tsx",
       lineNumber: 10,
@@ -114,7 +114,7 @@ function Header() {
         lineNumber: 14,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Link, { to: "/categories", children: "Howtu.ai Guides" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Link, { to: "/guides", children: "Howtu.ai Guides" }, void 0, false, {
         fileName: "app/components/Header.tsx",
         lineNumber: 15,
         columnNumber: 11
@@ -168,7 +168,7 @@ function Layout(props) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-TXPC7UX2.css";
+var tailwind_default = "/build/_assets/tailwind-4SO27DCB.css";
 
 // app/components/Title.tsx
 var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
@@ -186,4 +186,4 @@ export {
   tailwind_default,
   Title
 };
-//# sourceMappingURL=/build/_shared/chunk-CZLDT6TF.js.map
+//# sourceMappingURL=/build/_shared/chunk-KEYK25BR.js.map

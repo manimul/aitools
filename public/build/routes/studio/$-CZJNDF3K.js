@@ -36,9 +36,11 @@ import "/build/_shared/chunk-UXONZQWX.js";
 import {
   Disc,
   Home,
+  List,
   Tags,
-  Users
-} from "/build/_shared/chunk-YTXMV47J.js";
+  Users,
+  Wrench
+} from "/build/_shared/chunk-6TE67VER.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -395,8 +397,102 @@ var feature_default = defineType({
   }
 });
 
+// app/sanity/schema/guide.ts
+var guide_default = defineType({
+  name: "guide",
+  title: "Guide",
+  type: "document",
+  icon: List,
+  groups: [
+    {
+      name: "details",
+      title: "Details"
+    },
+    {
+      name: "editorial",
+      title: "Editorial"
+    },
+    {
+      name: "seo",
+      title: "SEO"
+    }
+  ],
+  fields: [
+    defineField({
+      name: "title",
+      type: "string",
+      group: "details"
+    }),
+    defineField({
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title"
+      },
+      group: "details"
+    }),
+    defineField({
+      name: "tags",
+      type: "array",
+      of: [{ type: "reference", to: { type: "tag" } }],
+      group: "details"
+    }),
+    defineField({
+      name: "image",
+      type: "image",
+      options: { hotspot: true },
+      group: "editorial"
+    }),
+    defineField({
+      name: "content",
+      type: "array",
+      of: [{ type: "block" }, { type: "image" }],
+      group: "editorial"
+    }),
+    defineField({
+      name: "overview",
+      type: "array",
+      of: [{ type: "block" }, { type: "image" }],
+      group: "editorial"
+    }),
+    defineField({
+      name: "metatitle",
+      title: "Title",
+      type: "string",
+      group: "seo"
+    }),
+    defineField({
+      name: "metadescription",
+      title: "Description",
+      type: "string",
+      validation: (Rule) => Rule.max(150).warning(
+        `A descriptions shouldn't be more than 150 characters.`
+      ),
+      group: "seo"
+    }),
+    defineField({
+      name: "metaimage",
+      title: "Image",
+      type: "image",
+      group: "seo"
+    })
+  ],
+  preview: {
+    select: {
+      title: "title",
+      media: "image"
+    },
+    prepare({ title, media }) {
+      return {
+        title,
+        media
+      };
+    }
+  }
+});
+
 // app/sanity/schema/index.ts
-var schema_default = [product_default, category_default, feature_default, tag_default, home_default];
+var schema_default = [product_default, category_default, feature_default, tag_default, home_default, guide_default];
 
 // node_modules/sanity-plugin-iframe-pane/lib/index.esm.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime());
@@ -639,9 +735,10 @@ async function resolvePreviewUrl(doc, client) {
 var structure = (S) => S.list().id("root").title("Content").items([
   S.documentListItem().schemaType("home").icon(Home).id("home").title("Home"),
   S.divider(),
-  S.documentTypeListItem("product").title("Products").icon(Disc),
-  S.documentTypeListItem("category").title("Category").icon(Users),
+  S.documentTypeListItem("product").title("Tools").icon(Wrench),
+  S.documentTypeListItem("guide").title("Guides").icon(List),
   S.divider(),
+  S.documentTypeListItem("category").title("Categories").icon(Users),
   S.documentTypeListItem("tag").title("Tags").icon(Tags)
 ]);
 var defaultDocumentNode = (S, { schemaType, getClient }) => {
@@ -713,4 +810,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/studio/$-4SMY3GA3.js.map
+//# sourceMappingURL=/build/routes/studio/$-CZJNDF3K.js.map
