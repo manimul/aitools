@@ -19,6 +19,9 @@ const slugsQuery = groq`*[defined(slug.current)]{
   _type == "tag" => {
     "slug": "tags/" + slug.current
   },
+  _type == "guide" => {
+    "slug": "guides/" + slug.current
+  },
 }`;
 
 const getSlugs = async () => {
@@ -36,13 +39,16 @@ const renderXML = (slugs: { slug?: string }[]) => {
 <loc>https://www.howtu.ai/</loc>
 </url>
 <url>
-<loc>https://www.howtu.ai/products</loc>
+<loc>https://www.howtu.ai/tools</loc>
 </url>
 <url>
 <loc>https://www.howtu.ai/tags</loc>
 </url>
 <url>
 <loc>https://www.howtu.ai/categories</loc>
+</url>
+<url>
+<loc>https://www.howtu.ai/guides</loc>
 </url>
       ${slugs
         .filter((item) => item.slug)
