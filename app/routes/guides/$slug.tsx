@@ -5,6 +5,10 @@ import { Link, useLoaderData } from '@remix-run/react';
 import groq from 'groq';
 import stylesheet from '~/tailwind.css';
 import { getClient } from '~/sanity/client';
+import type { SanityImageSource } from '@sanity/asset-utils';
+import urlBuilder from '@sanity/image-url';
+import { projectDetails } from '~/sanity/projectDetails';
+
 import { guideZ } from '~/types/content';
 import AlbumCover from '~/components/RecordCover';
 
@@ -68,22 +72,49 @@ export default function GuidePage() {
 
   return (
     <Layout>
-      <section className=' -mx-32 -mt-32 mb-32 h-screen  max-h-screen border   '>
+      <section>
+        <header className='mx-auto max-w-4xl '>
+          <Link className='underline' to='/guides'>
+            A howtu.ai guide
+          </Link>
+          <Title>{guide.title}</Title>
+        </header>
+        {guide.image ? (
+          <img
+            className=' my-6 h-auto  w-full object-cover  '
+            src={urlBuilder(projectDetails())
+              .image(guide.image.asset._ref)
+              .height(500)
+              .width(1400)
+              .fit('max')
+              .auto('format')
+              .url()}
+            alt={String(guide.image.title) ?? ``}
+            loading='lazy'
+          />
+        ) : (
+          <div className='flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500'>
+            {guide.image.title ?? `Missing Record art`}
+          </div>
+        )}
+      </section>
+      {guide.content && guide.content?.length > 0 ? (
+        <article className='mx-auto max-w-4xl'>
+          <SanityContent value={guide.content} />
+        </article>
+      ) : null}
+
+      <section className='-mx-32 -mt-32 mb-32 hidden h-screen  max-h-screen border   '>
         <header className=' absolute top-1/2 z-0 mx-auto -mt-12 ml-48 max-w-6xl '>
           <Link className='underline' to='/guides'>
             A howtu.ai guide
           </Link>
           <Title>{guide.title}</Title>
         </header>
-        <div className='h-full  max-h-screen  overflow-hidden '>
+        <div className='h-full  max-h-screen overflow-hidden  bg-black object-cover  '>
           <AlbumCover image={guide.image} title={guide.title} />
         </div>
       </section>
-      {guide.content && guide.content?.length > 0 ? (
-        <article className='mx-auto max-w-3xl'>
-          <SanityContent value={guide.content} />
-        </article>
-      ) : null}
     </Layout>
   );
 }

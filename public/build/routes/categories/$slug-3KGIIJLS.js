@@ -4,13 +4,13 @@ import {
 import {
   RecordCover
 } from "/build/_shared/chunk-NSFUBKRX.js";
-import "/build/_shared/chunk-K3XBZMEA.js";
-import "/build/_shared/chunk-UXONZQWX.js";
 import {
   Layout,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-KEYK25BR.js";
+} from "/build/_shared/chunk-6RDU6RSJ.js";
+import "/build/_shared/chunk-K3XBZMEA.js";
+import "/build/_shared/chunk-UXONZQWX.js";
 import "/build/_shared/chunk-6TE67VER.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
@@ -168,4 +168,4 @@ export {
   Categories as default,
   links
 };
-//# sourceMappingURL=/build/routes/categories/$slug-2YSJ2KCW.js.map
+//# sourceMappingURL=/build/routes/categories/$slug-3KGIIJLS.js.map

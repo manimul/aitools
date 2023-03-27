@@ -82,7 +82,7 @@ export default function Record(props: RecordDocument) {
               ) : null}
               {title ? <Title>{title}</Title> : null}
               {content && content?.length > 0 ? (
-                <section className=' text-6xl  italic  '>
+                <section className=' pr-4  text-6xl italic  '>
                   <SanityContent value={content} />
                 </section>
               ) : null}

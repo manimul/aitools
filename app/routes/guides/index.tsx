@@ -3,7 +3,11 @@ import type { LinksFunction, LoaderArgs, MetaFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
 import groq from 'groq';
+import { projectDetails } from '~/sanity/projectDetails';
+
 import { guidesZ } from '~/types/content';
+import urlBuilder from '@sanity/image-url';
+
 import AlbumCover from '~/components/RecordCover';
 
 import Layout from '~/components/Layout';
@@ -70,16 +74,43 @@ export default function Index() {
     <Layout>
       <div className='grid grid-cols-1 gap-6 md:gap-12'>
         <header className='space-y-4'>
-          <Title>All How.ai Guides</Title>
+          <Title>All howtu.ai Guides</Title>
         </header>
         {guides.length > 0 ? (
-          <section className='grid grid-cols-3'>
+          <section className='grid md:grid-cols-3'>
             {guides.map((guide) => (
-              <Link to={'/guides/' + guide.slug} key={guide.title}>
+              <Link
+                to={'/guides/' + guide.slug}
+                key={guide.title}
+                className='group grid items-center gap-4 border p-2 transition-all duration-300 hover:-translate-y-2 hover:border-dashed md:grid-cols-2 '
+              >
                 <div className=''>
-                  <AlbumCover image={guide.image} title={guide.title} />
+                  {guide.image ? (
+                    <img
+                      className='h-auto w-full  object-cover shadow-black transition-all duration-300  group-hover:scale-105 '
+                      src={urlBuilder(projectDetails())
+                        .image(guide.image.asset._ref)
+                        .height(300)
+                        .width(400)
+                        .fit('max')
+                        .auto('format')
+                        .url()}
+                      alt={String(guide.title) ?? ``}
+                      loading='lazy'
+                    />
+                  ) : (
+                    <div className='flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500'>
+                      {guide.title ?? `Missing thumbnail`}
+                    </div>
+                  )}
                 </div>
-                {guide.title}
+                <div>
+                  {' '}
+                  <h2 className='text-2xl'> {guide.title}</h2>
+                  <span className='opacity-50  group-hover:underline group-hover:opacity-100'>
+                    Read the guide
+                  </span>
+                </div>
               </Link>
             ))}
           </section>

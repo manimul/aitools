@@ -8,6 +8,9 @@ import { useRouteData } from 'remix-utils';
 import AlbumCover from '~/components/RecordCover';
 import Layout from '~/components/Layout';
 import Title from '~/components/Title';
+import { projectDetails } from '~/sanity/projectDetails';
+import urlBuilder from '@sanity/image-url';
+
 import { getClient } from '~/sanity/client';
 import stylesheet from '~/tailwind.css';
 import { categoryZ, categoriesZ, productStubsZ } from '~/types/product';
@@ -59,16 +62,40 @@ export default function Index() {
           <Title>All Categories</Title>
         </header>
         {categories.length > 0 ? (
-          <>
+          <section className='grid gap-6 md:grid-cols-2'>
             {categories.map((category) => (
               <Link
                 to={'/categories/' + category.slug.current}
                 key={category.title}
               >
-                {category.title}
+                <h2
+                  className='absolute z-10 bg-white p-4 font-mono text-3xl dark:bg-black
+                '
+                >
+                  {category.title}
+                </h2>
+
+                {category.image ? (
+                  <img
+                    className='  h-auto  w-full object-cover  '
+                    src={urlBuilder(projectDetails())
+                      .image(category.image.asset._ref)
+                      .height(200)
+                      .width(500)
+                      .fit('max')
+                      .auto('format')
+                      .url()}
+                    alt={String(category.image.title) ?? ``}
+                    loading='lazy'
+                  />
+                ) : (
+                  <div className='flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500'>
+                    {category.image.title ?? `Missing Record art`}
+                  </div>
+                )}
               </Link>
             ))}
-          </>
+          </section>
         ) : (
           <p> No products found </p>
         )}

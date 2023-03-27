@@ -2,13 +2,13 @@ import {
   ProductCard
 } from "/build/_shared/chunk-YLUQ6GRR.js";
 import "/build/_shared/chunk-NSFUBKRX.js";
-import "/build/_shared/chunk-K3XBZMEA.js";
-import "/build/_shared/chunk-UXONZQWX.js";
 import {
   Layout,
   Title,
   tailwind_default
-} from "/build/_shared/chunk-KEYK25BR.js";
+} from "/build/_shared/chunk-6RDU6RSJ.js";
+import "/build/_shared/chunk-K3XBZMEA.js";
+import "/build/_shared/chunk-UXONZQWX.js";
 import "/build/_shared/chunk-6TE67VER.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
@@ -102,4 +102,4 @@ export {
   Tags as default,
   links
 };
-//# sourceMappingURL=/build/routes/tags/$slug-MVBIELM2.js.map
+//# sourceMappingURL=/build/routes/tags/$slug-KIFTJ2AX.js.map

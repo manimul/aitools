@@ -1,16 +1,17 @@
-import type {PropsWithChildren} from 'react'
+/* eslint-disable prettier/prettier */
+import type { PropsWithChildren } from 'react';
 
-import Footer from '~/components/Footer'
-import Header from '~/components/Header'
+import Footer from '~/components/Footer';
+import Header from '~/components/Header';
 
 export default function Layout(props: PropsWithChildren) {
-  const {children} = props
+  const { children } = props;
 
   return (
     <>
       <Header />
-      <div className="container mx-auto p-4 lg:p-12">{children}</div>
+      <div className='container mx-auto p-4  lg:p-12 lg:pt-32'>{children}</div>
       <Footer />
     </>
-  )
+  );
 }

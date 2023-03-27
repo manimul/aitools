@@ -92,13 +92,13 @@ function ThemeToggle() {
 // app/components/Header.tsx
 var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime());
 function Header() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { className: "relative z-10 border-b border-gray-100 backdrop-blur-lg transition-colors duration-1000 ease-in-out dark:border-gray-900", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "container  mx-auto flex items-center justify-between p-4 lg:px-12", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { className: "z-10 w-full border-b border-gray-100 backdrop-blur-lg transition-colors duration-1000 ease-in-out dark:border-gray-900 md:fixed", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "container  mx-auto items-center justify-between p-4 md:flex lg:px-12", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Logo, {}, void 0, false, {
       fileName: "app/components/Header.tsx",
       lineNumber: 10,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "space-x-6 font-mono", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "space-x-6 font-mono ", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Link, { to: "/", children: "Home" }, void 0, false, {
         fileName: "app/components/Header.tsx",
         lineNumber: 12,
@@ -147,33 +147,33 @@ function Layout(props) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_jsx_dev_runtime5.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Header, {}, void 0, false, {
       fileName: "app/components/Layout.tsx",
-      lineNumber: 11,
+      lineNumber: 12,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "container mx-auto p-4 lg:p-12", children }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "container mx-auto p-4  lg:p-12 lg:pt-32", children }, void 0, false, {
       fileName: "app/components/Layout.tsx",
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Footer, {}, void 0, false, {
       fileName: "app/components/Layout.tsx",
-      lineNumber: 13,
+      lineNumber: 14,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/components/Layout.tsx",
-    lineNumber: 10,
+    lineNumber: 11,
     columnNumber: 5
   }, this);
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-4SO27DCB.css";
+var tailwind_default = "/build/_assets/tailwind-NT7KRLNJ.css";
 
 // app/components/Title.tsx
 var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
 function Title(props) {
-  return props.children ? /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("h1", { className: "text-bold featureing-tighter max-w-4xl text-4xl font-bold md:text-3xl lg:text-4xl xl:text-6xl", children: props.children }, void 0, false, {
+  return props.children ? /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("h1", { className: "text-bold max-w-4xl  font-mono text-4xl font-bold md:text-3xl lg:text-4xl xl:text-6xl", children: props.children }, void 0, false, {
     fileName: "app/components/Title.tsx",
     lineNumber: 7,
     columnNumber: 5
@@ -186,4 +186,4 @@ export {
   tailwind_default,
   Title
 };
-//# sourceMappingURL=/build/_shared/chunk-KEYK25BR.js.map
+//# sourceMappingURL=/build/_shared/chunk-6RDU6RSJ.js.map

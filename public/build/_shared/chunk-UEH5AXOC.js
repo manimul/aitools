@@ -8,12 +8,12 @@ import {
   RecordCover
 } from "/build/_shared/chunk-NSFUBKRX.js";
 import {
-  projectDetails
-} from "/build/_shared/chunk-K3XBZMEA.js";
-import {
   Layout,
   Title
-} from "/build/_shared/chunk-KEYK25BR.js";
+} from "/build/_shared/chunk-6RDU6RSJ.js";
+import {
+  projectDetails
+} from "/build/_shared/chunk-K3XBZMEA.js";
 import {
   Link
 } from "/build/_shared/chunk-6OT2F7ZE.js";
@@ -335,7 +335,7 @@ function Record(props) {
           lineNumber: 83,
           columnNumber: 24
         }, this) : null,
-        content && (content == null ? void 0 : content.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("section", { className: " text-6xl  italic  ", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(SanityContent, { value: content }, void 0, false, {
+        content && (content == null ? void 0 : content.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("section", { className: " pr-4  text-6xl italic  ", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(SanityContent, { value: content }, void 0, false, {
           fileName: "app/components/Product.tsx",
           lineNumber: 86,
           columnNumber: 19
@@ -735,4 +735,4 @@ export {
   Record,
   PreviewRecord
 };
-//# sourceMappingURL=/build/_shared/chunk-3R6AHNUU.js.map
+//# sourceMappingURL=/build/_shared/chunk-UEH5AXOC.js.map
