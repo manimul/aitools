@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/styles/studio.css"],
-  "sourcesContent": ["html {\n  background-color: #111111;\n}\n\nhtml,\nbody,\n#root {\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  -webkit-font-smoothing: antialiased;\n}\n"],
-  "mappings": ";AAAA;AACE;;AAGF;;;AAGE;;AAGF;AAVA;AAYE;;",
-  "names": []
-}

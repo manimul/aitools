@@ -19,5 +19,10 @@ export default defineType({
         source: 'title',
       },
     }),
+    defineField({
+      name: 'usertype',
+      title: 'Is this a user type tag?',
+      type: 'boolean',
+    }),
   ],
 });

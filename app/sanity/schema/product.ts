@@ -63,6 +63,18 @@ export default defineType({
       group: 'details',
     }),
     defineField({
+      title: 'Is there a free tier available?',
+      name: 'free',
+      type: 'boolean',
+      group: 'details',
+    }),
+    defineField({
+      name: 'specialdeal',
+      title: 'Special Deal',
+      type: 'string',
+      group: 'details',
+    }),
+    defineField({
       name: 'category',
       type: 'reference',
       to: [{ type: 'category' }],
@@ -81,6 +93,12 @@ export default defineType({
       group: 'editorial',
     }),
     defineField({
+      name: 'imagealt',
+      title: 'Image alt text',
+      type: 'string',
+      group: 'editorial',
+    }),
+    defineField({
       name: 'gallery',
       type: 'array',
       of: [{ type: 'image' }],
@@ -88,24 +106,34 @@ export default defineType({
     }),
     defineField({
       name: 'content',
+      title: 'Short Description',
       type: 'array',
       of: [{ type: 'block' }, { type: 'image' }],
       group: 'editorial',
     }),
     defineField({
       name: 'overview',
+      title: 'Full Description',
       type: 'array',
       of: [{ type: 'block' }, { type: 'image' }],
       group: 'editorial',
     }),
     defineField({
       name: 'ease',
+      title: 'Ease of Use',
       type: 'array',
       of: [{ type: 'block' }, { type: 'image' }],
       group: 'editorial',
     }),
     defineField({
       name: 'support',
+      type: 'array',
+      of: [{ type: 'block' }, { type: 'image' }],
+      group: 'editorial',
+    }),
+    defineField({
+      name: 'background',
+      title: 'Background Information',
       type: 'array',
       of: [{ type: 'block' }, { type: 'image' }],
       group: 'editorial',
@@ -132,13 +160,13 @@ export default defineType({
     }),
     defineField({
       name: 'metatitle',
-      title: 'Title',
+      title: 'Meta Title',
       type: 'string',
       group: 'seo',
     }),
     defineField({
       name: 'metadescription',
-      title: 'Description',
+      title: 'Meta Description',
       type: 'string',
       validation: (Rule) =>
         Rule.max(150).warning(

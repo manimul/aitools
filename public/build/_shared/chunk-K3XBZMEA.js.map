@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/sanity/projectDetails.ts"],
-  "sourcesContent": ["/* eslint-disable prettier/prettier */\ndeclare global {\n  interface Window {\n    ENV: {\n      SANITY_PUBLIC_PROJECT_ID: string;\n      SANITY_PUBLIC_DATASET: string;\n      SANITY_PUBLIC_API_VERSION: string;\n    };\n  }\n}\n\ntype ProjectDetails = {\n  projectId: string;\n  dataset: string;\n  apiVersion: string;\n};\n\nexport const projectDetails = (): ProjectDetails => {\n  const {\n    SANITY_PUBLIC_PROJECT_ID,\n    SANITY_PUBLIC_DATASET,\n    SANITY_PUBLIC_API_VERSION,\n  } = typeof document === 'undefined' ? process.env : window.ENV;\n\n  return {\n    projectId: SANITY_PUBLIC_PROJECT_ID ?? `hw4meujw`,\n    dataset: SANITY_PUBLIC_DATASET ?? `production`,\n    apiVersion: SANITY_PUBLIC_API_VERSION ?? `2022-09-19`,\n  };\n};\n"],
-  "mappings": ";AAiBO,IAAM,iBAAiB,MAAsB;AAClD,QAAM;AAAA,IACJ;AAAA,IACA;AAAA,IACA;AAAA,EACF,IAAI,OAAO,aAAa,cAAc,QAAQ,MAAM,OAAO;AAE3D,SAAO;AAAA,IACL,WAAW,8DAA4B;AAAA,IACvC,SAAS,wDAAyB;AAAA,IAClC,YAAY,gEAA6B;AAAA,EAC3C;AACF;",
-  "names": []
-}
