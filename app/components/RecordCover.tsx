@@ -14,7 +14,7 @@ export default function RecordCover(props: RecordCoverProps) {
   const { title, image } = props;
 
   return (
-    <div className='aspect-square bg-gray-50'>
+    <div className='aspect-square '>
       {image ? (
         <img
           className='h-auto w-full  object-cover shadow-black transition-all duration-300  group-hover:scale-105 '

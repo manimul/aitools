@@ -17,6 +17,9 @@ import type { HomeDocument } from '~/types/home';
 import SanityContent from '~/components/SanityContent';
 import ProductCard from '~/components/ProductCard';
 import { guidesZ, infosZ } from '~/types/content';
+import PrimaryHeading from '~/components/PrimaryHeading';
+import SecondaryHeading from '~/components/SecondaryHeading';
+import PrimaryHero from '~/components/PrimaryHero';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
@@ -105,25 +108,22 @@ export default function Index() {
 
   return (
     <Layout>
+      <PrimaryHero
+        title={home.title}
+        subtitle={home.subTitle}
+        image={home.image}
+        buttons={[
+          { text: 'Explore Writing Tools', link: '/categories/writing' },
+
+          // You can add as many button objects as you need
+        ]}
+      />
       <div className='grid grid-cols-1 gap-6 md:gap-12'>
-        <section className=' mb-6 border p-4 md:p-6  '>
-          <div className='mx-auto grid  gap-4 md:py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0'>
-            <div className='order-2 mr-auto space-y-4 place-self-center md:order-1 lg:col-span-7'>
-              <header className='space-y-4'>
-                {home.title ? <Title>{home.title}</Title> : null}
-                <p className='text-xl'>{home.subTitle} here </p>
-              </header>
-            </div>
-            <div className='order-1 md:order-2 lg:col-span-5 lg:mt-0 lg:flex'>
-              <AlbumCover image={home.image} title={home.title} />
-            </div>
-          </div>
-        </section>
         {guides.length > 0 ? (
           <section>
-            <h2 className='mb-6 font-mono text-2xl capitalize md:text-6xl'>
-              Newest howtu.ai Guides
-            </h2>
+            <SecondaryHeading> Newest howtu.ai Guides</SecondaryHeading>
+
+            <h2 className='mb-6 font-mono text-2xl capitalize md:text-6xl'></h2>
             <div className='grid md:grid-cols-3'>
               {guides.map((guide) => (
                 <Link
@@ -153,7 +153,7 @@ export default function Index() {
                   </div>
                   <div>
                     {' '}
-                    <h2 className='text-2xl'> {guide.title}</h2>
+                    <h3 className='text-2xl'>{guide.title} </h3>
                     <span className='opacity-50  group-hover:underline group-hover:opacity-100'>
                       Read the guide
                     </span>
@@ -168,9 +168,7 @@ export default function Index() {
         {products.length > 0 ? (
           <section className='my-12 border-t-2 border-dashed pt-12 '>
             {' '}
-            <h2 className='mb-6 font-mono text-2xl capitalize md:text-6xl'>
-              Newest Tool Reviews
-            </h2>
+            <SecondaryHeading> Newest Tool Reviews</SecondaryHeading>
             <ul className='mb-12  grid gap-6 md:grid-cols-4 md:gap-16 '>
               {products.slice(0, 4).map((product) => (
                 <ProductCard key={product._id} product={product} />
@@ -185,9 +183,8 @@ export default function Index() {
           {' '}
           {categories.length > 0 ? (
             <section className='my-12 border-t-2 border-dashed pt-12 '>
-              <h2 className='mb-6 font-mono text-2xl capitalize md:text-6xl'>
-                Newest Categories
-              </h2>
+              <SecondaryHeading> Newest Categories</SecondaryHeading>
+
               <div className='grid gap-6 md:grid-cols-2'>
                 {categories.map((category) => (
                   <Link

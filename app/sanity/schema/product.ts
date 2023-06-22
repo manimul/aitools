@@ -108,14 +108,51 @@ export default defineType({
       name: 'content',
       title: 'Short Description',
       type: 'array',
-      of: [{ type: 'block' }, { type: 'image' }],
+      of: [
+        { type: 'block' },
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative text',
+              description: 'Important for SEO and accessiblity.',
+              options: {
+                isHighlighted: true,
+              },
+            },
+          ],
+        },
+        {
+          type: 'youtube',
+        },
+      ],
       group: 'editorial',
     }),
     defineField({
       name: 'overview',
       title: 'Full Description',
       type: 'array',
-      of: [{ type: 'block' }, { type: 'image' }],
+      of: [
+        { type: 'block' },
+
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative text',
+              description: 'Important for SEO and accessiblity.',
+              options: {
+                isHighlighted: true,
+              },
+            },
+          ],
+        },
+        { type: 'youtube' },
+      ],
       group: 'editorial',
     }),
     defineField({
