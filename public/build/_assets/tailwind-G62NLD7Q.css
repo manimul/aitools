@@ -913,9 +913,6 @@ video {
 .gap-6 {
   gap: 52px;
 }
-.gap-12 {
-  gap: 3rem;
-}
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(8px * var(--tw-space-x-reverse));
@@ -935,11 +932,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(20px * var(--tw-space-y-reverse));
-}
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(52px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(52px * var(--tw-space-y-reverse));
 }
 .divide-x > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-x-reverse: 0;
@@ -1016,6 +1008,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+.bg-\[\#FFF6ED\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 246 237 / var(--tw-bg-opacity));
+}
 .bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1032,17 +1028,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(230 232 236 / var(--tw-bg-opacity));
 }
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 243 245 / var(--tw-bg-opacity));
-}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-\[\#FFF6ED\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 246 237 / var(--tw-bg-opacity));
 }
 .object-cover {
   object-fit: cover;
@@ -1050,14 +1038,14 @@ video {
 .p-2 {
   padding: 8px;
 }
+.p-3 {
+  padding: 12px;
+}
 .p-4 {
   padding: 20px;
 }
 .p-6 {
   padding: 52px;
-}
-.p-3 {
-  padding: 12px;
 }
 .px-12 {
   padding-left: 3rem;
@@ -1066,6 +1054,10 @@ video {
 .px-2 {
   padding-left: 8px;
   padding-right: 8px;
+}
+.px-4 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .py-3 {
   padding-top: 12px;
@@ -1082,10 +1074,6 @@ video {
 .py-8 {
   padding-top: 136px;
   padding-bottom: 136px;
-}
-.px-4 {
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .pr-4 {
   padding-right: 20px;
@@ -1590,6 +1578,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.dark .dark\:text-black {
+  --tw-text-opacity: 1;
+  color: rgb(16 17 18 / var(--tw-text-opacity));
+}
 .dark .dark\:text-blue-300 {
   --tw-text-opacity: 1;
   color: rgb(122 172 253 / var(--tw-text-opacity));
@@ -1605,10 +1597,6 @@ video {
 .dark .dark\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.dark .dark\:text-black {
-  --tw-text-opacity: 1;
-  color: rgb(16 17 18 / var(--tw-text-opacity));
 }
 .dark .dark\:prose-a\:text-cyan-200 :is(:where(a):not(:where([class~="not-prose"] *))) {
   --tw-text-opacity: 1;
@@ -1654,11 +1642,6 @@ video {
   .md\:gap-4 {
     gap: 20px;
   }
-  .md\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(8px * var(--tw-space-x-reverse));
-    margin-left: calc(8px * calc(1 - var(--tw-space-x-reverse)));
-  }
   .md\:p-6 {
     padding: 52px;
   }
@@ -1689,23 +1672,8 @@ video {
   .lg\:col-span-7 {
     grid-column: span 7 / span 7;
   }
-  .lg\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-  .lg\:col-span-8 {
-    grid-column: span 8 / span 8;
-  }
-  .lg\:col-span-4 {
-    grid-column: span 4 / span 4;
-  }
   .lg\:col-start-8 {
     grid-column-start: 8;
-  }
-  .lg\:col-end-3 {
-    grid-column-end: 3;
-  }
-  .lg\:col-end-12 {
-    grid-column-end: 12;
   }
   .lg\:col-end-13 {
     grid-column-end: 13;
@@ -1728,14 +1696,11 @@ video {
   .lg\:gap-12 {
     gap: 3rem;
   }
-  .lg\:gap-8 {
-    gap: 136px;
-  }
   .lg\:gap-5 {
     gap: 32px;
   }
-  .lg\:gap-x-5 {
-    column-gap: 32px;
+  .lg\:gap-8 {
+    gap: 136px;
   }
   .lg\:p-12 {
     padding: 3rem;
@@ -1768,15 +1733,9 @@ video {
   .xl\:gap-0 {
     gap: 0px;
   }
-  .xl\:gap-4 {
-    gap: 20px;
-  }
-  .xl\:gap-8 {
-    gap: 136px;
-  }
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
   }
 }
-/*# sourceMappingURL=/build/_assets/tailwind-KJFGNHN7.css.map */
+/*# sourceMappingURL=/build/_assets/tailwind-4MKPXVPS.css.map */

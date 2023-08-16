@@ -28,7 +28,7 @@ export const meta: MetaFunction = (data) => {
 };
 
 export const loader = async (props: LoaderArgs) => {
-  const query = groq`*[_type == "product"][0...12]{
+  const query = groq`*[_type == "product"]{
     _id,
     title,
     metadescription,

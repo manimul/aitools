@@ -7,5 +7,18 @@ import feature from '~/sanity/schema/feature';
 import guide from '~/sanity/schema/guide';
 import info from '~/sanity/schema/info';
 import youtube from '~/sanity/schema/youtube';
+import usecase from '~/sanity/schema/usecase';
+import faq from '~/sanity/schema/faq';
 
-export default [product, category, feature, tag, home, guide, info, youtube];
+export default [
+  product,
+  category,
+  feature,
+  tag,
+  home,
+  guide,
+  info,
+  youtube,
+  usecase,
+  faq,
+];

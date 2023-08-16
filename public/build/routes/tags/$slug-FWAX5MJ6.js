@@ -8,10 +8,10 @@ import {
 import {
   Layout,
   tailwind_default
-} from "/build/_shared/chunk-MXJIX5CJ.js";
+} from "/build/_shared/chunk-ANO2NPYG.js";
 import "/build/_shared/chunk-K3XBZMEA.js";
 import "/build/_shared/chunk-UXONZQWX.js";
-import "/build/_shared/chunk-GTC6AJN5.js";
+import "/build/_shared/chunk-IROXDNAB.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -104,4 +104,4 @@ export {
   Tags as default,
   links
 };
-//# sourceMappingURL=/build/routes/tags/$slug-UGIQ45LU.js.map
+//# sourceMappingURL=/build/routes/tags/$slug-FWAX5MJ6.js.map

@@ -41,7 +41,7 @@ import {
   Tags,
   Users,
   Wrench
-} from "/build/_shared/chunk-GTC6AJN5.js";
+} from "/build/_shared/chunk-IROXDNAB.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -166,14 +166,54 @@ var home_default = defineType({
   title: "Home",
   type: "document",
   icon: Home,
+  groups: [
+    {
+      name: "Hero",
+      title: "Hero"
+    },
+    {
+      name: "contentSection",
+      title: "Content Section"
+    },
+    {
+      name: "useCaseSection",
+      title: "Use Case Section"
+    },
+    {
+      name: "profileTools",
+      title: "Profile Tools"
+    },
+    {
+      name: "featuredGuide",
+      title: "Featured Guide"
+    },
+    {
+      name: "exploreCategories",
+      title: "Explore Categories"
+    },
+    {
+      name: "faq",
+      title: "FAQ Section"
+    },
+    {
+      name: "seo",
+      title: "SEO"
+    }
+  ],
   fields: [
     defineField({
-      name: "title",
+      name: "siteTitle",
       type: "string"
     }),
     defineField({
+      name: "title",
+      type: "string",
+      group: "Hero"
+    }),
+    defineField({
       name: "subTitle",
-      type: "string"
+      type: "string",
+      group: "Hero"
     }),
     defineField({
       name: "logo",
@@ -182,26 +222,118 @@ var home_default = defineType({
     defineField({
       name: "image",
       type: "image",
-      options: { hotspot: true }
+      options: { hotspot: true },
+      group: "Hero"
     }),
     defineField({
-      name: "siteTitle",
-      type: "string"
+      name: "showContentSection",
+      type: "boolean",
+      group: "contentSection",
+      initialValue: true
+    }),
+    defineField({
+      name: "contentSectionTitle",
+      type: "string",
+      group: "contentSection"
+    }),
+    defineField({
+      name: "contentSectionBody",
+      type: "array",
+      of: [{ type: "block" }, { type: "image" }],
+      group: "contentSection"
+    }),
+    defineField({
+      name: "contentSectionImage",
+      type: "image",
+      options: { hotspot: true },
+      group: "contentSection"
+    }),
+    defineField({
+      name: "showUseCaseSection",
+      type: "boolean",
+      group: "useCaseSection",
+      initialValue: true
+    }),
+    defineField({
+      name: "useCaseSectionTitle",
+      type: "string",
+      group: "useCaseSection"
+    }),
+    defineField({
+      name: "useCaseReference",
+      type: "array",
+      of: [{ type: "reference", to: { type: "usecase" } }],
+      group: "useCaseSection"
+    }),
+    defineField({
+      name: "showProfileTools",
+      type: "boolean",
+      group: "profileTools",
+      initialValue: true
+    }),
+    defineField({
+      name: "profileToolsTitle",
+      type: "string",
+      group: "profileTools"
+    }),
+    defineField({
+      name: "showFeaturedGuide",
+      type: "boolean",
+      group: "featuredGuide",
+      initialValue: true
+    }),
+    defineField({
+      name: "selectFeaturedGuide",
+      type: "reference",
+      to: { type: "guide" },
+      group: "featuredGuide"
+    }),
+    defineField({
+      name: "showExploreCategories",
+      type: "boolean",
+      group: "exploreCategories",
+      initialValue: true
+    }),
+    defineField({
+      name: "selectExploreCategories",
+      type: "reference",
+      to: { type: "category" },
+      group: "exploreCategories"
+    }),
+    defineField({
+      name: "showFAQ",
+      type: "boolean",
+      group: "faq",
+      initialValue: true
+    }),
+    defineField({
+      name: "faqTitle",
+      type: "string",
+      group: "faq"
+    }),
+    defineField({
+      name: "faqBody",
+      type: "array",
+      of: [{ type: "block" }, { type: "image" }],
+      group: "faq"
     }),
     defineField({
       name: "metatitle",
       title: "Meta Title",
-      type: "string"
+      type: "string",
+      group: "seo"
     }),
     defineField({
       name: "metadescription",
       title: "Meta Description",
-      type: "string"
+      type: "string",
+      group: "seo"
     }),
     defineField({
       name: "metaimage",
       title: "Meta Image",
-      type: "image"
+      type: "image",
+      group: "seo"
     })
   ],
   preview: {
@@ -611,8 +743,71 @@ var youtube_default = {
   ]
 };
 
+// app/sanity/schema/usecase.ts
+var usecase_default = defineType({
+  name: "usecase",
+  title: "Use Case",
+  type: "document",
+  icon: Users,
+  fields: [
+    defineField({
+      name: "title",
+      type: "string"
+    }),
+    defineField({
+      name: "description",
+      type: "array",
+      of: [{ type: "block" }]
+    }),
+    defineField({
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title"
+      }
+    })
+  ]
+});
+
+// app/sanity/schema/faq.ts
+var faq_default = defineType({
+  name: "faq",
+  title: "Faq Item",
+  type: "document",
+  icon: Users,
+  fields: [
+    defineField({
+      name: "question",
+      type: "string"
+    }),
+    defineField({
+      name: "answer",
+      type: "array",
+      of: [{ type: "block" }]
+    }),
+    defineField({
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "question"
+      }
+    })
+  ]
+});
+
 // app/sanity/schema/index.ts
-var schema_default = [product_default, category_default, feature_default, tag_default, home_default, guide_default, info_default, youtube_default];
+var schema_default = [
+  product_default,
+  category_default,
+  feature_default,
+  tag_default,
+  home_default,
+  guide_default,
+  info_default,
+  youtube_default,
+  usecase_default,
+  faq_default
+];
 
 // node_modules/sanity-plugin-iframe-pane/lib/index.esm.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime());
@@ -858,9 +1053,11 @@ var structure = (S) => S.list().id("root").title("Content").items([
   S.documentTypeListItem("product").title("Tools").icon(Wrench),
   S.documentTypeListItem("guide").title("Guides").icon(List),
   S.documentTypeListItem("info").title("Info").icon(Info),
+  S.documentTypeListItem("usecase").title("Use Case").icon(Users),
   S.divider(),
   S.documentTypeListItem("category").title("Categories").icon(Users),
-  S.documentTypeListItem("tag").title("Tags").icon(Tags)
+  S.documentTypeListItem("tag").title("Tags").icon(Tags),
+  S.documentTypeListItem("faq").title("FAQ").icon(Disc)
 ]);
 var defaultDocumentNode = (S, { schemaType, getClient }) => {
   const { apiVersion } = projectDetails();
@@ -931,4 +1128,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/studio/$-OZUBZ4WM.js.map
+//# sourceMappingURL=/build/routes/studio/$-UX6Q7JPS.js.map

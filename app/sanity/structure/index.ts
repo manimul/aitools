@@ -26,11 +26,13 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem('product').title('Tools').icon(Wrench),
       S.documentTypeListItem('guide').title('Guides').icon(List),
       S.documentTypeListItem('info').title('Info').icon(Info),
+      S.documentTypeListItem('usecase').title('Use Case').icon(Users),
 
       S.divider(),
       S.documentTypeListItem('category').title('Categories').icon(Users),
 
       S.documentTypeListItem('tag').title('Tags').icon(Tags),
+      S.documentTypeListItem('faq').title('FAQ').icon(Disc),
     ]);
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (

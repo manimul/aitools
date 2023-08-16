@@ -4,8 +4,8 @@ import {
 import {
   Layout,
   tailwind_default
-} from "/build/_shared/chunk-MXJIX5CJ.js";
-import "/build/_shared/chunk-GTC6AJN5.js";
+} from "/build/_shared/chunk-ANO2NPYG.js";
+import "/build/_shared/chunk-IROXDNAB.js";
 import "/build/_shared/chunk-LS6N33D7.js";
 import {
   require_groq
@@ -89,4 +89,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/tags/index-UYUDWTFU.js.map
+//# sourceMappingURL=/build/routes/tags/index-BUEOJV2D.js.map
