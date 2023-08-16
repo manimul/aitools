@@ -1,6 +1,6 @@
 import {
   ProductCard
-} from "/build/_shared/chunk-4UFLJSU7.js";
+} from "/build/_shared/chunk-OOVZGIZP.js";
 import "/build/_shared/chunk-GB5OAF5Y.js";
 import {
   Title
@@ -104,4 +104,4 @@ export {
   Tags as default,
   links
 };
-//# sourceMappingURL=/build/routes/tags/$slug-FWAX5MJ6.js.map
+//# sourceMappingURL=/build/routes/tags/$slug-PAQX33P5.js.map

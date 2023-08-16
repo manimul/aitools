@@ -23,7 +23,7 @@ export default function ProductCard({ product }: { product: ProductDocument }) {
         {product?.slug ? (
           <Link
             prefetch='intent'
-            to={'/products/' + product?.slug}
+            to={'/tools/' + product?.slug}
             className=' text-xl  font-bold md:text-3xl '
           >
             {product.title}

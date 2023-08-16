@@ -1,6 +1,6 @@
 import {
   ProductCard
-} from "/build/_shared/chunk-4UFLJSU7.js";
+} from "/build/_shared/chunk-OOVZGIZP.js";
 import {
   RecordCover
 } from "/build/_shared/chunk-GB5OAF5Y.js";
@@ -170,4 +170,4 @@ export {
   Categories as default,
   links
 };
-//# sourceMappingURL=/build/routes/categories/$slug-Q45UWYRA.js.map
+//# sourceMappingURL=/build/routes/categories/$slug-34VURZCW.js.map

@@ -1,6 +1,6 @@
 import {
   ProductCard
-} from "/build/_shared/chunk-4UFLJSU7.js";
+} from "/build/_shared/chunk-OOVZGIZP.js";
 import {
   SanityContent
 } from "/build/_shared/chunk-M3IW45AF.js";
@@ -480,4 +480,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/index-TJRA3CPB.js.map
+//# sourceMappingURL=/build/routes/index-Q2WJBZZZ.js.map

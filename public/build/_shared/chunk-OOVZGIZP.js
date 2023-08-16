@@ -41,7 +41,7 @@ function ProductCard({ product }) {
             Link,
             {
               prefetch: "intent",
-              to: "/products/" + (product == null ? void 0 : product.slug),
+              to: "/tools/" + (product == null ? void 0 : product.slug),
               className: " text-xl  font-bold md:text-3xl ",
               children: [
                 product.title,
@@ -155,4 +155,4 @@ function ProductCard({ product }) {
 export {
   ProductCard
 };
-//# sourceMappingURL=/build/_shared/chunk-4UFLJSU7.js.map
+//# sourceMappingURL=/build/_shared/chunk-OOVZGIZP.js.map
