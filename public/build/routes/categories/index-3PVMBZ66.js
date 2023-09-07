@@ -4,7 +4,7 @@ import {
 import {
   Layout,
   tailwind_default
-} from "/build/_shared/chunk-ANO2NPYG.js";
+} from "/build/_shared/chunk-P7CY5RSY.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
@@ -132,4 +132,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/categories/index-JXXTWSGZ.js.map
+//# sourceMappingURL=/build/routes/categories/index-3PVMBZ66.js.map

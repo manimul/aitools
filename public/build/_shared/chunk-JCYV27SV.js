@@ -17,11 +17,11 @@ var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 function RecordCover(props) {
   var _a;
   const { title, image } = props;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "aspect-square ", children: image ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "", children: image ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
     "img",
     {
-      className: "h-auto w-full  object-cover shadow-black transition-all duration-300  group-hover:scale-105 ",
-      src: (0, import_image_url.default)(projectDetails()).image(image.asset._ref).height(800).width(800).fit("max").auto("format").url(),
+      className: "h-auto mt-auto w-full  object-cover shadow-black transition-all duration-300  group-hover:scale-105 ",
+      src: (0, import_image_url.default)(projectDetails()).image(image.asset._ref).height(800).fit("fillmax").url(),
       alt: (_a = String(title)) != null ? _a : ``,
       loading: "lazy"
     },
@@ -35,7 +35,7 @@ function RecordCover(props) {
     this
   ) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500", children: title != null ? title : `Missing Record art` }, void 0, false, {
     fileName: "app/components/RecordCover.tsx",
-    lineNumber: 32,
+    lineNumber: 33,
     columnNumber: 9
   }, this) }, void 0, false, {
     fileName: "app/components/RecordCover.tsx",
@@ -47,4 +47,4 @@ function RecordCover(props) {
 export {
   RecordCover
 };
-//# sourceMappingURL=/build/_shared/chunk-GB5OAF5Y.js.map
+//# sourceMappingURL=/build/_shared/chunk-JCYV27SV.js.map

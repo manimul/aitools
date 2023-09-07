@@ -4,14 +4,14 @@ import {
 import "/build/_shared/chunk-PBYB3QU6.js";
 import {
   RecordCover
-} from "/build/_shared/chunk-GB5OAF5Y.js";
+} from "/build/_shared/chunk-JCYV27SV.js";
 import {
   Title
 } from "/build/_shared/chunk-Z5YUX75N.js";
 import {
   Layout,
   tailwind_default
-} from "/build/_shared/chunk-ANO2NPYG.js";
+} from "/build/_shared/chunk-P7CY5RSY.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
@@ -139,4 +139,4 @@ export {
   GuidePage as default,
   links
 };
-//# sourceMappingURL=/build/routes/guides/$slug-73YDHSFW.js.map
+//# sourceMappingURL=/build/routes/guides/$slug-RKKSBHBX.js.map

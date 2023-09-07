@@ -145,7 +145,7 @@ export default function Record(props: RecordDocument) {
               ) : null}
             </header>
           </div>
-          <div className='order-1 md:order-2 lg:col-span-5 lg:mt-0 lg:flex'>
+          <div className='order-1 md:order-2 lg:col-span-5 lg:mt-0 '>
             <AlbumCover image={image} title={title} />
           </div>
         </div>

@@ -6,13 +6,13 @@ import {
 } from "/build/_shared/chunk-PBYB3QU6.js";
 import {
   RecordCover
-} from "/build/_shared/chunk-GB5OAF5Y.js";
+} from "/build/_shared/chunk-JCYV27SV.js";
 import {
   Title
 } from "/build/_shared/chunk-Z5YUX75N.js";
 import {
   Layout
-} from "/build/_shared/chunk-ANO2NPYG.js";
+} from "/build/_shared/chunk-P7CY5RSY.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
@@ -473,7 +473,7 @@ function Record(props) {
         lineNumber: 70,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "order-1 md:order-2 lg:col-span-5 lg:mt-0 lg:flex", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(RecordCover, { image, title }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "order-1 md:order-2 lg:col-span-5 lg:mt-0 ", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(RecordCover, { image, title }, void 0, false, {
         fileName: "app/components/Product.tsx",
         lineNumber: 149,
         columnNumber: 13
@@ -737,4 +737,4 @@ export {
   Record,
   PreviewRecord
 };
-//# sourceMappingURL=/build/_shared/chunk-FO23PI4C.js.map
+//# sourceMappingURL=/build/_shared/chunk-GF5MK5PP.js.map

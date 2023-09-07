@@ -1,6 +1,6 @@
 import {
   RecordCover
-} from "/build/_shared/chunk-GB5OAF5Y.js";
+} from "/build/_shared/chunk-JCYV27SV.js";
 import {
   Link
 } from "/build/_shared/chunk-6OT2F7ZE.js";
@@ -155,4 +155,4 @@ function ProductCard({ product }) {
 export {
   ProductCard
 };
-//# sourceMappingURL=/build/_shared/chunk-OOVZGIZP.js.map
+//# sourceMappingURL=/build/_shared/chunk-ZTGOFDCS.js.map

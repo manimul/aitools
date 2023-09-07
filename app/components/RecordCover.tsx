@@ -14,16 +14,17 @@ export default function RecordCover(props: RecordCoverProps) {
   const { title, image } = props;
 
   return (
-    <div className='aspect-square '>
+    <div className=''>
       {image ? (
         <img
-          className='h-auto w-full  object-cover shadow-black transition-all duration-300  group-hover:scale-105 '
+          className='h-auto mt-auto w-full  object-cover shadow-black transition-all duration-300  group-hover:scale-105 '
           src={urlBuilder(projectDetails())
             .image(image.asset._ref)
             .height(800)
-            .width(800)
-            .fit('max')
-            .auto('format')
+            //.width(800)
+            //.bg('ffffff')
+            .fit('fillmax')
+           //.auto('format')
             .url()}
           alt={String(title) ?? ``}
           loading='lazy'
