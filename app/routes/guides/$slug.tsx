@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import type { LinksFunction, LoaderArgs } from '@remix-run/node';
+import type { LinksFunction, LoaderArgs, MetaFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
 import groq from 'groq';
@@ -14,11 +14,32 @@ import AlbumCover from '~/components/RecordCover';
 
 import { getSession } from '~/sessions';
 import Layout from '~/components/Layout';
+import type { HomeDocument } from '~/types/home';
+
 import Title from '~/components/Title';
 import SanityContent from '~/components/SanityContent';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
+};
+
+export const meta: MetaFunction = ({ data, parentsData }) => {
+  const home = parentsData.root.home as HomeDocument;
+
+  return {
+    title: [data.guide.metatitle, home.siteTitle].filter(Boolean).join(' | '),
+    description: [data.guide.metadescription],
+    'og:image': urlBuilder(projectDetails())
+      .image(data.guide.metaimage.asset._ref)
+      .url(),
+    'og:title': [data.guide.metatitle, home.siteTitle]
+      .filter(Boolean)
+      .join(' | '),
+    'og:description': [data.guide.metadescription],
+    'og:type': 'website',
+    'og:url': 'https://howtu.ai/guides/' + data.guide.slug,
+    'og:site_name': 'howtu.ai',
+  };
 };
 
 // Load the `product` document with this slug

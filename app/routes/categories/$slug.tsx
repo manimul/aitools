@@ -9,7 +9,7 @@ import { projectDetails } from '~/sanity/projectDetails';
 
 import { categoryZ, productStubsZ, groupedProductsZ } from '~/types/product';
 
-import type { LinksFunction, LoaderArgs } from '@remix-run/node';
+import type { LinksFunction, LoaderArgs, MetaFunction } from '@remix-run/node';
 import Layout from '~/components/Layout';
 import stylesheet from '~/tailwind.css';
 import AlbumCover from '~/components/RecordCover';
@@ -19,9 +19,38 @@ import Title from '~/components/Title';
 import urlBuilder from '@sanity/image-url';
 import SanityContent from '~/components/SanityContent';
 import ProductCard from '~/components/ProductCard';
+import { HomeDocument } from '~/types/home';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
+};
+
+export const meta: MetaFunction = ({ data, parentsData }) => {
+  const home = parentsData.root.home as HomeDocument;
+
+  return {
+    title: ['Explore ' + data.category.title + ' tools', home.siteTitle]
+      .filter(Boolean)
+      .join(' | '),
+    description: [
+      'Explore top-rated ' +
+        data.category.title +
+        ' tools and elevate your projects with our comprehensive selection. Dive into detailed guides and expert reviews to choose the best ' +
+        data.category.title +
+        ' solution tailored to your needs.',
+    ],
+    'og:image': urlBuilder(projectDetails())
+      .image(data.category.image.asset._ref)
+      .url(),
+    'og:title': ['Explore ' + data.category.title + ' tools', home.siteTitle]
+      .filter(Boolean)
+      .join(' | '),
+    'og:description':
+      'Unlock the power of artificial intelligence with accessible AI solutions at howtu.ai. Elevate your everyday tasks and boost productivity by exploring our wide range of user-friendly tools, comprehensive guides, and expert insights designed to simplify your personal and professional life. Begin your AI journey with us today!',
+    'og:type': 'website',
+    'og:url': 'https://howtu.ai/categories/' + data.category.slug.current,
+    'og:site_name': 'howtu.ai',
+  };
 };
 
 // Load the `category` document with this slug

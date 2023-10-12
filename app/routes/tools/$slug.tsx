@@ -31,6 +31,13 @@ export const meta: MetaFunction = ({ data, parentsData }) => {
     'og:image': urlBuilder(projectDetails())
       .image(data.product.metaimage.asset._ref)
       .url(),
+    'og:title': [data.product.metatitle, home.siteTitle]
+      .filter(Boolean)
+      .join(' | '),
+    'og:description': [data.product.metadescription],
+    'og:type': 'website',
+    'og:url': 'https://howtu.ai/tools/' + data.product.slug,
+    'og:site_name': 'howtu.ai',
   };
 };
 

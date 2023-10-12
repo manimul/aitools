@@ -23,7 +23,19 @@ export const meta: MetaFunction = (data) => {
   const home = data.parentsData.root.home as HomeDocument;
 
   return {
-    title: [home.title, home.siteTitle].filter(Boolean).join(' | '),
+    title: ['Browse a huge range of AI tools', home.siteTitle]
+      .filter(Boolean)
+      .join(' | '),
+    'og:title': ['Browse a huge range of AI tools', home.siteTitle]
+      .filter(Boolean)
+      .join(' | '),
+    description:
+      "Browse howtu.ai's comprehensive list of AI tools and solutions. Explore step-by-step tutorials and expert reviews to find the best AI tool for your needs.",
+    'og:description':
+      "Browse howtu.ai's comprehensive list of AI tools and solutions. Explore step-by-step tutorials and expert reviews to find the best AI tool for your needs.",
+    'og:type': 'website',
+    'og:url': 'https://howtu.ai/tools',
+    'og:site_name': 'howtu.ai',
   };
 };
 

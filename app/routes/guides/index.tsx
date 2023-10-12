@@ -21,14 +21,22 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = (data) => {
-  const home = data.parentsData.root.home as HomeDocument;
+  const home = data.parentsData.root.home;
 
   return {
-    title: ['Browse AI Tool Categories', home.siteTitle]
+    title: ['Learn how to use AI to your advantage', home.siteTitle]
       .filter(Boolean)
       .join(' | '),
     description:
-      'Browse the different types of AI tools listed by category type.',
+      "Browse the different types of AI tools. Unlock the power of AI with our comprehensive guides! Whether you're a beginner or seasoned pro, explore step-by-step tutorials and insights to navigate through various AI tools with ease. Elevate your skills, understand complex technologies, and harness AI's potential to drive innovation and solutions in your projects or business, listed by category type.",
+    'og:title': ['Learn how to use AI to your advantage', home.siteTitle]
+      .filter(Boolean)
+      .join(' | '),
+    'og:description':
+      "Browse the different types of AI tools. Unlock the power of AI with our comprehensive guides! Whether you're a beginner or seasoned pro, explore step-by-step tutorials and insights to navigate through various AI tools with ease. Elevate your skills, understand complex technologies, and harness AI's potential to drive innovation and solutions in your projects or business, listed by category type.",
+    'og:type': 'website',
+    'og:url': 'https://howtu.ai/guides',
+    'og:site_name': 'howtu.ai',
   };
 };
 

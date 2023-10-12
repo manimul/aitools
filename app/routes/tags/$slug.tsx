@@ -4,13 +4,14 @@ import groq from 'groq';
 import { json } from '@remix-run/node';
 import { tagZ, productStubsZ } from '~/types/product';
 
-import type { LinksFunction, LoaderArgs } from '@remix-run/node';
+import type { LinksFunction, LoaderArgs, MetaFunction } from '@remix-run/node';
 import Layout from '~/components/Layout';
 import stylesheet from '~/tailwind.css';
 import { getClient } from '~/sanity/client';
 import AlbumCover from '~/components/RecordCover';
 import Title from '~/components/Title';
 import ProductCard from '~/components/ProductCard';
+import { HomeDocument } from '~/types/home';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];

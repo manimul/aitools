@@ -1035,10 +1035,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 243 245 / var(--tw-bg-opacity));
-}
 .object-cover {
   object-fit: cover;
 }
@@ -1090,12 +1086,6 @@ video {
 }
 .pt-4 {
   padding-top: 20px;
-}
-.align-middle {
-  vertical-align: middle;
-}
-.align-bottom {
-  vertical-align: bottom;
 }
 .font-mono {
   font-family:
@@ -1751,4 +1741,4 @@ video {
     line-height: 1;
   }
 }
-/*# sourceMappingURL=/build/_assets/tailwind-RXVWP565.css.map */
+/*# sourceMappingURL=/build/_assets/tailwind-SDQM323Q.css.map */

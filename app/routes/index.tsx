@@ -30,6 +30,15 @@ export const meta: MetaFunction = (data) => {
 
   return {
     title: [home.title, home.siteTitle].filter(Boolean).join(' | '),
+    description:
+      'Unlock the power of artificial intelligence with accessible AI solutions at howtu.ai. Elevate your everyday tasks and boost productivity by exploring our wide range of user-friendly tools, comprehensive guides, and expert insights designed to simplify your personal and professional life. Begin your AI journey with us today!',
+    'og:image': urlBuilder(projectDetails()).image(home.image.asset._ref).url(),
+    'og:title': home.title,
+    'og:description':
+      'Unlock the power of artificial intelligence with accessible AI solutions at howtu.ai. Elevate your everyday tasks and boost productivity by exploring our wide range of user-friendly tools, comprehensive guides, and expert insights designed to simplify your personal and professional life. Begin your AI journey with us today!',
+    'og:type': 'website',
+    'og:url': 'https://howtu.ai/',
+    'og:site_name': 'howtu.ai',
   };
 };
 

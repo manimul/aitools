@@ -12,7 +12,7 @@ import {
   Layout,
   tailwind_default,
   useRouteData
-} from "/build/_shared/chunk-P7CY5RSY.js";
+} from "/build/_shared/chunk-AR65SWWO.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
@@ -152,7 +152,14 @@ var links = () => {
 var meta = (data) => {
   const home = data.parentsData.root.home;
   return {
-    title: [home.title, home.siteTitle].filter(Boolean).join(" | ")
+    title: [home.title, home.siteTitle].filter(Boolean).join(" | "),
+    description: "Unlock the power of artificial intelligence with accessible AI solutions at howtu.ai. Elevate your everyday tasks and boost productivity by exploring our wide range of user-friendly tools, comprehensive guides, and expert insights designed to simplify your personal and professional life. Begin your AI journey with us today!",
+    "og:image": (0, import_image_url.default)(projectDetails()).image(home.image.asset._ref).url(),
+    "og:title": home.title,
+    "og:description": "Unlock the power of artificial intelligence with accessible AI solutions at howtu.ai. Elevate your everyday tasks and boost productivity by exploring our wide range of user-friendly tools, comprehensive guides, and expert insights designed to simplify your personal and professional life. Begin your AI journey with us today!",
+    "og:type": "website",
+    "og:url": "https://howtu.ai/",
+    "og:site_name": "howtu.ai"
   };
 };
 function Index() {
@@ -173,7 +180,7 @@ function Index() {
       false,
       {
         fileName: "app/routes/index.tsx",
-        lineNumber: 111,
+        lineNumber: 120,
         columnNumber: 7
       },
       this
@@ -182,12 +189,12 @@ function Index() {
       guides.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(SecondaryHeading, { children: " Newest howtu.ai Guides" }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 124,
+          lineNumber: 133,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h2", { className: "mb-6 font-mono text-2xl capitalize md:text-6xl" }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 126,
+          lineNumber: 135,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "grid md:grid-cols-3", children: guides.map((guide) => {
@@ -210,17 +217,17 @@ function Index() {
                   false,
                   {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 136,
+                    lineNumber: 145,
                     columnNumber: 23
                   },
                   this
                 ) : /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500", children: (_b = guide.title) != null ? _b : `Missing thumbnail` }, void 0, false, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 149,
+                  lineNumber: 158,
                   columnNumber: 23
                 }, this) }, void 0, false, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 134,
+                  lineNumber: 143,
                   columnNumber: 19
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { children: [
@@ -230,17 +237,17 @@ function Index() {
                     " "
                   ] }, void 0, true, {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 156,
+                    lineNumber: 165,
                     columnNumber: 21
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("span", { className: "opacity-50  group-hover:underline group-hover:opacity-100", children: "Read the guide" }, void 0, false, {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 157,
+                    lineNumber: 166,
                     columnNumber: 21
                   }, this)
                 ] }, void 0, true, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 154,
+                  lineNumber: 163,
                   columnNumber: 19
                 }, this)
               ]
@@ -249,48 +256,48 @@ function Index() {
             true,
             {
               fileName: "app/routes/index.tsx",
-              lineNumber: 129,
+              lineNumber: 138,
               columnNumber: 17
             },
             this
           );
         }) }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 127,
+          lineNumber: 136,
           columnNumber: 13
         }, this)
       ] }, void 0, true, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 123,
+        lineNumber: 132,
         columnNumber: 11
       }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: " No products found " }, void 0, false, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 166,
+        lineNumber: 175,
         columnNumber: 11
       }, this),
       products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "my-12 border-t-2 border-dashed pt-12 ", children: [
         " ",
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(SecondaryHeading, { children: " Newest Tool Reviews" }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 171,
+          lineNumber: 180,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("ul", { className: "mb-12  grid gap-6 md:grid-cols-4 md:gap-16 ", children: products.slice(0, 4).map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ProductCard, { product }, product._id, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 174,
+          lineNumber: 183,
           columnNumber: 17
         }, this)) }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 172,
+          lineNumber: 181,
           columnNumber: 13
         }, this)
       ] }, void 0, true, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 169,
+        lineNumber: 178,
         columnNumber: 11
       }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: "No products found" }, void 0, false, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 179,
+        lineNumber: 188,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { children: [
@@ -298,7 +305,7 @@ function Index() {
         categories.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "my-12 border-t-2 border-dashed pt-12 ", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(SecondaryHeading, { children: " Newest Categories" }, void 0, false, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 186,
+            lineNumber: 195,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "grid gap-6 md:grid-cols-2", children: categories.map((category) => {
@@ -318,7 +325,7 @@ function Index() {
                     false,
                     {
                       fileName: "app/routes/index.tsx",
-                      lineNumber: 194,
+                      lineNumber: 203,
                       columnNumber: 21
                     },
                     this
@@ -335,13 +342,13 @@ function Index() {
                     false,
                     {
                       fileName: "app/routes/index.tsx",
-                      lineNumber: 202,
+                      lineNumber: 211,
                       columnNumber: 23
                     },
                     this
                   ) : /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500", children: (_b = category.image.title) != null ? _b : `Missing Record art` }, void 0, false, {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 215,
+                    lineNumber: 224,
                     columnNumber: 23
                   }, this)
                 ]
@@ -350,28 +357,28 @@ function Index() {
               true,
               {
                 fileName: "app/routes/index.tsx",
-                lineNumber: 190,
+                lineNumber: 199,
                 columnNumber: 19
               },
               this
             );
           }) }, void 0, false, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 188,
+            lineNumber: 197,
             columnNumber: 15
           }, this)
         ] }, void 0, true, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 185,
+          lineNumber: 194,
           columnNumber: 13
         }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: " No products found " }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 224,
+          lineNumber: 233,
           columnNumber: 13
         }, this)
       ] }, void 0, true, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 182,
+        lineNumber: 191,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { children: [
@@ -395,7 +402,7 @@ function Index() {
                     false,
                     {
                       fileName: "app/routes/index.tsx",
-                      lineNumber: 241,
+                      lineNumber: 250,
                       columnNumber: 25
                     },
                     this
@@ -412,27 +419,27 @@ function Index() {
                     false,
                     {
                       fileName: "app/routes/index.tsx",
-                      lineNumber: 247,
+                      lineNumber: 256,
                       columnNumber: 25
                     },
                     this
                   )
                 ] }, void 0, true, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 239,
+                  lineNumber: 248,
                   columnNumber: 23
                 }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500", children: (_b = info.image.title) != null ? _b : `Missing Record art` }, void 0, false, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 261,
+                  lineNumber: 270,
                   columnNumber: 23
                 }, this),
                 info.content && ((_c = info.content) == null ? void 0 : _c.length) > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { id: "overview", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(SanityContent, { value: info.content }, void 0, false, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 268,
+                  lineNumber: 277,
                   columnNumber: 25
                 }, this) }, void 0, false, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 267,
+                  lineNumber: 276,
                   columnNumber: 23
                 }, this) : null
               ]
@@ -441,37 +448,37 @@ function Index() {
             true,
             {
               fileName: "app/routes/index.tsx",
-              lineNumber: 234,
+              lineNumber: 243,
               columnNumber: 19
             },
             this
           );
         }) }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 232,
+          lineNumber: 241,
           columnNumber: 15
         }, this) }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 231,
+          lineNumber: 240,
           columnNumber: 13
         }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: " No products found " }, void 0, false, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 276,
+          lineNumber: 285,
           columnNumber: 13
         }, this)
       ] }, void 0, true, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 228,
+        lineNumber: 237,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 121,
+      lineNumber: 130,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/index.tsx",
-    lineNumber: 110,
+    lineNumber: 119,
     columnNumber: 5
   }, this);
 }
@@ -480,4 +487,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/index-YJOYFQXY.js.map
+//# sourceMappingURL=/build/routes/index-6FSC2VQ2.js.map

@@ -8,7 +8,7 @@ import {
 import {
   Layout,
   tailwind_default
-} from "/build/_shared/chunk-P7CY5RSY.js";
+} from "/build/_shared/chunk-AR65SWWO.js";
 import "/build/_shared/chunk-K3XBZMEA.js";
 import "/build/_shared/chunk-UXONZQWX.js";
 import "/build/_shared/chunk-IROXDNAB.js";
@@ -45,58 +45,58 @@ function Tags() {
         '"'
       ] }, void 0, true, {
         fileName: "app/routes/tags/$slug.tsx",
-        lineNumber: 68,
+        lineNumber: 69,
         columnNumber: 17
       }, this) }, void 0, false, {
         fileName: "app/routes/tags/$slug.tsx",
-        lineNumber: 67,
+        lineNumber: 68,
         columnNumber: 15
       }, this) }, void 0, false, {
         fileName: "app/routes/tags/$slug.tsx",
-        lineNumber: 66,
+        lineNumber: 67,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "hidden lg:col-span-5 lg:mt-0 lg:flex", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {}, void 0, false, {
           fileName: "app/routes/tags/$slug.tsx",
-          lineNumber: 72,
+          lineNumber: 73,
           columnNumber: 15
         }, this),
         " "
       ] }, void 0, true, {
         fileName: "app/routes/tags/$slug.tsx",
-        lineNumber: 71,
+        lineNumber: 72,
         columnNumber: 13
       }, this)
     ] }, void 0, true, {
       fileName: "app/routes/tags/$slug.tsx",
-      lineNumber: 65,
+      lineNumber: 66,
       columnNumber: 11
     }, this) }, void 0, false, {
       fileName: "app/routes/tags/$slug.tsx",
-      lineNumber: 64,
+      lineNumber: 65,
       columnNumber: 9
     }, this),
     products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid  gap-6 md:grid-cols-3 md:gap-16", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
       fileName: "app/routes/tags/$slug.tsx",
-      lineNumber: 79,
+      lineNumber: 80,
       columnNumber: 15
     }, this)) }, void 0, false, {
       fileName: "app/routes/tags/$slug.tsx",
-      lineNumber: 77,
+      lineNumber: 78,
       columnNumber: 11
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: "No products found with this tag." }, void 0, false, {
       fileName: "app/routes/tags/$slug.tsx",
-      lineNumber: 83,
+      lineNumber: 84,
       columnNumber: 11
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/tags/$slug.tsx",
-    lineNumber: 63,
+    lineNumber: 64,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/routes/tags/$slug.tsx",
-    lineNumber: 62,
+    lineNumber: 63,
     columnNumber: 5
   }, this);
 }
@@ -104,4 +104,4 @@ export {
   Tags as default,
   links
 };
-//# sourceMappingURL=/build/routes/tags/$slug-GOB4X7PJ.js.map
+//# sourceMappingURL=/build/routes/tags/$slug-IGDDP6LC.js.map

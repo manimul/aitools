@@ -2,14 +2,14 @@ import {
   PreviewRecord,
   PreviewSuspense,
   Record
-} from "/build/_shared/chunk-GF5MK5PP.js";
+} from "/build/_shared/chunk-V7IT24F6.js";
 import "/build/_shared/chunk-M3IW45AF.js";
 import "/build/_shared/chunk-PBYB3QU6.js";
 import "/build/_shared/chunk-JCYV27SV.js";
 import "/build/_shared/chunk-Z5YUX75N.js";
 import {
   tailwind_default
-} from "/build/_shared/chunk-P7CY5RSY.js";
+} from "/build/_shared/chunk-AR65SWWO.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
@@ -32,7 +32,7 @@ import {
   __toESM
 } from "/build/_shared/chunk-CUPSZOF3.js";
 
-// app/routes/____$slug.tsx
+// app/routes/tools/$slug.tsx
 var import_groq = __toESM(require_groq());
 var import_image_url = __toESM(require_image_url_umd());
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
@@ -44,29 +44,34 @@ var meta = ({ data, parentsData }) => {
   return {
     title: [data.product.metatitle, home.siteTitle].filter(Boolean).join(" | "),
     description: [data.product.metadescription],
-    "og:image": (0, import_image_url.default)(projectDetails()).image(data.product.metaimage.asset._ref).url()
+    "og:image": (0, import_image_url.default)(projectDetails()).image(data.product.metaimage.asset._ref).url(),
+    "og:title": [data.product.metatitle, home.siteTitle].filter(Boolean).join(" | "),
+    "og:description": [data.product.metadescription],
+    "og:type": "website",
+    "og:url": "https://howtu.ai/tools/" + data.product.slug,
+    "og:site_name": "howtu.ai"
   };
 };
 function RecordPage() {
   const { product, preview, query, params, token } = useLoaderData();
   if (preview && query && params && token) {
     return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Record, { ...product }, void 0, false, {
-      fileName: "app/routes/____$slug.tsx",
-      lineNumber: 163,
+      fileName: "app/routes/tools/$slug.tsx",
+      lineNumber: 170,
       columnNumber: 34
     }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewRecord, { query, params, token }, void 0, false, {
-      fileName: "app/routes/____$slug.tsx",
-      lineNumber: 164,
+      fileName: "app/routes/tools/$slug.tsx",
+      lineNumber: 171,
       columnNumber: 9
     }, this) }, void 0, false, {
-      fileName: "app/routes/____$slug.tsx",
-      lineNumber: 163,
+      fileName: "app/routes/tools/$slug.tsx",
+      lineNumber: 170,
       columnNumber: 7
     }, this);
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Record, { ...product }, void 0, false, {
-    fileName: "app/routes/____$slug.tsx",
-    lineNumber: 169,
+    fileName: "app/routes/tools/$slug.tsx",
+    lineNumber: 176,
     columnNumber: 10
   }, this);
 }
@@ -75,4 +80,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/____$slug-FZEEM4FU.js.map
+//# sourceMappingURL=/build/routes/tools/$slug-SD2SXGYC.js.map

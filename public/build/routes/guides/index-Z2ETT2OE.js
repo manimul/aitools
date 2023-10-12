@@ -4,7 +4,7 @@ import {
 import {
   Layout,
   tailwind_default
-} from "/build/_shared/chunk-P7CY5RSY.js";
+} from "/build/_shared/chunk-AR65SWWO.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
@@ -38,8 +38,13 @@ var links = () => {
 var meta = (data) => {
   const home = data.parentsData.root.home;
   return {
-    title: ["Browse AI Tool Categories", home.siteTitle].filter(Boolean).join(" | "),
-    description: "Browse the different types of AI tools listed by category type."
+    title: ["Learn how to use AI to your advantage", home.siteTitle].filter(Boolean).join(" | "),
+    description: "Browse the different types of AI tools. Unlock the power of AI with our comprehensive guides! Whether you're a beginner or seasoned pro, explore step-by-step tutorials and insights to navigate through various AI tools with ease. Elevate your skills, understand complex technologies, and harness AI's potential to drive innovation and solutions in your projects or business, listed by category type.",
+    "og:title": ["Learn how to use AI to your advantage", home.siteTitle].filter(Boolean).join(" | "),
+    "og:description": "Browse the different types of AI tools. Unlock the power of AI with our comprehensive guides! Whether you're a beginner or seasoned pro, explore step-by-step tutorials and insights to navigate through various AI tools with ease. Elevate your skills, understand complex technologies, and harness AI's potential to drive innovation and solutions in your projects or business, listed by category type.",
+    "og:type": "website",
+    "og:url": "https://howtu.ai/guides",
+    "og:site_name": "howtu.ai"
   };
 };
 function Index() {
@@ -47,11 +52,11 @@ function Index() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Layout, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid grid-cols-1 gap-6 md:gap-12", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("header", { className: "space-y-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Title, { children: "All howtu.ai Guides" }, void 0, false, {
       fileName: "app/routes/guides/index.tsx",
-      lineNumber: 77,
+      lineNumber: 85,
       columnNumber: 11
     }, this) }, void 0, false, {
       fileName: "app/routes/guides/index.tsx",
-      lineNumber: 76,
+      lineNumber: 84,
       columnNumber: 9
     }, this),
     guides.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("section", { className: "grid md:grid-cols-3", children: guides.map((guide) => {
@@ -74,17 +79,17 @@ function Index() {
               false,
               {
                 fileName: "app/routes/guides/index.tsx",
-                lineNumber: 89,
+                lineNumber: 97,
                 columnNumber: 21
               },
               this
             ) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex aspect-square w-full items-center justify-center bg-gray-100 text-gray-500", children: (_b = guide.title) != null ? _b : `Missing thumbnail` }, void 0, false, {
               fileName: "app/routes/guides/index.tsx",
-              lineNumber: 102,
+              lineNumber: 110,
               columnNumber: 21
             }, this) }, void 0, false, {
               fileName: "app/routes/guides/index.tsx",
-              lineNumber: 87,
+              lineNumber: 95,
               columnNumber: 17
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { children: [
@@ -94,17 +99,17 @@ function Index() {
                 guide.title
               ] }, void 0, true, {
                 fileName: "app/routes/guides/index.tsx",
-                lineNumber: 109,
+                lineNumber: 117,
                 columnNumber: 19
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", { className: "opacity-50  group-hover:underline group-hover:opacity-100", children: "Read the guide" }, void 0, false, {
                 fileName: "app/routes/guides/index.tsx",
-                lineNumber: 110,
+                lineNumber: 118,
                 columnNumber: 19
               }, this)
             ] }, void 0, true, {
               fileName: "app/routes/guides/index.tsx",
-              lineNumber: 107,
+              lineNumber: 115,
               columnNumber: 17
             }, this)
           ]
@@ -113,27 +118,27 @@ function Index() {
         true,
         {
           fileName: "app/routes/guides/index.tsx",
-          lineNumber: 82,
+          lineNumber: 90,
           columnNumber: 15
         },
         this
       );
     }) }, void 0, false, {
       fileName: "app/routes/guides/index.tsx",
-      lineNumber: 80,
+      lineNumber: 88,
       columnNumber: 11
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: " No products found " }, void 0, false, {
       fileName: "app/routes/guides/index.tsx",
-      lineNumber: 118,
+      lineNumber: 126,
       columnNumber: 11
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/guides/index.tsx",
-    lineNumber: 75,
+    lineNumber: 83,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/routes/guides/index.tsx",
-    lineNumber: 74,
+    lineNumber: 82,
     columnNumber: 5
   }, this);
 }
@@ -142,4 +147,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/guides/index-LNMQTILQ.js.map
+//# sourceMappingURL=/build/routes/guides/index-Z2ETT2OE.js.map

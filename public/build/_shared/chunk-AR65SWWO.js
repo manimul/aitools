@@ -168,11 +168,11 @@ function Layout(props) {
 }
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-CIJMRV55.css";
+var tailwind_default = "/build/_assets/tailwind-JWYSCRDC.css";
 
 export {
   useRouteData,
   Layout,
   tailwind_default
 };
-//# sourceMappingURL=/build/_shared/chunk-P7CY5RSY.js.map
+//# sourceMappingURL=/build/_shared/chunk-AR65SWWO.js.map

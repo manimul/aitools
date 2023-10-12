@@ -2,14 +2,14 @@ import {
   PreviewRecord,
   PreviewSuspense,
   Record
-} from "/build/_shared/chunk-GF5MK5PP.js";
+} from "/build/_shared/chunk-V7IT24F6.js";
 import "/build/_shared/chunk-M3IW45AF.js";
 import "/build/_shared/chunk-PBYB3QU6.js";
 import "/build/_shared/chunk-JCYV27SV.js";
 import "/build/_shared/chunk-Z5YUX75N.js";
 import {
   tailwind_default
-} from "/build/_shared/chunk-P7CY5RSY.js";
+} from "/build/_shared/chunk-AR65SWWO.js";
 import {
   projectDetails
 } from "/build/_shared/chunk-K3XBZMEA.js";
@@ -32,7 +32,7 @@ import {
   __toESM
 } from "/build/_shared/chunk-CUPSZOF3.js";
 
-// app/routes/tools/$slug.tsx
+// app/routes/____$slug.tsx
 var import_groq = __toESM(require_groq());
 var import_image_url = __toESM(require_image_url_umd());
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
@@ -51,21 +51,21 @@ function RecordPage() {
   const { product, preview, query, params, token } = useLoaderData();
   if (preview && query && params && token) {
     return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewSuspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Record, { ...product }, void 0, false, {
-      fileName: "app/routes/tools/$slug.tsx",
+      fileName: "app/routes/____$slug.tsx",
       lineNumber: 163,
       columnNumber: 34
     }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(PreviewRecord, { query, params, token }, void 0, false, {
-      fileName: "app/routes/tools/$slug.tsx",
+      fileName: "app/routes/____$slug.tsx",
       lineNumber: 164,
       columnNumber: 9
     }, this) }, void 0, false, {
-      fileName: "app/routes/tools/$slug.tsx",
+      fileName: "app/routes/____$slug.tsx",
       lineNumber: 163,
       columnNumber: 7
     }, this);
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Record, { ...product }, void 0, false, {
-    fileName: "app/routes/tools/$slug.tsx",
+    fileName: "app/routes/____$slug.tsx",
     lineNumber: 169,
     columnNumber: 10
   }, this);
@@ -75,4 +75,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/tools/$slug-2HK6D3KW.js.map
+//# sourceMappingURL=/build/routes/____$slug-EAPJHQ7T.js.map

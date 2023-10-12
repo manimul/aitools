@@ -9,7 +9,7 @@ import {
   Layout,
   tailwind_default,
   useRouteData
-} from "/build/_shared/chunk-P7CY5RSY.js";
+} from "/build/_shared/chunk-AR65SWWO.js";
 import "/build/_shared/chunk-K3XBZMEA.js";
 import "/build/_shared/chunk-UXONZQWX.js";
 import "/build/_shared/chunk-IROXDNAB.js";
@@ -37,7 +37,13 @@ var links = () => {
 var meta = (data) => {
   const home = data.parentsData.root.home;
   return {
-    title: [home.title, home.siteTitle].filter(Boolean).join(" | ")
+    title: ["Browse a huge range of AI tools", home.siteTitle].filter(Boolean).join(" | "),
+    "og:title": ["Browse a huge range of AI tools", home.siteTitle].filter(Boolean).join(" | "),
+    description: "Browse howtu.ai's comprehensive list of AI tools and solutions. Explore step-by-step tutorials and expert reviews to find the best AI tool for your needs.",
+    "og:description": "Browse howtu.ai's comprehensive list of AI tools and solutions. Explore step-by-step tutorials and expert reviews to find the best AI tool for your needs.",
+    "og:type": "website",
+    "og:url": "https://howtu.ai/tools",
+    "og:site_name": "howtu.ai"
   };
 };
 function Index() {
@@ -46,33 +52,33 @@ function Index() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Layout, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "grid grid-cols-1 gap-6 md:gap-12", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("header", { className: "space-y-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Title, { children: "All tools" }, void 0, false, {
       fileName: "app/routes/tools/index.tsx",
-      lineNumber: 64,
+      lineNumber: 76,
       columnNumber: 11
     }, this) }, void 0, false, {
       fileName: "app/routes/tools/index.tsx",
-      lineNumber: 63,
+      lineNumber: 75,
       columnNumber: 9
     }, this),
     products.length > 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("ul", { className: "grid  gap-6 md:grid-cols-3 md:gap-16 ", children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProductCard, { product }, product._id, false, {
       fileName: "app/routes/tools/index.tsx",
-      lineNumber: 69,
+      lineNumber: 81,
       columnNumber: 15
     }, this)) }, void 0, false, {
       fileName: "app/routes/tools/index.tsx",
-      lineNumber: 67,
+      lineNumber: 79,
       columnNumber: 11
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: "No products found" }, void 0, false, {
       fileName: "app/routes/tools/index.tsx",
-      lineNumber: 73,
+      lineNumber: 85,
       columnNumber: 11
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/tools/index.tsx",
-    lineNumber: 62,
+    lineNumber: 74,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/routes/tools/index.tsx",
-    lineNumber: 61,
+    lineNumber: 73,
     columnNumber: 5
   }, this);
 }
@@ -81,4 +87,4 @@ export {
   links,
   meta
 };
-//# sourceMappingURL=/build/routes/tools/index-QJGWOFQB.js.map
+//# sourceMappingURL=/build/routes/tools/index-OI2TZPDY.js.map
